@@ -3,7 +3,18 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+require('dotenv').config()
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `XENOSTAR 2020`,
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATO_API_TOKEN,
+      },
+    },
+  ]
 }

@@ -26,6 +26,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`,
+            subsets: [`latin`],
+            variants: [`400`, `400i`, `700`, `900`]
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `XENOSTAR 2020`,

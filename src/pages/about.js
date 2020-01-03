@@ -1,3 +1,9 @@
 import React from 'react'
+import { App } from 'components'
 
-export default () => <div>About page</div>
+
+export default () => (
+  <App>
+    <div>About page</div>
+  </App>
+)

@@ -8,6 +8,9 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `XENOSTAR 2020`,
+    description: `Xenostar.net is the official website of Bryan Leewood.`,
+    author: `Bryan Leewood`,
+    siteUrl: `https://xenostar-2020.netlify.com/`,
   },
   plugins: [
     {
@@ -22,7 +25,23 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `XENOSTAR 2020`,
+        short_name: `XENOSTAR 2020`,
+        start_url: `/`,
+        background_color: `#6b37bf`,
+        theme_color: `#6b37bf`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/assets/icon.png`, // This path is relative to the root of the site.
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    `gatsby-alias-imports`
+    `gatsby-alias-imports`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`
   ]
 }

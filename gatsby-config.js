@@ -22,6 +22,7 @@ module.exports = {
         // Add any options here
       },
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-alias-imports`
   ]
 }

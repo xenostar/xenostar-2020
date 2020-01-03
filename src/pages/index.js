@@ -1,3 +1,8 @@
 import React from 'react'
+import App from 'components/App'
 
-export default () => <div>Home Page</div>
+export default () => (
+  <App>
+    <div>Home Page</div>
+  </App>
+)

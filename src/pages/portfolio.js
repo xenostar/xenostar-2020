@@ -1,8 +1,9 @@
 import React from 'react'
-import { Page } from 'components'
+import { Page, SEO } from 'components'
 
 export default () => (
   <Page>
+    <SEO title="Portfolio" />
     <h1>Portfolio</h1>
     <p>
       Est elit id cillum labore laboris aliqua magna amet fugiat proident nisi

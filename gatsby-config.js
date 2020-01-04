@@ -8,7 +8,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Xenostar`,
-    subtitle: `Studios`,
+    subTitle: `Studios`,
     description: `Xenostar.net is the official website of Bryan Leewood.`,
     author: `Bryan Leewood`,
     siteUrl: `https://xenostar-2020.netlify.com/`,

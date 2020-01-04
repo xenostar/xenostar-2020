@@ -31,10 +31,9 @@ const StyledNav = styled.nav`
     font-weight: 700;
     margin-left: 20px;
     padding: 8px;
-    text-transform: uppercase;
-    text-transform: uppercase;
     text-align: center;
-    transition: all 2s ease;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
     width: 130px;
   }
   a:first-child {

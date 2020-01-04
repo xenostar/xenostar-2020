@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Header, Nav, Footer, NormalizeStyle, ResetStyle, GlobalStyle } from 'components'
+import { Header, Nav, Footer, NormalizeStyle, ResetStyle, GlobalStyle, SEO } from 'components'
 
 const Layout = ({ children }) => (
   <StyledLayout>
-    <NormalizeStyle />
-    <ResetStyle />
-    <GlobalStyle />
-    <Header />
-    <Nav />
+    <SEO/>
+    <NormalizeStyle/>
+    <ResetStyle/>
+    <GlobalStyle/>
+    <Header/>
+    <Nav/>
     {children}
-    <Footer />
+    <Footer/>
   </StyledLayout>
 )
 

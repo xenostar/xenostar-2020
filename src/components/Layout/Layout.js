@@ -1,24 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Header, Nav, Page, Footer, NormalizeStyle, ResetStyle, GlobalStyle } from 'components'
+import { Header, Nav, Footer, NormalizeStyle, ResetStyle, GlobalStyle } from 'components'
 
-
-export const Layout = ({ children }) => (
+const Layout = ({ children }) => (
   <StyledLayout>
-    <NormalizeStyle/>
-    <ResetStyle/>
-    <GlobalStyle/>
-    <Header/>
-    <Nav/>
-    <Page>
-      {children}
-    </Page>
-    <Footer/>
+    <NormalizeStyle />
+    <ResetStyle />
+    <GlobalStyle />
+    <Header />
+    <Nav />
+    {children}
+    <Footer />
   </StyledLayout>
 )
 
 const StyledLayout = styled.div`
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -30,7 +27,6 @@ const StyledLayout = styled.div`
     min-width: 100%;
     padding: 1.875rem 0.9375rem 5.3125rem;
   }
-  /* &:hover {
-    background: red;
-  } */
 `
+
+export default Layout

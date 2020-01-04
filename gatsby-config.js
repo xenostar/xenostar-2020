@@ -15,9 +15,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-alias-imports`,
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    // },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout/Layout`),
+      },
+    },
     {
       resolve: `gatsby-source-datocms`,
       options: {

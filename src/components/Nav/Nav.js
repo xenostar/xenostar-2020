@@ -2,13 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-
 export const Nav = () => (
   <StyledNav>
-    <Link activeClassName="active" to="/">Home</Link>
-    <Link activeClassName="active" to="/about">About</Link>
-    <Link activeClassName="active" to="/portfolio">Portfolio</Link>
-    <Link activeClassName="active" to="/blog">Blog</Link>
+    <Link activeClassName="active" to="/">
+      Home
+    </Link>
+    <Link activeClassName="active" to="/about">
+      About
+    </Link>
+    <Link activeClassName="active" to="/portfolio">
+      Portfolio
+    </Link>
+    <Link activeClassName="active" to="/blog">
+      Blog
+    </Link>
   </StyledNav>
 )
 
@@ -27,6 +34,7 @@ const StyledNav = styled.nav`
     text-transform: uppercase;
     text-transform: uppercase;
     text-align: center;
+    transition: all 2s ease;
     width: 130px;
   }
   a:first-child {
@@ -36,6 +44,5 @@ const StyledNav = styled.nav`
   a:hover {
     background: #000;
     color: #fff;
-    transition: all 0.2s ease;
   }
 `

@@ -1,6 +1,10 @@
 import React from 'react'
-
+import styled from 'styled-components'
 
 export const Footer = () => (
-  <div>Footer</div>
+  <StyledFooter>Footer</StyledFooter>
 )
+
+const StyledFooter = styled.footer`
+  display: flex;
+`

@@ -8,7 +8,7 @@ export const Page = ({ children }) => (
   </StyledPage>
 )
 
-const StyledPage = styled.div`
+const StyledPage = styled.main`
   clear: both;
 
   p a,

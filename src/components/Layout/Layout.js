@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Header, Nav, Footer, NormalizeStyle, ResetStyle, GlobalStyle, SEO } from 'components'
+import { Header, NavMain, Footer, NormalizeStyle, ResetStyle, GlobalStyle, SEO } from 'components'
 
 const Layout = ({ children }) => (
   <StyledLayout>
@@ -8,8 +8,8 @@ const Layout = ({ children }) => (
     <NormalizeStyle/>
     <ResetStyle/>
     <GlobalStyle/>
+    <NavMain/>
     <Header/>
-    <Nav/>
     {children}
     <Footer/>
   </StyledLayout>
@@ -23,6 +23,7 @@ const StyledLayout = styled.div`
   max-width: 90vw;
   min-height: 100vh;
   padding: 1.875rem;
+  padding-top: 0;
   position: relative;
   @media only screen and (max-width: 62.5rem) {
     min-width: 100%;

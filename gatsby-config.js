@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/Layout/Layout`),
+        component: require.resolve(`src/components/Layout/Layout`),
       },
     },
     {
@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `XENOSTAR 2020`,
-        short_name: `XENOSTAR 2020`,
+        name: `Xenostar Studios`,
+        short_name: `Xenostar Studios`,
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,

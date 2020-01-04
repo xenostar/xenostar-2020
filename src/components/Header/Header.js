@@ -43,12 +43,13 @@ const StyledHeader = styled.header`
     user-select: none;
   }
   span {
-    color: #fff;
+    color: #ED5429;
     /* text-shadow: 0 0 300px rgba(0,0,0,0.5); */
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /* text-shadow: -1px 0 #ED5429, 0 1px #ED5429, 1px 0 #ED5429, 0 -1px #ED5429; */
     transition: all 0.3s ease;
   }
   &:hover span {
-    color: #000;
+    color: #fff;
+    text-shadow: -1px 0 #ED5429, 0 1px #ED5429, 1px 0 #ED5429, 0 -1px #ED5429;
   }
 `

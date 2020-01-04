@@ -1,9 +1,10 @@
 import React from 'react'
-import { App } from 'components'
+import { Layout } from 'components'
 
 
 export default () => (
-  <App>
-    <div>Home page</div>
-  </App>
+  <Layout>
+    <h1>Home</h1>
+    <p>Et ea non ipsum cupidatat labore nulla sint sunt culpa. Dolore velit minim ad culpa id. Non esse deserunt ad culpa ipsum excepteur aute dolor eiusmod ea ex et proident.</p>
+  </Layout>
 )

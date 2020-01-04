@@ -4,13 +4,14 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   html {
     color: #444;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     font-style: normal;
     font-weight: 400;
   }
 
   body {
+    background-color: #fff;
     overflow-y: scroll;
   }
 

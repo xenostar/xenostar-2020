@@ -7,12 +7,17 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `XENOSTAR 2020`,
+    title: `Xenostar`,
+    subtitle: `Studios`,
     description: `Xenostar.net is the official website of Bryan Leewood.`,
     author: `Bryan Leewood`,
     siteUrl: `https://xenostar-2020.netlify.com/`,
   },
   plugins: [
+    `gatsby-alias-imports`,
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    // },
     {
       resolve: `gatsby-source-datocms`,
       options: {
@@ -30,9 +35,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Lato`,
+            family: `Open Sans`,
             subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `900`]
+            variants: [`400`, `400i`, `700`, `700i`, `900`, `900i`]
+          },
+          {
+            family: `Permanent Marker`,
+            subsets: [`latin`],
+            variants: [`400`]
           },
         ],
       },
@@ -52,7 +62,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-alias-imports`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`
   ]

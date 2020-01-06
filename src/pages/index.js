@@ -3,7 +3,7 @@ import { Header, Page, Section, Row } from 'components'
 
 export default () => (
   <>
-    <Header/>
+    <Header />
     <Page>
       <Section>
         <Row>

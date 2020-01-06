@@ -4,13 +4,13 @@ import { Nav, Footer, NormalizeStyle, ResetStyle, GlobalStyle, SEO } from 'compo
 
 const Layout = ({ children: pages }) => (
   <StyledLayout>
-    <SEO title=""/>
-    <NormalizeStyle/>
-    <ResetStyle/>
-    <GlobalStyle/>
-    <Nav/>
+    <SEO title="" />
+    <NormalizeStyle />
+    <ResetStyle />
+    <GlobalStyle />
+    <Nav />
     {pages}
-    <Footer/>
+    <Footer />
   </StyledLayout>
 )
 

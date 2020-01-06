@@ -3,7 +3,7 @@ import { SubHeader, Page, SEO, Section, Row } from 'components'
 
 export default () => (
   <>
-    <SEO title="Blog"/>
+    <SEO title="Blog" />
     <SubHeader page="blog" />
     <Page>
       <Section>

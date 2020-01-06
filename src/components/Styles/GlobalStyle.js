@@ -4,7 +4,6 @@ import { createGlobalStyle } from 'styled-components'
 // import BackgroundTop from 'assets/bg_top.png'
 // import BackgroundBot from 'assets/bg_bot.png'
 
-
 export const GlobalStyle = createGlobalStyle`
   html {
     color: #222;
@@ -47,5 +46,9 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 3px;
     color: #fff;
     padding: 5px 3px;
+  }
+
+  .gatsby-plugin-transition-link-portal {
+    cursor: pointer;
   }
 `

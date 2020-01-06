@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Page = ({ children }) => (
+export const Page = ({ children: content }) => (
   <StyledPage>
-    {children}
+    {content}
   </StyledPage>
 )
 

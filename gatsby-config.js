@@ -15,10 +15,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-alias-imports`,
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve(`./src/components/Layout/Layout`),
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-layout`,
+      resolve: 'gatsby-plugin-transition-link',
       options: {
-        component: require.resolve(`./src/components/Layout/Layout`),
+        layout: require.resolve(`./src/components/Layout/Layout`),
       },
     },
     {
@@ -71,6 +77,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    /* Must be after gatsby-plugin-manifest */
     `gatsby-plugin-offline`
   ]
 }

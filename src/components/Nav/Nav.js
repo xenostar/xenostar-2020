@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row as Row_ } from 'components'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const Nav = () => (
   <StyledNav>
     <Row>
-      <Link activeClassName="active" to="/">
+      <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/">
         home
-      </Link>
-      <Link activeClassName="active" to="/about">
+      </AniLink>
+      <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/about">
         about
-      </Link>
-      <Link activeClassName="active" to="/portfolio">
+      </AniLink>
+      <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/portfolio">
         portfolio
-      </Link>
-      <Link activeClassName="active" to="/blog">
+      </AniLink>
+      <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/blog">
         blog
-      </Link>
+      </AniLink>
     </Row>
   </StyledNav>
 )

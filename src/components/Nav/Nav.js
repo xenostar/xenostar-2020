@@ -7,23 +7,24 @@ export const Nav = () => (
   <StyledNav>
     <Row>
       <Link activeClassName="active" to="/">
-        Home
+        home
       </Link>
       <Link activeClassName="active" to="/about">
-        About
+        about
       </Link>
       <Link activeClassName="active" to="/portfolio">
-        Portfolio
+        portfolio
       </Link>
       <Link activeClassName="active" to="/blog">
-        Blog
+        blog
       </Link>
     </Row>
   </StyledNav>
 )
 
 const StyledNav = styled.nav`
-  background: rgba(#90c7a8, 0.25);
+  border-top: 4px solid rgba(144, 199, 168, 1);
+  background: rgba(144, 199, 168, 0.075);
   display: flex;
   justify-content: center;
   padding: 0 30px;
@@ -31,8 +32,9 @@ const StyledNav = styled.nav`
 
   a {
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.25em;
+    /* text-transform: uppercase; */
     margin-left: 30px;
     line-height: 60px;
     transition: 0.3s all;

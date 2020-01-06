@@ -1,17 +1,25 @@
 import React from 'react'
-import { Page, SEO } from 'components'
+import { SubHeader, Page, SEO, Section, Row } from 'components'
 
 export default () => (
-  <Page>
+  <>
     <SEO title="Portfolio" />
-    <h1>Portfolio</h1>
-    <p>
-      Est elit id cillum labore laboris aliqua magna amet fugiat proident nisi
-      elit. Non nulla duis sit occaecat laborum exercitation ut officia. Dolore
-      laboris exercitation eu tempor laboris nisi anim irure voluptate est
-      exercitation ad veniam. Est elit incididunt eu excepteur proident proident
-      velit veniam. Aute proident duis adipisicing non et proident excepteur
-      excepteur et id nostrud sint.
-    </p>
-  </Page>
+    <SubHeader page="portfolio" />
+    <Page>
+      <Section>
+        <Row>
+          <p>
+            Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim qui
+            Lorem ea sunt exercitation sunt Lorem sit do. Est laborum nostrud
+            dolor sit cupidatat nisi ut incididunt. Qui aliqua ea cupidatat
+            deserunt aute anim velit culpa id cupidatat. Esse culpa officia nisi
+            commodo duis excepteur minim dolore deserunt et. Est eiusmod id ut eu
+            qui ex quis magna incididunt enim officia pariatur consectetur. Amet
+            nisi do nisi tempor dolore labore dolore sit sit laborum dolore
+            commodo commodo veniam.
+          </p>
+        </Row>
+      </Section>
+    </Page>
+  </>
 )

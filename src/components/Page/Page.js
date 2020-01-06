@@ -1,10 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Page = ({ children }) => <StyledPage>{children}</StyledPage>
+export const Page = ({ children }) => (
+  <StyledPage>
+    {children}
+  </StyledPage>
+)
 
 const StyledPage = styled.main`
-  clear: both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   p a,
   table a {
@@ -34,18 +40,18 @@ const StyledPage = styled.main`
     font-size: 1em;
   }
 
-  &.content h1,
-  &.content h2,
-  &.content h3,
-  &.content h4,
-  &.content h5,
-  &.content h6,
-  &.content p,
-  &.content ol,
-  &.content ul {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
     margin-bottom: 1.25rem;
   }
-  &.content *:last-child {
+  *:last-child {
     margin-bottom: 0;
   }
 `

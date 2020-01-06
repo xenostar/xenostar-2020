@@ -1,9 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
+// import BackgroundImage from 'assets/papyrus.png'
+// import BackgroundImage from 'assets/bg.png'
+// import BackgroundTop from 'assets/bg_top.png'
+// import BackgroundBot from 'assets/bg_bot.png'
 
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    color: #444;
+    color: #222;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     font-style: normal;
@@ -11,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #f1f1f1;
+    background-color: #fff;
     overflow-y: scroll;
   }
 
@@ -20,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #ED5429;
+    color: #90c7a8;
     text-decoration: none;
   }
 

@@ -25,9 +25,11 @@ export const Nav = () => (
 const StyledNav = styled.nav`
   border-top: 4px solid rgba(144, 199, 168, 1);
   background: rgba(144, 199, 168, 0.075);
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   padding: 0 30px;
+  position: fixed;
   user-select: none;
 
   a {
@@ -47,7 +49,6 @@ const StyledNav = styled.nav`
     color: #222;
   }
 `
-
 const Row = styled(Row_)`
   flex-direction: row;
 `

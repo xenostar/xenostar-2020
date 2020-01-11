@@ -14,25 +14,34 @@ module.exports = {
     siteUrl: `https://xenostar-2020.netlify.com/`,
   },
   plugins: [
-    `gatsby-alias-imports`,
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: require.resolve(`./src/components/Layout/Layout`),
-    //   },
-    // },
-    {
-      resolve: 'gatsby-plugin-transition-link',
-      options: {
-        layout: require.resolve(`./src/components/Layout/Layout`),
-      },
-    },
+    /**
+     *
+     * Source Plugins
+     *
+     */
     {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+
+    /**
+     *
+     * Functionality Plugins
+     *
+     */
+    `gatsby-alias-imports`,
+    `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -49,7 +58,7 @@ module.exports = {
             variants: [`400`, `400i`, `700`, `700i`, `900`, `900i`]
           },
           {
-            family: `Permanent Marker`,
+            family: `Bebas Neue`,
             subsets: [`latin`],
             variants: [`400`]
           },
@@ -61,6 +70,26 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve(`./src/components/Layout/Layout`),
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve(`./src/components/Layout/Layout`),
+    //   },
+    // },
+
+    /**
+     *
+     * SEO Plugins
+     *
+     */
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -75,9 +104,6 @@ module.exports = {
         icon: `src/assets/icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    /* Must be after gatsby-plugin-manifest */
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`, // MUST be after gatsby-plugin-manifest
   ]
 }

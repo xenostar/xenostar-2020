@@ -1,20 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
-// import BackgroundImage from 'assets/papyrus.png'
-// import BackgroundImage from 'assets/bg.png'
-// import BackgroundTop from 'assets/bg_top.png'
-// import BackgroundBot from 'assets/bg_bot.png'
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    color: #222;
-    font-family: 'Open Sans', sans-serif;
+    color: ${props => props.theme.colors.secondary};
+    font-family: ${props => props.theme.fonts.openSans};
     font-size: 1em;
     font-style: normal;
-    font-weight: 400;
+    font-weight: ${props => props.theme.fonts.defaultWeight};
   }
 
   body {
-    background-color: #fff;
+    background-color: ${props => props.theme.colors.background};
     overflow-y: scroll;
   }
 
@@ -22,15 +18,22 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
+  h1 { font-size: 3em; }
+  h2 { font-size: 2.5em; }
+  h3 { font-size: 2em; }
+  h4 { font-size: 1.5em; }
+  h5 { font-size: 1.25em; }
+  h6 { font-size: 1em; }
+
   a {
-    color: #90c7a8;
+    color: ${props => props.theme.colors.primary};
     text-decoration: none;
   }
 
   p, ol, ul {
-    font-size: 1.25em;
-    font-weight: 300;
-    line-height: 1.5;
+    font-size: ${props => props.theme.fonts.defaultSize};
+    font-weight: ${props => props.theme.fonts.defaultWeight};
+    line-height: ${props => props.theme.fonts.lineHeight};
   }
 
   ul {
@@ -42,10 +45,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    background-color: #ED5429;
-    border-radius: 3px;
-    color: #fff;
-    padding: 5px 3px;
+    background-color: ${props => props.theme.colors.secondary};
+    border-radius: ${props => props.theme.layout.borderRadius};
+    color: ${props => props.theme.colors.white};
+    padding: ${props => props.theme.layout.padding};
   }
 
   .gatsby-plugin-transition-link-portal {

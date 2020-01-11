@@ -13,12 +13,11 @@ export const Header = () => (
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding: 60px 30px;
+  padding: ${props => props.theme.layout.paddingBig} ${props => props.theme.layout.padding};
 
   h1 {
     color: #222;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 5em;
     line-height: 1;
     user-select: none;
   }

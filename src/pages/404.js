@@ -1,16 +1,15 @@
 import React from 'react'
-import { SubHeader, Page, SEO, Section, Row } from 'components'
+import { Page, SEO, SubHeader, Section, Row, Footer } from 'components'
 
 export default () => (
-  <>
+  <Page>
     <SEO title="404" />
     <SubHeader page="404" />
-    <Page>
-      <Section>
-        <Row>
-          <p>Page not found!</p>
-        </Row>
-      </Section>
-    </Page>
-  </>
+    <Section>
+      <Row>
+        <p>Page not found!</p>
+      </Row>
+    </Section>
+    <Footer />
+  </Page>
 )

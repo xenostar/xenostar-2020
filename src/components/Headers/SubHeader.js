@@ -13,7 +13,7 @@ export const SubHeader = ({ siteAbbrv = "xs", page = "page" }) => (
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding: 60px 30px;
+  padding: ${props => props.theme.layout.paddingBig} ${props => props.theme.layout.padding};
 
   h1 {
     color: #222;

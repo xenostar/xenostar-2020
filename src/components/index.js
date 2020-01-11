@@ -1,11 +1,16 @@
+export * from './Section/Section'
 export * from './Row/Row'
-export * from './Focus/Focus'
-export * from './Footer/Footer'
+export * from './Col/Col'
+
 export * from './Headers/Header'
 export * from './Headers/SubHeader'
+export * from './Footer/Footer'
+
+export * from './Logo/Logo'
+export * from './TopBar/TopBar'
 export * from './Nav/Nav'
+
 export * from './Page/Page'
-export * from './Section/Section'
 export * from './SEO/SEO'
 export * from './Styles/GlobalStyle'
 export * from './Styles/NormalizeStyle'

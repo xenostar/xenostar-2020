@@ -14,5 +14,5 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   margin-top: auto;
-  padding: 60px 30px;
+  padding: ${props => props.theme.layout.paddingBig} ${props => props.theme.layout.padding};
 `

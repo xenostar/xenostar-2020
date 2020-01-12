@@ -55,7 +55,7 @@ module.exports = {
           {
             family: `Open Sans`,
             subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `700i`, `900`, `900i`]
+            variants: [`400`, `400i`, `700`, `700i`, `800`, `800i`]
           },
           {
             family: `Bebas Neue`,
@@ -65,7 +65,7 @@ module.exports = {
           {
             family: `Ubuntu`,
             subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `700i`, `900`, `900i`]
+            variants: [`400`, `400i`, `700`, `700i`, `800`, `800i`]
           },
         ],
       },

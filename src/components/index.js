@@ -7,7 +7,10 @@ export * from './Headers/SubHeader'
 export * from './Footer/Footer'
 
 export * from './Logo/Logo'
+
+export * from './TopBar/TopBarBurger'
 export * from './TopBar/TopBar'
+
 export * from './Nav/Nav'
 
 export * from './Page/Page'

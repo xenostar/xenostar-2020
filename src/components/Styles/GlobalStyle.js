@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   h6 { font-size: 1em; }
 
   a {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
     text-decoration: none;
   }
 

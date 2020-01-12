@@ -21,6 +21,7 @@ const StyledLogo = styled(AniLink)`
   font-size: 3.75em; /* 60px */
   height: 5rem; /* 80px */
   line-height: 1;
+  pointer-events: auto;
   transition: ${props => props.theme.transitions.default};
   width: 5rem; /* 80px */
 

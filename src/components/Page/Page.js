@@ -12,14 +12,21 @@ const StyledPage = styled.main`
   flex-direction: column;
   min-height: 100vh;
 
-  p a,
-  table a {
-    border-bottom: 2px solid ${props => props.theme.colors.transparent};
-    transition: ${props => props.theme.transitions.default};
+  * a {
+    background-image: linear-gradient(
+      ${props => props.theme.colors.lightBlue},
+      ${props => props.theme.colors.lightBlue}
+    );
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    border-radius: 1px;
+    font-weight: 700;
+    padding: 0 2px;
+    transition: ${props => props.theme.transitions.fast};
   }
-  p a:hover,
-  table a:hover {
-    border-bottom: 2px solid ${props => props.theme.colors.primary};
+  * a:hover {
+    background-size: 100% 100%;
   }
 
   h1, h2, h3, h4, h5, h6,

@@ -28,14 +28,14 @@ const AniLink = styled(AniLink_)`
   transition: ${props => props.theme.transitions.default};
   width: 5rem; /* 80px */
 
+  :hover {
+    opacity: 0.75;
+  }
+
   div {
     padding-top: 0.4375rem; /* 7px */
   }
   span {
     color: ${props => props.theme.colors.primary};
-  }
-
-  :hover {
-    opacity: 0.75;
   }
 `

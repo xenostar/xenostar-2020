@@ -22,8 +22,8 @@ export const GlobalStyle = createGlobalStyle`
   h2 { font-size: 2.5em; }
   h3 { font-size: 2em; }
   h4 { font-size: 1.5em; }
-  h5 { font-size: 1.25em; }
-  h6 { font-size: 1em; }
+  h5 { font-size: 1.25em; font-weight: 900; text-transform: uppercase; }
+  h6 { font-size: 1em; font-weight: 900; text-transform: uppercase; }
 
   a {
     color: ${props => props.theme.colors.secondary};

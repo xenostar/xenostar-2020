@@ -1,16 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
 
 export const Logo = () => (
-  <StyledLogo cover direction="left" bg="#90c7a8" to="/">
-    <div>
-      X<span>S</span>
-    </div>
+  <StyledLogo>
+    <AniLink cover direction="left" bg="#90c7a8" to="/">
+      <div>
+        X<span>S</span>
+      </div>
+    </AniLink>
   </StyledLogo>
 )
 
-const StyledLogo = styled(AniLink)`
+const StyledLogo = styled.div``
+const AniLink = styled(AniLink_)`
   background-color: #232121;
   border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.white};

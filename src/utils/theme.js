@@ -14,7 +14,6 @@ export const theme = {
     ubuntu: `'Ubuntu', sans-serif`,
     lineHeight: '1.5',
     defaultSize: '1.25em',
-    // defaultSize: '40px',
     defaultWeight: '400',
   },
   transitions: {
@@ -25,8 +24,8 @@ export const theme = {
     borderRadius: '0.3125rem', // 5px
     maxWidth: '68.75rem', // 1100px
     padding: '1.875rem', // 30px
-    paddingBig: '3.75rem', // 30px
+    paddingBig: '3.75rem', // 60px
     margin: '1.875rem', // 30px
-    marginBig: '3.75rem', // 30px
+    marginBig: '3.75rem', // 60px
   }
 }

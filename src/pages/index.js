@@ -1,42 +1,12 @@
 import React from 'react'
-import { Page, Header, Section, Row, Footer } from 'components'
+import { Page, Section, Row, Footer } from 'components'
 
 export default () => (
   <Page>
-    <Header />
     <Section>
       <Row>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-        <h4>Header 4</h4>
-        <h5>Header 5</h5>
-        <h6>Header 6</h6>
-        <p>
-          Et ea non <a href="https://www.google.com/">ipsum</a> cupidatat labore
-          nulla sint sunt culpa. Dolore velit minim ad culpa id. Non esse
-          deserunt ad culpa ipsum excepteur aute dolor eiusmod ea ex et
-          proident.
-        </p>
-        <ul>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>List Item 3</li>
-        </ul>
-        <p>
-          Et ea non <a href="https://www.google.com/">ipsum</a> cupidatat labore
-          nulla sint sunt culpa. Dolore velit minim ad culpa id. Non esse
-          deserunt ad culpa ipsum excepteur aute dolor eiusmod ea ex et
-          proident.
-        </p>
-        <code>
-          function(test)
-        </code>
-        <ol>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>List Item 3</li>
-        </ol>
+        <h1>My name is Bryan Leewood and this is my personal portfolio. I have been designing and developing web pages for nearly ten years. Creating beautiful, elegant web applications is my passion. Browse my portfolio and learn more about who I am and what I do.</h1>
+        <p>Quis proident sit laboris in laboris aliquip consequat ad ad ex nostrud et commodo magna. Amet cillum incididunt anim laborum enim. Duis tempor ipsum cillum non. Deserunt consequat ut exercitation in dolore. Lorem cillum dolore aute excepteur fugiat aliqua sunt sit tempor ea eu.</p>
       </Row>
     </Section>
     <Footer />

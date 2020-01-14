@@ -12,6 +12,7 @@ export const TopBar = () => (
 )
 
 const StyledTopBar = styled.nav`
+  border-top: 5px solid ${props => props.theme.colors.primary};
   display: flex;
   justify-content: center;
   padding: ${props => props.theme.layout.padding};

@@ -11,7 +11,7 @@ import {
   Nav,
 } from 'components'
 
-const Layout = ({ children: pages }) => (
+const Layout = ({ children, location }) => (
   <StoreProvider store={store}>
     <ThemeProvider theme={theme}>
       <StyledLayout>
@@ -19,9 +19,9 @@ const Layout = ({ children: pages }) => (
         <NormalizeStyle />
         <ResetStyle />
         <GlobalStyle />
-        <TopBar />
+        <TopBar location={location} />
         <Nav />
-        {pages}
+        {children}
       </StyledLayout>
     </ThemeProvider>
   </StoreProvider>

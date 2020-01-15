@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStoreState } from 'easy-peasy'
-import { Row as Row_ } from 'components'
+import { Row } from 'components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const Nav = () => {
@@ -9,6 +9,7 @@ export const Nav = () => {
 
   return (
     <StyledNav open={openStatus}>
+      <Row>
         <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/">
           Home
         </AniLink>
@@ -24,6 +25,7 @@ export const Nav = () => {
         <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/components">
           Components
         </AniLink>
+      </Row>
     </StyledNav>
   )
 }
@@ -60,7 +62,4 @@ const StyledNav = styled.nav`
   a:hover {
     color: #222;
   }
-`
-const Row = styled(Row_)`
-  flex-direction: row;
 `

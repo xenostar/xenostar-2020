@@ -1,18 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
 
-export const Logo = () => (
-  <StyledLogo>
-    <AniLink cover direction="left" bg="#90c7a8" to="/">
-      <div>
-        X<span>S</span>
-      </div>
-    </AniLink>
-  </StyledLogo>
-)
+export const Logo = ({ location }) => {
+  const [currentPage, setCurrentPage] = useState(location)
+  // const currentPage = page.replace(/\//g, '')
+  // console.log('running')
 
-const StyledLogo = styled.div``
+  useEffect(() => {
+    let formattedPage = location.replace(/\//g, '')
+    setCurrentPage(formattedPage)
+  }, [location])
+
+  return (
+    <StyledLogo>
+      <AniLink cover direction="left" bg="#90c7a8" to="/">
+        <div>
+          X<span>S</span>
+        </div>
+      </AniLink>
+      {currentPage}
+    </StyledLogo>
+  )
+}
+
+const StyledLogo = styled.div`
+  display: inline-flex;
+  align-items: center;
+`
 const AniLink = styled(AniLink_)`
   background-color: #232121;
   border-radius: ${props => props.theme.layout.borderRadius};

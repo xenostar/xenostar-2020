@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row as Row_, Logo, TopBarBurger } from 'components'
 
-export const TopBar = ({ location: { pathname } }) => (
+export const TopBar = () => (
   <StyledTopBar>
     <Row>
-      <Logo location={pathname} />
+      <Logo />
       <TopBarBurger />
     </Row>
   </StyledTopBar>

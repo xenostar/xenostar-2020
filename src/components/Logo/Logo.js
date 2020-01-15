@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { useStoreState } from 'easy-peasy'
 import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
 
-export const Logo = ({ location }) => {
-  const [currentPage, setCurrentPage] = useState(location)
-  // const currentPage = page.replace(/\//g, '')
-  // console.log('running')
-
-  useEffect(() => {
-    let formattedPage = location.replace(/\//g, '')
-    setCurrentPage(formattedPage)
-  }, [location])
+export const Logo = () => {
+  const currentPage = useStoreState(state => state.page.currentPage)
 
   return (
     <StyledLogo>

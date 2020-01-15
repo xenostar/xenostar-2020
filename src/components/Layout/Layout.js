@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import { StoreProvider } from 'easy-peasy'
 import { store, theme } from 'utils'
 import {
+  StoreSync,
   SEO,
   NormalizeStyle,
   ResetStyle,
@@ -15,11 +16,12 @@ const Layout = ({ children, location }) => (
   <StoreProvider store={store}>
     <ThemeProvider theme={theme}>
       <StyledLayout>
+        <StoreSync location={location} />
         <SEO title="" />
         <NormalizeStyle />
         <ResetStyle />
         <GlobalStyle />
-        <TopBar location={location} />
+        <TopBar />
         <Nav />
         {children}
       </StyledLayout>

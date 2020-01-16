@@ -4,8 +4,8 @@ import { useStoreActions } from 'easy-peasy'
 import { FiMenu as FiMenu_ } from 'react-icons/fi'
 
 export const TopBarBurger = () => {
-  const setOpenStatus = useStoreActions(actions => actions.nav.setOpenStatus)
-  const handleClick = () => setOpenStatus()
+  const openNav = useStoreActions(actions => actions.nav.openNav)
+  const handleClick = () => openNav()
 
   return (
     <StyledTopBarBurger onClick={handleClick}>

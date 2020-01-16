@@ -1,34 +1,62 @@
-import React from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { useStoreState } from 'easy-peasy'
-import { Row } from 'components'
+import { useStoreActions, useStoreState } from 'easy-peasy'
+import { Row, Col } from 'components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-export const Nav = () => {
-  const openStatus = useStoreState(state => state.nav.openStatus)
+export const Nav = memo(() => {
+  const currentPage = useStoreState(state => state.page.currentPage)
+  const isNavOpen = useStoreState(state => state.nav.isNavOpen)
+  const closeNav = useStoreActions(actions => actions.nav.closeNav)
+  const node = useRef()
+
+  useEffect(() => {
+    closeNav()
+  }, [currentPage, closeNav])
+
+  useEffect(() => {
+    const handleOutsideClick = e => {
+      if (node.current.contains(e.target)) {
+        return
+      }
+      closeNav()
+    }
+
+    if (isNavOpen) {
+      document.addEventListener('mousedown', handleOutsideClick)
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick)
+    }
+  }, [isNavOpen, closeNav])
 
   return (
-    <StyledNav open={openStatus}>
+    <StyledNav open={isNavOpen}>
       <Row>
-        <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/">
-          Home
-        </AniLink>
-        <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/about">
-          About
-        </AniLink>
-        <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/portfolio">
-          Portfolio
-        </AniLink>
-        <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/blog">
-          Blog
-        </AniLink>
-        <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/components">
-          Components
-        </AniLink>
+        <Col ref={node}>
+          <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/">
+            Home
+          </AniLink>
+          <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/about">
+            About
+          </AniLink>
+          <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/portfolio">
+            Portfolio
+          </AniLink>
+          <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/blog">
+            Blog
+          </AniLink>
+          <AniLink cover direction="left" bg="#90c7a8" activeClassName="active" to="/components">
+            Components
+          </AniLink>
+        </Col>
       </Row>
     </StyledNav>
   )
-}
+})
 
 const StyledNav = styled.nav`
   border-top: 4px solid rgba(144, 199, 168, 1);

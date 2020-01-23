@@ -75,7 +75,6 @@ const StyledNav = styled.nav`
   transform: ${props => props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: 200;
-
   a {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 900;

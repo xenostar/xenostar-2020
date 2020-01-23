@@ -1,10 +1,9 @@
 import React from 'react'
-import { SEO, Page, SubHeader, Section, Row, Col, Footer } from 'components'
+import { SEO, Page, Section, Row, Col, Footer } from 'components'
 
 export default () => (
   <Page>
     <SEO title="Components" />
-    <SubHeader page="components" />
     <Section>
       <Row>
         <Col>

@@ -5,9 +5,9 @@ export * from './Row/Row'
 export * from './Col/Col'
 
 export * from './Headers/Header'
-export * from './Headers/SubHeader'
 export * from './Footer/Footer'
 
+export * from './PageName/PageName'
 export * from './Logo/Logo'
 
 export * from './TopBar/TopBarBurger'

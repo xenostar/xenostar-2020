@@ -1,12 +1,12 @@
 export const theme = {
   colors: {
-    primary: 'rgb(144,199,168,1)', // #90C7A8
-    secondary: 'rgb(34,34,34,1)', // #222222
-    lightBlue: 'rgba(199,227,211,1)', // #C7E3D3
-    background: 'rgba(255,255,255,1)', // #FFF
-    transparent: 'rgba(0,0,0,0)',
-    white: 'rgba(255,255,255,1)',
-    black: 'rgba(0,0,0,1)',
+    primary: 'rgb(144, 199, 168, 1)', // #90c7a8
+    secondary: 'rgb(34, 34, 34, 1)', // #222
+    lightBlue: 'rgba(199, 227, 211, 1)', // #C7e3d3
+    background: 'rgba(255, 255, 255, 1)', // #fff
+    transparent: 'rgba(0, 0, 0, 0)', // Transparent
+    white: 'rgba(255, 255, 255, 1)', // #fff
+    black: 'rgba(0, 0, 0, 1)', // #000
   },
   fonts: {
     bebasNeue: `'Bebas Neue', cursive`,
@@ -14,6 +14,7 @@ export const theme = {
     ubuntu: `'Ubuntu', sans-serif`,
     lineHeight: '1.5',
     defaultSize: '1.25em',
+    defaultStyle: 'normal',
     defaultWeight: '400',
   },
   transitions: {

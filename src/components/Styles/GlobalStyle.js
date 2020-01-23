@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.secondary};
     font-family: ${props => props.theme.fonts.openSans};
     font-size: 1em;
-    font-style: normal;
+    font-style: ${props => props.theme.fonts.defaultStyle};
     font-weight: ${props => props.theme.fonts.defaultWeight};
   }
 
@@ -22,8 +22,8 @@ export const GlobalStyle = createGlobalStyle`
   h2 { font-size: 2.5em; }
   h3 { font-size: 2em; }
   h4 { font-size: 1.5em; }
-  h5 { font-size: 1.25em; font-weight: 900; text-transform: uppercase; }
-  h6 { font-size: 1em; font-weight: 900; text-transform: uppercase; }
+  h5 { font-size: 1.25em; font-weight: 800; text-transform: uppercase; }
+  h6 { font-size: 1em; font-weight: 800; text-transform: uppercase; }
 
   a {
     color: ${props => props.theme.colors.secondary};

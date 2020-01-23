@@ -13,19 +13,21 @@ export const Header = () => (
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding: ${props => props.theme.layout.paddingBig} ${props => props.theme.layout.padding};
-
+  padding-top: ${props => props.theme.layout.paddingBig};
+  padding-right: ${props => props.theme.layout.padding};
+  padding-bottom: ${props => props.theme.layout.paddingBig};
+  padding-left: ${props => props.theme.layout.padding};
   h1 {
-    color: #222;
+    color: ${props => props.theme.colors.secondary};
     font-family: 'Ubuntu', sans-serif;
     line-height: 1;
     user-select: none;
   }
   span {
-    color: #90c7a8;
-    transition: all 0.3s ease;
+    color: ${props => props.theme.colors.primary};
+    transition: ${props => props.theme.transitions.default};
   }
   &:hover span {
-    color: #90c7a8;
+    color: ${props => props.theme.colors.primary};
   }
 `

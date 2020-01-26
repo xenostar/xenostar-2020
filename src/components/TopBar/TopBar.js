@@ -11,7 +11,7 @@ export const TopBar = () => (
   </StyledTopBar>
 )
 
-const StyledTopBar = styled.nav`
+const StyledTopBar = styled.div`
   border-top: 5px solid ${props => props.theme.colors.primary};
   display: flex;
   justify-content: center;

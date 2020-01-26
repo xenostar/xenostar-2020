@@ -13,6 +13,8 @@ export const theme = {
     openSans: `'Open Sans', sans-serif`,
     ubuntu: `'Ubuntu', sans-serif`,
     lineHeight: '1.5',
+    bold: '700',
+    bold800: '800',
     defaultSize: '1.25em',
     defaultStyle: 'normal',
     defaultWeight: '400',

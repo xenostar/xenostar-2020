@@ -3,13 +3,12 @@ import styled from 'styled-components'
 import { useStoreActions } from 'easy-peasy'
 import { IoMdClose as IoMdClose_ } from 'react-icons/io'
 
-export const NavigationClose = () => {
+export const NavClose = props => {
   const closeNav = useStoreActions(actions => actions.nav.closeNav)
-  const handleClick = () => closeNav()
 
   return (
-    <StyledNavClose>
-      <IoMdClose onClick={handleClick} />
+    <StyledNavClose {...props}>
+      <IoMdClose onClick={closeNav} />
     </StyledNavClose>
   )
 }
@@ -17,22 +16,13 @@ export const NavigationClose = () => {
 const StyledNavClose = styled.div`
   display: flex;
   justify-content: right;
-  padding-top: ${props => props.theme.layout.paddingBig};
-  padding-right: ${props => props.theme.layout.paddingBig};
-  padding-bottom: 6.25rem; /* 100px */
-
-  @media only screen and (max-width: 26.875rem) { /* 430px */
-    padding-bottom: ${props => props.theme.layout.paddingBig};
-  }
 `
 const IoMdClose = styled(IoMdClose_)`
-  color: #fff;
+  color: ${props => props.theme.colors.white};
   cursor: pointer;
-  font-size: 26px;
-  opacity: 1;
+  font-size: 2.25rem;
   transition: ${props => props.theme.transitions.default};
-
   :hover {
-    opacity: 0.75;
+    color: ${props => props.theme.colors.primary};
   }
 `

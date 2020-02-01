@@ -20,7 +20,7 @@ const StyledPage = styled.main`
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: 100% 35%;
-    border-radius: 1px;
+    border-radius: ${props => props.theme.layout.borderRadiusSmall};
     font-weight: 700;
     padding: 0 2px;
     transition: ${props => props.theme.transitions.fast};

@@ -13,9 +13,9 @@ export * from './Logo/Logo'
 export * from './TopBar/TopBarBurger'
 export * from './TopBar/TopBar'
 
+export * from './Nav/NavClose'
 export * from './Nav/NavLink'
 export * from './Nav/NavLinks'
-export * from './Nav/NavClose'
 export * from './Nav/Nav'
 
 export * from './Page/Page'

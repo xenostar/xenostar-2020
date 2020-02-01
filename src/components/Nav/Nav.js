@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useStoreActions, useStoreState } from 'easy-peasy'
-import { NavLinks } from 'components'
+import { NavClose as NavClose_, NavLinks } from 'components'
 
 export const Nav = memo(() => {
   const currentPage = useStoreState(state => state.page.currentPage)
@@ -15,10 +15,9 @@ export const Nav = memo(() => {
 
   useEffect(() => {
     const handleOutsideClick = e => {
-      if (node.current.contains(e.target)) {
-        return
+      if (!node.current.contains(e.target)) {
+        closeNav()
       }
-      closeNav()
     }
 
     if (isNavOpen) {
@@ -34,13 +33,14 @@ export const Nav = memo(() => {
 
   return (
     <StyledNav ref={node} open={isNavOpen}>
+      <NavClose />
       <NavLinks />
     </StyledNav>
   )
 })
 
 const StyledNav = styled.nav`
-  border-top: 4px solid rgba(144, 199, 168, 1);
+  border-top: ${props => props.theme.layout.topBar} solid ${props => props.theme.colors.primary};
   background: ${props => props.theme.colors.secondary};
   display: flex;
   flex-direction: column;
@@ -50,11 +50,14 @@ const StyledNav = styled.nav`
   right: 0;
   bottom: 0;
   left: 0;
-  padding: ${props => props.theme.layout.padding};
-  padding-top: ${props => props.theme.layout.paddingBig};
+  overflow-y: auto;
   position: fixed;
-  transition: 0.5s all ease;
+  transition: ${props => props.open ? props.theme.transitions.default : '1s all ease'};
   transform: ${props => props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: 200;
+`
+const NavClose = styled(NavClose_)`
+  padding: ${props => props.theme.layout.padding};
+  padding-top: ${props => props.theme.layout.paddingBig};
 `

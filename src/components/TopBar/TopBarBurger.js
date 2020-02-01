@@ -5,10 +5,9 @@ import { FiMenu as FiMenu_ } from 'react-icons/fi'
 
 export const TopBarBurger = () => {
   const openNav = useStoreActions(actions => actions.nav.openNav)
-  const handleClick = () => openNav()
 
   return (
-    <StyledTopBarBurger onClick={handleClick}>
+    <StyledTopBarBurger onClick={openNav}>
       <FiMenu />
     </StyledTopBarBurger>
   )
@@ -21,16 +20,10 @@ const StyledTopBarBurger = styled.div`
   pointer-events: auto;
 `
 const FiMenu = styled(FiMenu_)`
-  background-color: ${props => props.theme.colors.white};
-  border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.secondary};
   cursor: pointer;
   font-size: 2.25rem;
   pointer-events: auto;
   transform: scale(1);
   transition: ${props => props.theme.transitions.default};
-
-  :hover {
-    /* transform: scale(1.2); */
-  }
 `

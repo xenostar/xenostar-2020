@@ -1,23 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink as NavLink_ } from 'components'
+import { routes } from 'utils'
 
-export const NavLinks = () => (
-  <StyledNavLinks>
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/portfolio">Portfolio</NavLink>
-    <NavLink to="/about">About</NavLink>
-    <NavLink to="/blog">Blog</NavLink>
-    <NavLink to="/components">Components</NavLink>
+export const NavLinks = props => (
+  <StyledNavLinks {...props}>
+    <NavLink to={routes.home}>Home</NavLink>
+    <NavLink to={routes.portfolio}>Portfolio</NavLink>
+    <NavLink to={routes.about}>About</NavLink>
+    <NavLink to={routes.blog}>Blog</NavLink>
+    <NavLink to={routes.components}>Components</NavLink>
   </StyledNavLinks>
 )
 
 const StyledNavLinks = styled.div`
   align-items: flex-end;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   z-index: 200;
+  width: 100%;
 `
 const NavLink = styled(NavLink_)`
-  margin-top: ${props => props.theme.layout.padding};
+  width: 100%;
 `

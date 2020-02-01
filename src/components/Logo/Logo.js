@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { PageName as PageName_ } from 'components'
 import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
+import { routes } from 'utils'
 
 export const Logo = () => (
   <StyledLogo>
-    <AniLink to="/" cover direction="left" bg="#90c7a8">
+    <AniLink to={routes.home} cover direction="left" bg="#90c7a8">
       <div>
         X<span>S</span>
       </div>
@@ -20,7 +21,7 @@ const StyledLogo = styled.div`
 `
 const AniLink = styled(AniLink_)`
   align-items: center;
-  background-color: #232121;
+  background-color: ${props => props.theme.colors.tertiary};
   border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.white};
   display: inline-flex;
@@ -33,6 +34,7 @@ const AniLink = styled(AniLink_)`
   transition: ${props => props.theme.transitions.default};
   width: 5rem; /* 80px */
   :hover {
+    background-color: ${props => props.theme.colors.primary};
     opacity: 0.75;
   }
   div {

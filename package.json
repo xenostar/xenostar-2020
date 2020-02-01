@@ -41,7 +41,8 @@
     "react-helmet": "^5.2.1",
     "react-helmet-async": "^1.0.4",
     "react-icons": "^3.8.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "typewriter-effect": "^2.12.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

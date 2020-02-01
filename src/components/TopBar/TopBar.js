@@ -12,7 +12,7 @@ export const TopBar = () => (
 )
 
 const StyledTopBar = styled.div`
-  border-top: 5px solid ${props => props.theme.colors.primary};
+  border-top: ${props => props.theme.layout.topBar} solid ${props => props.theme.colors.primary};
   display: flex;
   justify-content: center;
   padding: ${props => props.theme.layout.padding};

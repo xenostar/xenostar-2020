@@ -4,7 +4,13 @@ import PropTypes from 'prop-types'
 import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
 
 export const NavLink = ({ to = '/', children, ...props }) => (
-  <AniLink cover direction="right" bg="#90c7a8" activeClassName="active" to={to} {...props}>
+  <AniLink
+    activeClassName="active"
+    bg="#90c7a8"
+    cover
+    direction="right"
+    to={to}
+    {...props}>
     {children}
   </AniLink>
 )
@@ -20,8 +26,10 @@ const AniLink = styled(AniLink_)`
   font-size: 4em;
   line-height: 60px;
   transition: ${props => props.theme.transitions.default};
+  padding: ${props => props.theme.layout.padding};
   &.active,
   :hover {
+    background-color: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.white};
   }
 `

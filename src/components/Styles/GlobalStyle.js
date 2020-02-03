@@ -15,43 +15,29 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: ${props => props.theme.fonts.montserrat};
     line-height: 1.5;
+    user-select: none;
   }
 
   h1 {
-    font-family: ${props => props.theme.fonts.montserrat};
-    font-weight: 900;
     font-size: 5em;
-    /* letter-spacing: 0; */
-    user-select: none;
+    font-weight: ${props => props.theme.fonts.boldBlack};
   }
   h2 {
-    font-family: ${props => props.theme.fonts.montserrat};
     font-size: 2.5em;
-    user-select: none;
   }
   h3 {
-    font-family: ${props => props.theme.fonts.montserrat};
     font-size: 2em;
-    user-select: none;
   }
   h4 {
-    font-family: ${props => props.theme.fonts.montserrat};
     font-size: 1.5em;
-    user-select: none;
   }
   h5 {
-    font-family: ${props => props.theme.fonts.montserrat};
     font-size: 1.25em;
-    font-weight: 800;
-    text-transform: uppercase;
-    user-select: none;
   }
   h6 {
     font-size: 1em;
-    font-weight: 800;
-    text-transform: uppercase;
-    user-select: none;
   }
 
   a {

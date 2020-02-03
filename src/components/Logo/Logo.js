@@ -11,13 +11,16 @@ export const Logo = () => (
         X<span>S</span>
       </div>
     </AniLink>
-    <PageName />
+    {/* <PageName /> */}
   </StyledLogo>
 )
 
 const StyledLogo = styled.div`
   display: inline-flex;
   align-items: center;
+  :active {
+    transform: translateY(3px);
+  }
 `
 const AniLink = styled(AniLink_)`
   align-items: center;

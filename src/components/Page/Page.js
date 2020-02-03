@@ -21,12 +21,15 @@ const StyledPage = styled.main`
     background-repeat: no-repeat;
     background-size: 100% 35%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};
-    font-weight: 700;
     padding: 0 2px;
     transition: ${props => props.theme.transitions.fast};
   }
   * a:hover {
     background-size: 100% 100%;
+  }
+
+  p a {
+    font-weight: ${props => props.theme.fonts.bold};
   }
 
   h1, h2, h3, h4, h5, h6,

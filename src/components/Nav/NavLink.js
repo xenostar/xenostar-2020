@@ -21,8 +21,8 @@ NavLink.propTypes = {
 
 const AniLink = styled(AniLink_)`
   color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.ubuntu};
-  font-weight: ${props => props.theme.fonts.bold800};
+  font-family: ${props => props.theme.fonts.montserrat};
+  font-weight: ${props => props.theme.fonts.boldBlack};
   font-size: 4em;
   line-height: 60px;
   transition: ${props => props.theme.transitions.default};

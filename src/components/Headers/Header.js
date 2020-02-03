@@ -1,11 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row } from 'components'
+import { Row, Col } from 'components'
 
-export const Header = () => (
+export const Header = ({ title, desc }) => (
   <StyledHeader>
     <Row>
-      <h1>xeno<span>star</span></h1>
+      <Col>
+        <Title>
+          {title}
+        </Title>
+        <h3>
+          {desc}
+        </h3>
+      </Col>
     </Row>
   </StyledHeader>
 )
@@ -13,21 +20,14 @@ export const Header = () => (
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding-top: ${props => props.theme.layout.paddingBig};
+  padding-top: 150px;
   padding-right: ${props => props.theme.layout.padding};
-  padding-bottom: ${props => props.theme.layout.paddingBig};
+  /* padding-bottom: ${props => props.theme.layout.paddingHuge}; */
   padding-left: ${props => props.theme.layout.padding};
-  h1 {
-    color: ${props => props.theme.colors.secondary};
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 1;
-    user-select: none;
-  }
+`
+const Title = styled.h1`
+  margin-bottom: 0 !important;
   span {
-    color: ${props => props.theme.colors.primary};
-    transition: ${props => props.theme.transitions.default};
-  }
-  &:hover span {
     color: ${props => props.theme.colors.primary};
   }
 `

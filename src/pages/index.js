@@ -11,8 +11,7 @@ export default () => (
             Hi, I'm <span>Bryan</span><br />I make <a href="https://www.google.com">things</a>
           </Title>
           <h3>
-            Welcome to my portfolio. I have been designing and developing web
-            pages for nearly ten years. Creating beautiful, elegant web
+            Welcome to my portfolio. Creating beautiful, elegant web
             applications is my passion. Browse my portfolio and learn more about
             who I am and what I do.
           </h3>
@@ -43,5 +42,6 @@ const Title = styled.h1`
 `
 
 const Header = styled(Section)`
-  padding-top: 180px;
+  padding-top: 150px;
+  padding-bottom: 0;
 `

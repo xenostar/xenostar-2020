@@ -15,8 +15,10 @@ export const theme = {
     ubuntu: `'Ubuntu', sans-serif`,
     montserrat: `'Montserrat', sans-serif`,
     lineHeight: '1.5',
+    boldSemi: '600',
     bold: '700',
-    bold800: '800',
+    boldExtra: '800',
+    boldBlack: '900',
     defaultSize: '1.25em',
     defaultStyle: 'normal',
     defaultWeight: '400',
@@ -26,9 +28,10 @@ export const theme = {
     fast: '0.2s all ease',
   },
   layout: {
-    // borderRadius: '0.375rem', // 6px
-    borderRadius: '0',
-    borderRadiusSmall: '0.0625rem', // 1px
+    // borderRadius: '6px',
+    // borderRadius: '0',
+    borderRadius: '1px',
+    borderRadiusSmall: '1px',
     // maxWidth: '68.75rem', // 1100px
     maxWidth: '60vw',
     maxWidthFixed: '62.5rem', // 1000px
@@ -40,6 +43,6 @@ export const theme = {
     marginBig: '3.75rem', // 60px
     marginHuge: '5.625rem', // 90px
     marginGiant: '7.5rem', // 120px
-    topBar: '0.375rem' // 5px
+    topBar: '5px'
   }
 }

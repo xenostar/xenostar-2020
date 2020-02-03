@@ -26,8 +26,8 @@ export const theme = {
     fast: '0.2s all ease',
   },
   layout: {
-    borderRadius: '0.375rem', // 6px
-    // borderRadius: '0',
+    // borderRadius: '0.375rem', // 6px
+    borderRadius: '0',
     borderRadiusSmall: '0.0625rem', // 1px
     // maxWidth: '68.75rem', // 1100px
     maxWidth: '60vw',

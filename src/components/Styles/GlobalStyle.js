@@ -18,12 +18,41 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
-  h1 { font-size: 3em; }
-  h2 { font-size: 2.5em; }
-  h3 { font-size: 2em; }
-  h4 { font-size: 1.5em; }
-  h5 { font-size: 1.25em; font-weight: 800; text-transform: uppercase; }
-  h6 { font-size: 1em; font-weight: 800; text-transform: uppercase; }
+  h1 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    font-weight: 900;
+    font-size: 5em;
+    /* letter-spacing: 0; */
+    user-select: none;
+  }
+  h2 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    font-size: 2.5em;
+    user-select: none;
+  }
+  h3 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    font-size: 2em;
+    user-select: none;
+  }
+  h4 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    font-size: 1.5em;
+    user-select: none;
+  }
+  h5 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    font-size: 1.25em;
+    font-weight: 800;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  h6 {
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    user-select: none;
+  }
 
   a {
     color: ${props => props.theme.colors.secondary};

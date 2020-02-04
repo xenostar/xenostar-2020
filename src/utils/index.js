@@ -1,5 +1,4 @@
+export * from './theme'
 export * from './helpers'
-export * from './media'
 export * from './routes'
 export * from './store'
-export * from './theme'

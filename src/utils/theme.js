@@ -44,5 +44,10 @@ export const theme = {
     marginHuge: '5.625rem', // 90px
     marginGiant: '7.5rem', // 120px
     topBar: '5px'
+  },
+  breakpoints: {
+    desktop: 1200,
+    tablet: 960,
+    phone: 480
   }
 }

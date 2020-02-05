@@ -10,7 +10,8 @@ export const NavLink = ({ to = '/', children, ...props }) => (
     cover
     direction="right"
     to={to}
-    {...props}>
+    {...props}
+  >
     {children}
   </AniLink>
 )

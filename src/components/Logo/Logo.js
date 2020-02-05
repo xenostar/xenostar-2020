@@ -1,23 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
 import { routes } from 'utils'
 
 export const Logo = () => (
-  <StyledLogo
-    activeClassName="active"
-    bg="#90c7a8"
-    cover
-    direction="left"
-    to={routes.home}>
-    <Text>
-      X<span>S</span>
-      <HomeText>Home</HomeText>
-    </Text>
+  <StyledLogo>
+    <AniLink
+      activeClassName="active"
+      bg="#90c7a8"
+      cover
+      direction="left"
+      to={routes.home}>
+      <Text>
+        X<span>S</span>
+        <HomeText>Home</HomeText>
+      </Text>
+    </AniLink>
   </StyledLogo>
 )
 
-const StyledLogo = styled(AniLink)`
+const StyledLogo = styled.div`
+  display: inline-flex;
+  transition: ${props => props.theme.transitions.default};
+  :active {
+    transform: translateY(3px);
+  }
+`
+const AniLink = styled(AniLink_)`
   align-items: center;
   background-color: ${props => props.theme.colors.tertiary};
   border-radius: ${props => props.theme.layout.borderRadius};
@@ -38,9 +47,6 @@ const StyledLogo = styled(AniLink)`
   :hover > div > div {
     opacity: 1;
   }
-  :not(.active):active {
-    transform: translateY(3px);
-  }
 `
 const Text = styled.div`
   padding-top: 0.4375rem; /* 7px */
@@ -56,7 +62,7 @@ const HomeText = styled.div`
   position: absolute;
   top: -14px;
   right: -4px;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateZ(0);
   transform-origin: bottom right;
   transition: ${props => props.theme.transitions.default};
 `

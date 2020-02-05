@@ -5,6 +5,7 @@ export * from './Row/Row'
 export * from './Col/Col'
 
 export * from './Headers/Header'
+export * from './Headers/HeaderHome'
 export * from './Footer/Footer'
 
 export * from './PageName/PageName'

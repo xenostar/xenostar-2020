@@ -26,12 +26,15 @@ export const GlobalStyle = createGlobalStyle`
   }
   h2 {
     font-size: 2.5em;
+    letter-spacing: -1px;
   }
   h3 {
     font-size: 2em;
+    letter-spacing: -1px;
   }
   h4 {
     font-size: 1.5em;
+    letter-spacing: -1px;
   }
   h5 {
     font-size: 1.25em;

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 export const usePortfolioApi = () => {
   const { allDatoCmsPortfolioItem } = useStaticQuery(graphql`
     query {
-      allDatoCmsPortfolioItem {
+      allDatoCmsPortfolioItem(limit: 4) {
         items: nodes {
           name
           description

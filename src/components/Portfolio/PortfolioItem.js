@@ -20,14 +20,17 @@ const StyledPortfolioItem = styled.div`
   box-shadow: 0 2px 20px rgba(0,0,0,0.2);
   display: block;
   overflow: hidden;
+  transform: skew(-10deg);
 `
 const AniLink = styled(AniLink_)`
   display: block;
 `
 const Image = styled(Img)`
-  opacity: 0.75;
+  opacity: 0.9;
   filter: grayscale(100%);
   transition: ${props => props.theme.transitions.default};
+  width: 120%;
+  transform: translateX(-10%) skew(10deg);
   :hover {
     opacity: 1;
     filter: grayscale(0);

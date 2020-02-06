@@ -18,8 +18,8 @@ const Row = styled(Row_)`
 `
 const Grid = styled.div`
   display: grid;
-  grid-gap: 60px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   width: 100%;
 `

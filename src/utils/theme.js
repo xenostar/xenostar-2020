@@ -28,8 +28,8 @@ export const theme = {
     fast: '0.2s all ease',
   },
   layout: {
-    borderRadius: '6px',
-    // borderRadius: '0',
+    // borderRadius: '6px',
+    borderRadius: '0',
     // borderRadius: '1px',
     borderRadiusSmall: '1px',
     // maxWidth: '68.75rem', // 1100px

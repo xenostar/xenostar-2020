@@ -12,7 +12,13 @@ const StyledPage = styled.main`
   flex-direction: column;
   min-height: 100vh;
 
-  * a {
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a,
+  p a {
     background-image: linear-gradient(
       ${props => props.theme.colors.lightBlue},
       ${props => props.theme.colors.lightBlue}
@@ -24,7 +30,13 @@ const StyledPage = styled.main`
     padding: 0 2px;
     transition: ${props => props.theme.transitions.fast};
   }
-  * a:hover {
+  h1 a:hover,
+  h2 a:hover,
+  h3 a:hover,
+  h4 a:hover,
+  h5 a:hover,
+  h6 a:hover,
+  p a:hover {
     background-size: 100% 100%;
   }
 

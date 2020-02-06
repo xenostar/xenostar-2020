@@ -26,4 +26,7 @@ const FiMenu = styled(FiMenu_)`
   pointer-events: auto;
   transform: scale(1);
   transition: ${props => props.theme.transitions.default};
+  :hover {
+    color: ${props => props.theme.colors.primary};
+  }
 `

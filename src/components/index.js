@@ -19,6 +19,9 @@ export * from './Nav/NavLink'
 export * from './Nav/NavLinks'
 export * from './Nav/Nav'
 
+export * from './Portfolio/PortfolioGrid'
+export * from './Portfolio/PortfolioItem'
+
 export * from './Page/Page'
 export * from './SEO/SEO'
 export * from './Styles/GlobalStyle'

@@ -28,6 +28,7 @@ const StyledHeader = styled.header`
   padding-top: 150px;
   padding-right: ${props => props.theme.layout.padding};
   padding-left: ${props => props.theme.layout.padding};
+  /* padding-bottom: ${props => props.theme.layout.paddingHuge}; */
 `
 const Title = styled.h1`
   span {

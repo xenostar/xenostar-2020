@@ -44,10 +44,6 @@ const StyledPage = styled.main`
     font-weight: ${props => props.theme.fonts.bold};
   }
 
-  h1, h2, h3, h4, h5, h6,
-  p, ol, ul, code {
-    margin-bottom: ${props => props.theme.layout.margin};
-  }
   *:last-child {
     margin-bottom: 0;
   }

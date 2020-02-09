@@ -39,6 +39,6 @@ const Grid = styled.div`
     ".   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   ."
   ;
   :hover {
-    grid-gap: 20px;
+    grid-gap: 40px;
   }
 `

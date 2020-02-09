@@ -34,6 +34,9 @@ const StyledPortfolioItem = styled.div`
     box-shadow: 0 10px 20px -10px rgba(0,0,0,1);
     z-index: 10;
   }
+  :active {
+    transform: translateY(3px);
+  }
 `
 const AniLink = styled(AniLink_)`
   display: block;

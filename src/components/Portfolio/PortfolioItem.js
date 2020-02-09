@@ -23,8 +23,9 @@ export const PortfolioItem = ({
 )
 
 const StyledPortfolioItem = styled.div`
+  /* background-color: ${props => props.theme.colors.primary}; */
   border-radius: ${props => props.theme.layout.borderRadius};
-  /* box-shadow: 0 2px 20px rgba(0,0,0,0.2); */
+  /* box-shadow: 0 2px 20px ${props => props.theme.colors.primary}; */
   display: block;
   overflow: hidden;
   /* transform: skew(-10deg); */

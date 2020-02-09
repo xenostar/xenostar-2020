@@ -23,13 +23,17 @@ const Row = styled(Row_)`
 const Grid = styled.div`
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   grid-template-rows: auto;
   width: 100%;
   grid-template-areas:
-    ".   .   a1  a2  a2  .   ."
-    "a3  a4  a4  a2  a2  a5  a6"
-    ".   a4  a4  a7  a7  a8  a9"
-    ".   .   a11 a7  a7  .   ."
+    ".   .   .   a14 a1  a1  a2  a2  a2  a2  .   .   .   ."
+    ".   .   .   a12 a1  a1  a2  a2  a2  a2  .   .   .   ."
+    "a3  a3  a4  a4  a4  a4  a2  a2  a2  a2  a5  a5  a6  a6"
+    "a3  a3  a4  a4  a4  a4  a2  a2  a2  a2  a5  a5  a6  a6"
+    ".   a16 a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  a9  ."
+    ".   .   a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  .   ."
+    ".   .   .   a15 a11 a11 a7  a7  a7  a7  .   .   .   ."
+    ".   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   ."
   ;
 `

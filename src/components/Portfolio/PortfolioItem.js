@@ -25,11 +25,15 @@ export const PortfolioItem = ({
 const StyledPortfolioItem = styled.div`
   /* background-color: ${props => props.theme.colors.primary}; */
   border-radius: ${props => props.theme.layout.borderRadius};
-  /* box-shadow: 0 2px 20px ${props => props.theme.colors.primary}; */
   display: block;
   overflow: hidden;
   /* transform: skew(-10deg); */
+  transition: ${props => props.theme.transitions.default};
   grid-area: ${({ number }) => number};
+  :hover {
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,1);
+    z-index: 10;
+  }
 `
 const AniLink = styled(AniLink_)`
   display: block;

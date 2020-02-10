@@ -30,31 +30,28 @@ PortfolioItem.propTypes = {
 
 const StyledPortfolioItem = styled.div`
   display: block;
-  /* overflow: hidden; */
-  /* transition: ${props => props.theme.transitions.default}; */
   grid-area: ${({ number }) => number};
-  :active {
-    transform: ${props => props.theme.transforms.active};
-  }
 `
 const AniLink = styled(AniLink_)`
   display: block;
   position: relative;
+  transition: ${props => props.theme.transitions.default};
   :hover > p {
     opacity: 1;
     transform: translateY(0px) rotate(90deg) translateZ(0);
   }
+  :active {
+    transform: ${props => props.theme.transforms.active};
+  }
 `
 const Name = styled.p`
   font-family: ${props => props.theme.fonts.bebasNeue};
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 1em;
   position: absolute;
   bottom: 100%;
   left: 100%;
   line-height: 38px;
   opacity: 0;
-  text-transform: uppercase;
   transform: translateY(-10px) rotate(90deg) translateZ(0);
   transform-origin: bottom left;
   transition: ${props => props.theme.transitions.default};
@@ -66,7 +63,6 @@ const Image = styled(Img)`
   transition: ${props => props.theme.transitions.default};
   :hover {
     box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 1);
-    /* box-shadow: 0 10px 20px red; */
     z-index: 10;
   }
 `

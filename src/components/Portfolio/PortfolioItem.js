@@ -50,10 +50,10 @@ const Name = styled.p`
   position: absolute;
   bottom: 100%;
   left: 100%;
-  line-height: 38px;
+  line-height: 28px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-10px) rotate(90deg) translateZ(0);
+  transform: translateY(-6px) rotate(90deg) translateZ(0);
   transform-origin: bottom left;
   transition: ${props => props.theme.transitions.default};
   white-space: nowrap;

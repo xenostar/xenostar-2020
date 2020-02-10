@@ -34,6 +34,6 @@ const Grid = styled.div`
     '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .'
   ;
   :hover {
-    grid-gap: 40px;
+    grid-gap: ${props => props.theme.layout.padding};
   }
 `

@@ -9,17 +9,16 @@ export default () => {
     <Page>
       <HeaderHome />
       <PortfolioGrid>
-        {items.map((data, i) => {
-          return (
-            <PortfolioItem
-              key={i}
-              featuredImage={data.featuredImage}
-              image={data.image}
-              slug={data.slug}
-              number={i + 1}
-            />
-          )
-        })}
+        {items.map((data, i) => (
+          <PortfolioItem
+            key={i}
+            featuredImage={data.featuredImage}
+            image={data.image}
+            name={data.name}
+            number={i + 1}
+            slug={data.slug}
+          />
+        ))}
       </PortfolioGrid>
       <Footer />
     </Page>

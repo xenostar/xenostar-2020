@@ -7,7 +7,6 @@ import { routes } from 'utils'
 export const HeaderHome = () => (
   <StyledHeader>
     <Row>
-      <Col>
         <Title>
           Hi, I'm <span>Bryan</span>
           <br />I make <AniLink bg="#90c7a8" cover direction="right" to={routes.portfolio}>things</AniLink>
@@ -17,7 +16,6 @@ export const HeaderHome = () => (
           is my passion. Browse my portfolio and learn more about who I am and
           what I do.
         </SubTitle>
-      </Col>
     </Row>
   </StyledHeader>
 )

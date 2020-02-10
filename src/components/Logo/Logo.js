@@ -23,7 +23,7 @@ const StyledLogo = styled.div`
   display: inline-flex;
   transition: ${props => props.theme.transitions.default};
   :active {
-    transform: translateY(3px);
+    transform: ${props => props.theme.transforms.active};
   }
 `
 const AniLink = styled(AniLink_)`

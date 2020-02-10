@@ -23,16 +23,18 @@ export const theme = {
     defaultStyle: 'normal',
     defaultWeight: '400',
   },
+  transforms: {
+    active: 'translateY(3px)',
+  },
   transitions: {
     default: '0.3s all ease',
     fast: '0.2s all ease',
+    slow: '0.6s all ease',
   },
   layout: {
-    borderRadius: '6px',
     // borderRadius: '0',
-    // borderRadius: '1px',
+    borderRadius: '6px',
     borderRadiusSmall: '1px',
-    // maxWidth: '68.75rem', // 1100px
     maxWidth: '60vw',
     maxWidthFixed: '62.5rem', // 1000px
     padding: '1.875rem', // 30px

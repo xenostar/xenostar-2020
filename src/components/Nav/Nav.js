@@ -52,7 +52,7 @@ const StyledNav = styled.nav`
   left: 0;
   overflow-y: auto;
   position: fixed;
-  transition: ${props => props.open ? props.theme.transitions.default : '1s all ease'};
+  transition: ${props => props.theme.transitions.slow};
   transform: ${props => props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: 200;

@@ -52,6 +52,7 @@ const Name = styled.p`
   left: 100%;
   line-height: 38px;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(-10px) rotate(90deg) translateZ(0);
   transform-origin: bottom left;
   transition: ${props => props.theme.transitions.default};

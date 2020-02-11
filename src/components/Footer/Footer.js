@@ -6,7 +6,7 @@ import { IoIosHeart } from 'react-icons/io'
 export const Footer = () => (
   <StyledFooter>
     <Row>
-      <h6>Built with <IoIosHeart /> by <a href="https://github.com/xenostar" target="_blank" rel="noopener noreferrer">Xenostar</a>.</h6>
+      <Text>Built with <IoIosHeart /> by <a href="https://github.com/xenostar" target="_blank" rel="noopener noreferrer">Xenostar</a></Text>
     </Row>
   </StyledFooter>
 )
@@ -21,3 +21,4 @@ const StyledFooter = styled.footer`
   padding-bottom: ${props => props.theme.layout.paddingBig};
   padding-left: ${props => props.theme.layout.padding};
 `
+const Text = styled.h5``

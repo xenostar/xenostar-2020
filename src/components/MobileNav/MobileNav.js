@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useStoreActions, useStoreState } from 'easy-peasy'
-import { NavClose as NavClose_, NavLinks } from 'components'
+import { MobileNavClose as MobileNavClose_, MobileNavLinks } from 'components'
 
-export const Nav = memo(() => {
+export const MobileNav = memo(() => {
   const currentPage = useStoreState(state => state.page.currentPage)
   const isNavOpen = useStoreState(state => state.nav.isNavOpen)
   const closeNav = useStoreActions(actions => actions.nav.closeNav)
@@ -32,16 +32,16 @@ export const Nav = memo(() => {
   }, [isNavOpen, closeNav])
 
   return (
-    <StyledNav ref={node} open={isNavOpen}>
-      <NavClose />
-      <NavLinks />
-    </StyledNav>
+    <StyledMobileNav ref={node} open={isNavOpen}>
+      <MobileNavClose />
+      <MobileNavLinks />
+    </StyledMobileNav>
   )
 })
 
-const StyledNav = styled.nav`
+const StyledMobileNav = styled.nav`
   border-top: ${props => props.theme.layout.topBar} solid ${props => props.theme.colors.primary};
-  background: ${props => props.theme.colors.secondary};
+  background-color: rgba(255,255,255,0.95);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,7 +57,5 @@ const StyledNav = styled.nav`
   user-select: none;
   z-index: 200;
 `
-const NavClose = styled(NavClose_)`
-  padding: ${props => props.theme.layout.padding};
-  padding-top: ${props => props.theme.layout.paddingBig};
+const MobileNavClose = styled(MobileNavClose_)`
 `

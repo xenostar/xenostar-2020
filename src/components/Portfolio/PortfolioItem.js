@@ -36,10 +36,6 @@ const AniLink = styled(AniLink_)`
   display: block;
   position: relative;
   transition: ${props => props.theme.transitions.default};
-  :hover > p {
-    opacity: 1;
-    transform: translateY(0px) rotate(90deg) translateZ(0);
-  }
   :active {
     transform: ${props => props.theme.transforms.active};
   }
@@ -58,6 +54,10 @@ const Name = styled.p`
   transition: ${props => props.theme.transitions.default};
   white-space: nowrap;
   z-index: 20;
+  ${AniLink}:hover & {
+    opacity: 1;
+    transform: translateY(0px) rotate(90deg) translateZ(0);
+  }
 `
 const Image = styled(Img)`
   border-radius: ${props => props.theme.layout.borderRadius};

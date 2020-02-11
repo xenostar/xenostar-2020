@@ -10,7 +10,7 @@ import {
   ResetStyle,
   GlobalStyle,
   TopBar,
-  Nav,
+  MobileNav,
 } from 'components'
 
 const Layout = ({ children, location }) => (
@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => (
           <ResetStyle />
           <GlobalStyle />
           <TopBar />
-          <Nav />
+          <MobileNav />
           {children}
         </StyledLayout>
       </HelmetProvider>

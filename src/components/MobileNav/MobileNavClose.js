@@ -28,6 +28,6 @@ const IoMdClose = styled(IoMdClose_)`
   font-size: 2.25rem;
   transition: ${props => props.theme.transitions.default};
   :hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
   }
 `

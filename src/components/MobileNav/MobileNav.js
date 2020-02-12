@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useStoreActions, useStoreState } from 'easy-peasy'
-import { MobileNavClose as MobileNavClose_, MobileNavLinks } from 'components'
+import { MobileNavClose, MobileNavLinks } from 'components'
 
 export const MobileNav = memo(() => {
   const currentPage = useStoreState(state => state.page.currentPage)
@@ -56,6 +56,4 @@ const StyledMobileNav = styled.nav`
   transform: ${props => props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: 200;
-`
-const MobileNavClose = styled(MobileNavClose_)`
 `

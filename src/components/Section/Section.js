@@ -7,4 +7,5 @@ export const Section = styled.section`
   padding-right: ${props => props.theme.layout.padding};
   padding-bottom: ${props => props.theme.layout.paddingHuge};
   padding-left: ${props => props.theme.layout.padding};
+  width: 100%;
 `

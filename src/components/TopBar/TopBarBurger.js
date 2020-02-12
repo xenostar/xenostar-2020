@@ -20,6 +20,8 @@ const StyledTopBarBurger = styled.div`
   pointer-events: auto;
 `
 const FiMenu = styled(FiMenu_)`
+  background-color: ${props => props.theme.colors.white};
+  border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.secondary};
   cursor: pointer;
   font-size: 2.25rem;

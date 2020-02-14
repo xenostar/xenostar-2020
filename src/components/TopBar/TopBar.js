@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row as Row_, Logo, TopBarBurger } from 'components'
+import { Row as Row_, Logo, Nav, MobileNavBurger } from 'components'
 
 export const TopBar = () => (
   <StyledTopBar>
     <Row>
       <Logo />
-      <TopBarBurger />
+      <Nav />
+      <MobileNavBurger />
     </Row>
   </StyledTopBar>
 )

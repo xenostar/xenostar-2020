@@ -1,9 +1,9 @@
-import React, { memo, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { MobileNavClose, MobileNavLinks } from 'components'
 
-export const MobileNav = memo(() => {
+export const MobileNav = () => {
   const currentPage = useStoreState(state => state.page.currentPage)
   const isNavOpen = useStoreState(state => state.nav.isNavOpen)
   const closeNav = useStoreActions(actions => actions.nav.closeNav)
@@ -37,7 +37,7 @@ export const MobileNav = memo(() => {
       <MobileNavLinks />
     </StyledMobileNav>
   )
-})
+}
 
 const StyledMobileNav = styled.nav`
   border-top: ${props => props.theme.layout.topBar} solid ${props => props.theme.colors.primary};

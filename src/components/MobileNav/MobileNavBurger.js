@@ -1,23 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
+import { media } from 'utils'
 import { useStoreActions } from 'easy-peasy'
 import { FiMenu as FiMenu_ } from 'react-icons/fi'
 
-export const TopBarBurger = () => {
+export const MobileNavBurger = () => {
   const openNav = useStoreActions(actions => actions.nav.openNav)
 
   return (
-    <StyledTopBarBurger onClick={openNav}>
+    <StyledMobileNavBurger onClick={openNav}>
       <FiMenu />
-    </StyledTopBarBurger>
+    </StyledMobileNavBurger>
   )
 }
 
-const StyledTopBarBurger = styled.div`
+const StyledMobileNavBurger = styled.div`
   align-items: center;
-  display: flex;
+  display: none;
   height: 5rem;
   pointer-events: auto;
+  ${media.tablet`
+    display: flex;
+  `}
 `
 const FiMenu = styled(FiMenu_)`
   background-color: ${props => props.theme.colors.white};

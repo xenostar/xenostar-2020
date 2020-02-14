@@ -15,9 +15,12 @@ export * from './Footer/Footer'
 export * from './PageName/PageName'
 export * from './Logo/Logo'
 
-export * from './TopBar/TopBarBurger'
 export * from './TopBar/TopBar'
 
+export * from './Nav/NavLink'
+export * from './Nav/Nav'
+
+export * from './MobileNav/MobileNavBurger'
 export * from './MobileNav/MobileNavClose'
 export * from './MobileNav/MobileNavLink'
 export * from './MobileNav/MobileNavLinks'

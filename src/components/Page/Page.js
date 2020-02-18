@@ -28,7 +28,8 @@ const StyledPage = styled.main`
     background-size: 100% 35%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};
     padding: 0 2px;
-    transition: ${props => props.theme.transitions.fast};
+    /* transition: ${props => props.theme.transitions.fast}; */
+    transition: 0.2s background ease;
   }
   h1 a:hover,
   h2 a:hover,

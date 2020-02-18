@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'components'
+import { media } from 'utils'
 
 export const Header = ({ title, desc }) => (
   <StyledHeader>
@@ -29,5 +30,8 @@ const Title = styled.h1`
   span {
     color: ${props => props.theme.colors.primary};
   }
+  ${media.tablet`
+    font-size: 10.5vw;
+  `}
 `
 const SubTitle = styled.h3``

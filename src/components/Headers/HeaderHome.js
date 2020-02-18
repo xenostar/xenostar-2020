@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'components'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import { routes } from 'utils'
+import { media, routes } from 'utils'
 
 export const HeaderHome = () => (
   <StyledHeader>
@@ -34,5 +34,8 @@ const Title = styled.h1`
   span {
     color: ${props => props.theme.colors.primary};
   }
+  ${media.tablet`
+    font-size: 10.5vw;
+  `}
 `
 const SubTitle = styled.h3``

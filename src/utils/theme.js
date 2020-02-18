@@ -5,6 +5,7 @@ export const theme = {
     tertiary: 'rgba(35, 33, 33, 1)', // #232121
     lightBlue: 'rgba(199, 227, 211, 1)', // #C7e3d3
     background: 'rgba(255, 255, 255, 1)', // #fff
+    // background: '#E0E5EC', // For use with Neumorphism
     transparent: 'rgba(0, 0, 0, 0)', // Transparent
     white: 'rgba(255, 255, 255, 1)', // #fff
     black: 'rgba(0, 0, 0, 1)', // #000

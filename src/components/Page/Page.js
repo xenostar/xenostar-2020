@@ -19,17 +19,18 @@ const StyledPage = styled.main`
   h5 a,
   h6 a,
   p a {
-    background-image: linear-gradient(
-      ${props => props.theme.colors.lightBlue},
-      ${props => props.theme.colors.lightBlue}
+    background-image:
+    ${props => props.theme.colors.gradient},
+    linear-gradient(
+      ${props => props.theme.colors.primary},
+      ${props => props.theme.colors.primary}
     );
     background-position: bottom left;
     background-repeat: no-repeat;
-    background-size: 100% 35%;
+    background-size: 0 35%, 100% 35%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};
     padding: 0 2px;
-    /* transition: ${props => props.theme.transitions.fast}; */
-    transition: 0.2s background ease;
+    transition: 0.2s background ease-out;
   }
   h1 a:hover,
   h2 a:hover,
@@ -38,7 +39,7 @@ const StyledPage = styled.main`
   h5 a:hover,
   h6 a:hover,
   p a:hover {
-    background-size: 100% 100%;
+    background-size: 100% 35%, 100% 35%;
   }
 
   p a {

@@ -12,7 +12,7 @@ export const Logo = () => (
       direction="left"
       to={routes.home}>
       <Text>
-        X<span>S</span>
+        X<TextColor>S</TextColor>
         <HomeText>Home</HomeText>
       </Text>
     </AniLink>
@@ -42,21 +42,33 @@ const AniLink = styled(AniLink_)`
   transition: ${props => props.theme.transitions.default};
   width: 5rem; /* 80px */
   :hover {
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.transparent};
   }
-  :hover > div > div {
-    opacity: 1;
+  :before {
+    content: '';
+    border-radius: ${props => props.theme.layout.borderRadius};
+    background-image: ${props => props.theme.colors.gradient};
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
 `
 const Text = styled.div`
   padding-top: 0.4375rem; /* 7px */
   position: relative;
-  span {
-    color: ${props => props.theme.colors.primary};
+`
+const TextColor = styled.span`
+  color: ${props => props.theme.colors.primary};
+  transition: ${props => props.theme.transitions.default};
+  ${AniLink}:hover & {
+    opacity: 0;
   }
 `
 const HomeText = styled.div`
-  color: ${props => props.theme.colors.tertiary};
+  color: ${props => props.theme.colors.white};
   font-size: 26px;
   opacity: 0;
   position: absolute;
@@ -65,4 +77,7 @@ const HomeText = styled.div`
   transform: rotate(-90deg) translateZ(0);
   transform-origin: bottom right;
   transition: ${props => props.theme.transitions.default};
+  ${AniLink}:hover & {
+    opacity: 1;
+  }
 `

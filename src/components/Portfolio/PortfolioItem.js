@@ -63,7 +63,7 @@ const Image = styled(Img)`
   border-radius: ${props => props.theme.layout.borderRadius};
   transition: ${props => props.theme.transitions.default};
   :hover {
-    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 1);
+    box-shadow: ${props => props.theme.colors.boxShadow};
     z-index: 10;
   }
 `

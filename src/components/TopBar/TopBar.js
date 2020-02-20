@@ -27,7 +27,7 @@ const StyledTopBar = styled.div`
 `
 const Gradient = styled.div`
   background-image: ${props => props.theme.colors.gradient};
-  height: 5px;
+  height: ${props => props.theme.layout.topBar};
   display: flex;
   width: 100%;
 `

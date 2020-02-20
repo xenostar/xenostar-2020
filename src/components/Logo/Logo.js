@@ -62,6 +62,7 @@ const Text = styled.div`
 `
 const TextColor = styled.span`
   color: ${props => props.theme.colors.primary};
+  opacity: 1;
   transition: ${props => props.theme.transitions.default};
   ${AniLink}:hover & {
     opacity: 0;

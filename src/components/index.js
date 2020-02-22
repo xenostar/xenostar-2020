@@ -8,6 +8,9 @@ export * from './Section/Section'
 export * from './Row/Row'
 export * from './Col/Col'
 
+export * from './Social/SocialIcon'
+export * from './Social/Social'
+
 export * from './Headers/Header'
 export * from './Headers/HeaderHome'
 export * from './Footer/Footer'

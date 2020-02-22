@@ -6,9 +6,7 @@ import Img from 'gatsby-image'
 import { routes } from 'utils'
 
 export const PortfolioItem = ({
-  featuredImage: { fluid, alt = '', title = '' },
-  // image: { fluid, alt = '', title = '' },
-  // slug,
+  featuredImage: { fluid, alt = '' },
   name = '',
   number,
 }) => (
@@ -40,7 +38,7 @@ const AniLink = styled(AniLink_)`
     transform: ${props => props.theme.transforms.active};
   }
 `
-const Name = styled.p`
+const Name = styled.div`
   font-family: ${props => props.theme.fonts.bebasNeue};
   font-size: 1em;
   position: absolute;

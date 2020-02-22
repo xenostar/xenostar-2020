@@ -8,7 +8,7 @@ export default () => {
   return (
     <Page>
       <SEO title={seo.title} description={seo.description} />
-      <Header title={seo.title} desc={introText} />
+      <Header title={seo.title} introText={introText} />
       <Section>
         <Row>
           <Col>

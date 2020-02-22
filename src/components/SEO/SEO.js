@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet-async'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useSeoApi } from 'hooks'
 
 export const SEO = ({
   lang = 'en',
@@ -9,38 +9,23 @@ export const SEO = ({
   description = '',
   meta = [],
 }) => {
-  const { datoCmsSite: site } = useStaticQuery(graphql`
-    query {
-      datoCmsSite {
-        globalSeo {
-          siteName
-          facebookPageUrl
-          twitterAccount
-          fallbackSeo {
-            title
-            description
-            twitterCard
-          }
-        }
-      }
-    }
-  `)
-  const metaDescription = description || site.globalSeo.fallbackSeo.description
-  const metaTitle = title ? `${site.globalSeo.siteName} | ${title}` : site.globalSeo.siteName
+  const { globalSeo: site } = useSeoApi()
+  const metaDescription = description || site.fallbackSeo.description
+  const metaTitle = title ? `${site.siteName} | ${title}` : site.siteName
 
   return (
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      defaultTitle={site.globalSeo.siteName}
-      titleTemplate={`${site.globalSeo.siteName} | %s`}
+      defaultTitle={site.siteName}
+      titleTemplate={`${site.siteName} | %s`}
       meta={[
         { name: 'description', content: metaDescription, },
         { property: 'og:title', content: metaTitle, },
         { property: 'og:description', content: metaDescription, },
         { property: 'og:type', content: 'website', },
-        { name: 'twitter:card', content: site.globalSeo.fallbackSeo.twitterCard, },
-        { name: 'twitter:creator', content: site.globalSeo.twitterAccount, },
+        { name: 'twitter:card', content: site.fallbackSeo.twitterCard, },
+        { name: 'twitter:creator', content: site.twitterAccount, },
         { name: 'twitter:title', content: metaTitle, },
         { name: 'twitter:description', content: metaDescription, },
       ].concat(meta)}

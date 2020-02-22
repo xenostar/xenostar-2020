@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { Row, Col } from 'components'
 import { media } from 'utils'
 
-export const Header = ({ title, desc }) => (
+export const Header = ({ title, introText }) => (
   <StyledHeader>
     <Row>
       <Col>
         <Title>
           {title}
         </Title>
-        <SubTitle>
-          {desc}
-        </SubTitle>
+        <IntroText>
+          {introText}
+        </IntroText>
       </Col>
     </Row>
   </StyledHeader>
@@ -34,4 +34,4 @@ const Title = styled.h1`
     font-size: 10.5vw;
   `}
 `
-const SubTitle = styled.h3``
+const IntroText = styled.h3``

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Page, HeaderHome, PortfolioGrid, PortfolioItem, Footer } from 'components'
-import { usePortfolioApi } from 'hooks'
+import { usePortfolioItemApi } from 'hooks'
 
 export default () => {
-  const { items } = usePortfolioApi()
+  const { items } = usePortfolioItemApi()
 
   return (
     <Page>

@@ -16,9 +16,9 @@ export const HeaderHome = () => {
             Hi, I'm <span>Bryan</span>
             <br />I make <AniLink bg="#90c7a8" cover direction="right" to={routes.portfolio}>things</AniLink>
           </Title>
-          <SubTitle>
+          <IntroText>
             {introText}
-          </SubTitle>
+          </IntroText>
         </Col>
       </Row>
     </StyledHeader>
@@ -31,7 +31,6 @@ const StyledHeader = styled.header`
   padding-top: 150px;
   padding-right: ${props => props.theme.layout.padding};
   padding-left: ${props => props.theme.layout.padding};
-  /* padding-bottom: ${props => props.theme.layout.paddingHuge}; */
 `
 const Title = styled.h1`
   span {
@@ -41,4 +40,4 @@ const Title = styled.h1`
     font-size: 10.5vw;
   `}
 `
-const SubTitle = styled.h3``
+const IntroText = styled.h3``

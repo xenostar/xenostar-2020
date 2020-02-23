@@ -21,7 +21,7 @@ export const Header = ({ title, introText }) => (
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 9.0625rem; /* 145px */
   padding-right: ${props => props.theme.layout.padding};
   padding-left: ${props => props.theme.layout.padding};
 `

@@ -19,7 +19,7 @@ export const ResetStyle = createGlobalStyle`
 
   html,blockquote,body,div,ol,ul,iframe,
   header,nav,section,aside,footer,
-  h1,h2,h3,h4,h5,h6,p,blockquote,
+  h1,h2,h3,h4,h5,h6,p,blockquote,pre,
   button,fieldset,input,label,select,textarea {
     display: block;
     border: 0;

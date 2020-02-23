@@ -32,5 +32,7 @@ export * from './MobileNav/MobileNav'
 export * from './Portfolio/PortfolioGrid'
 export * from './Portfolio/PortfolioItem'
 
+export * from './Blog/BlogItem'
+
 export * from './Page/Page'
 export * from './SEO/SEO'

@@ -63,10 +63,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6,
-  p, ol, ul, code {
+  p, ol, ul, code, pre {
     margin-bottom: ${props => props.theme.layout.margin};
   }
 
+  pre,
   code {
     background-color: ${props => props.theme.colors.secondary};
     border-radius: ${props => props.theme.layout.borderRadius};

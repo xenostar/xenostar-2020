@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'components'
+import { Row, Col as Col_ } from 'components'
 import { media } from 'utils'
 
 export const Header = ({ title, introText }) => (
@@ -24,6 +24,9 @@ const StyledHeader = styled.header`
   padding-top: 9.0625rem; /* 145px */
   padding-right: ${props => props.theme.layout.padding};
   padding-left: ${props => props.theme.layout.padding};
+`
+const Col = styled(Col_)`
+  margin-bottom: 0;
 `
 const Title = styled.h1`
   margin-bottom: 0 !important;

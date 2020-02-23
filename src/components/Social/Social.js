@@ -4,11 +4,11 @@ import { SocialIcon as SocialIcon_ } from 'components'
 import { useSocialInfo } from 'hooks'
 
 export const Social = props => {
-  const { nodes } = useSocialInfo()
+  const { items } = useSocialInfo()
 
   return (
     <StyledSocial {...props}>
-      {nodes.map((data, i) => (
+      {items.map((data, i) => (
         <SocialIcon
           key={i}
           href={data.url}

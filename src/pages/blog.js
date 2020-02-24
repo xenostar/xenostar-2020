@@ -13,12 +13,13 @@ export default () => {
       <Section>
         <Row>
           <Col>
-            {items.map((data, i) => (
+            {items.map(data => (
               <BlogItem
-                key={i}
+                key={data.title}
                 title={data.title}
                 slug={data.slug}
                 body={data.body}
+                excerpt={data.excerpt}
                 tags={data.tags}
                 categories={data.categories}
                 seo={seo}

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col as Col_ } from 'components'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Row, Col as Col_, Anchor } from 'components'
 import { media, routes } from 'utils'
 import { useHomeApi } from 'hooks'
 
@@ -14,7 +13,7 @@ export const HeaderHome = () => {
         <Col>
           <Title>
             Hi, I'm <span>Bryan</span>
-            <br />I make <AniLink bg="#90c7a8" cover direction="right" to={routes.portfolio}>things</AniLink>
+            <br />I make <Anchor to={routes.portfolio}>things</Anchor>
           </Title>
           <IntroText>
             {introText}
@@ -28,7 +27,7 @@ export const HeaderHome = () => {
 const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
-  padding-top: 9.0625rem; /* 145px */
+  padding-top: 9.125rem; /* 146px */
   padding-right: ${props => props.theme.layout.padding};
   padding-left: ${props => props.theme.layout.padding};
 `

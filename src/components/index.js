@@ -8,6 +8,8 @@ export * from './Section/Section'
 export * from './Row/Row'
 export * from './Col/Col'
 
+export * from './Anchor/Anchor'
+
 export * from './Social/SocialIcon'
 export * from './Social/Social'
 

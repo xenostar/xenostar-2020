@@ -8,6 +8,7 @@ export const useBlogItemApi = () => {
           title
           slug
           body
+          excerpt
           tags
           categories
           seo {

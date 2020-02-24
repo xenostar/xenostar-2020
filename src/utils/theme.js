@@ -31,14 +31,20 @@ export const theme = {
     openSans: `'Open Sans', sans-serif`,
     ubuntu: `'Ubuntu', sans-serif`,
     montserrat: `'Montserrat', sans-serif`,
-    lineHeight: '1.5',
     boldSemi: '600',
     bold: '700',
     boldExtra: '800',
     boldBlack: '900',
+    defaultLineHeight: '1.5',
     defaultSize: '1.25em',
     defaultStyle: 'normal',
     defaultWeight: '400',
+    h1Size: '5em',
+    h2Size: '2.5em',
+    h3Size: '2em',
+    h4Size: '1.5em',
+    h5Size: '1.25em',
+    h6Size: '1em',
   },
   transforms: {
     active: 'translateY(3px)',
@@ -49,7 +55,6 @@ export const theme = {
     slow: '0.4s all ease',
   },
   layout: {
-    // borderRadius: '0',
     borderRadius: '6px',
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
@@ -62,7 +67,7 @@ export const theme = {
     marginBig: '3.75rem', // 60px
     marginHuge: '5.625rem', // 90px
     marginGiant: '7.5rem', // 120px
-    topBar: '5px'
+    topBar: '6px'
   },
   breakpoints: {
     desktop: 1200,

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
+import { Anchor as Anchor_ } from 'components'
 import Img from 'gatsby-image'
 import { routes } from 'utils'
 
@@ -11,10 +11,10 @@ export const PortfolioItem = ({
   number,
 }) => (
   <StyledPortfolioItem number={'a' + number} className={'a' + number}>
-    <AniLink bg="#90c7a8" cover direction="right" to={routes.portfolio}>
+    <Anchor to={routes.portfolio}>
       <Image fluid={fluid} alt={alt} />
       <Name>{name}</Name>
-    </AniLink>
+    </Anchor>
   </StyledPortfolioItem>
 )
 
@@ -30,7 +30,7 @@ const StyledPortfolioItem = styled.div`
   display: block;
   grid-area: ${({ number }) => number};
 `
-const AniLink = styled(AniLink_)`
+const Anchor = styled(Anchor_)`
   display: block;
   position: relative;
   transition: ${props => props.theme.transitions.default};
@@ -52,7 +52,7 @@ const Name = styled.div`
   transition: ${props => props.theme.transitions.default};
   white-space: nowrap;
   z-index: 20;
-  ${AniLink}:hover & {
+  ${Anchor}:hover & {
     opacity: 1;
     transform: translateY(0px) rotate(90deg) translateZ(0);
   }

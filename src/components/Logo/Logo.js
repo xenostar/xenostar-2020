@@ -1,32 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
+import { Anchor as Anchor_ } from 'components'
 import { routes } from 'utils'
 
 export const Logo = () => (
   <StyledLogo>
-    <AniLink
-      activeClassName="active"
-      bg="#90c7a8"
-      cover
+    <Anchor
       direction="left"
-      to={routes.home}>
+      to={routes.home}
+    >
       <Text>
         X<TextColor>S</TextColor>
         <HomeText>Home</HomeText>
       </Text>
-    </AniLink>
+    </Anchor>
   </StyledLogo>
 )
 
 const StyledLogo = styled.div`
-  display: inline-flex;
+  border-radius: ${props => props.theme.layout.borderRadius};
+  display: flex;
   transition: ${props => props.theme.transitions.default};
   :active {
     transform: ${props => props.theme.transforms.active};
   }
+  :hover {
+    box-shadow: ${props => props.theme.colors.boxShadow};
+    z-index: 10;
+  }
 `
-const AniLink = styled(AniLink_)`
+const Anchor = styled(Anchor_)`
   align-items: center;
   background-color: ${props => props.theme.colors.tertiary};
   border-radius: ${props => props.theme.layout.borderRadius};
@@ -64,7 +67,7 @@ const TextColor = styled.span`
   color: ${props => props.theme.colors.primary};
   opacity: 1;
   transition: ${props => props.theme.transitions.default};
-  ${AniLink}:hover & {
+  ${Anchor}:hover & {
     opacity: 0;
   }
 `
@@ -78,7 +81,7 @@ const HomeText = styled.div`
   transform: rotate(-90deg) translateZ(0);
   transform-origin: bottom right;
   transition: ${props => props.theme.transitions.default};
-  ${AniLink}:hover & {
+  ${Anchor}:hover & {
     opacity: 1;
   }
 `

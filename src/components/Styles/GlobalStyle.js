@@ -21,26 +21,26 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 5em;
+    font-size: ${props => props.theme.fonts.h1Size};
     font-weight: ${props => props.theme.fonts.boldBlack};
   }
   h2 {
-    font-size: 2.5em;
+    font-size: ${props => props.theme.fonts.h2Size};
     letter-spacing: -1px;
   }
   h3 {
-    font-size: 2em;
+    font-size: ${props => props.theme.fonts.h3Size};
     letter-spacing: -1px;
   }
   h4 {
-    font-size: 1.5em;
+    font-size: ${props => props.theme.fonts.h4Size};
     letter-spacing: -1px;
   }
   h5 {
-    font-size: 1.25em;
+    font-size: ${props => props.theme.fonts.h5Size};
   }
   h6 {
-    font-size: 1em;
+    font-size: ${props => props.theme.fonts.h6Size};
   }
 
   a {
@@ -51,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
   p, ol, ul {
     font-size: ${props => props.theme.fonts.defaultSize};
     font-weight: ${props => props.theme.fonts.defaultWeight};
-    line-height: ${props => props.theme.fonts.lineHeight};
+    line-height: ${props => props.theme.fonts.defaultLineHeight};
   }
 
   ul {

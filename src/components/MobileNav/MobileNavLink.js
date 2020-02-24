@@ -1,26 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import AniLink_ from 'gatsby-plugin-transition-link/AniLink'
+import { Anchor as Anchor_ } from 'components'
 
 export const MobileNavLink = ({ to = '/', children, ...props }) => (
-  <AniLink
-    activeClassName="active"
-    bg="#90c7a8"
-    cover
-    direction="right"
-    to={to}
-    {...props}
-  >
+  <Anchor to={to} {...props}>
     {children}
-  </AniLink>
+  </Anchor>
 )
 
 MobileNavLink.propTypes = {
-  to: PropTypes.string
+  to: PropTypes.string,
+  children: PropTypes.any,
 }
 
-const AniLink = styled(AniLink_)`
+const Anchor = styled(Anchor_)`
   color: ${props => props.theme.colors.primary};
   display: flex;
   font-family: ${props => props.theme.fonts.montserrat};

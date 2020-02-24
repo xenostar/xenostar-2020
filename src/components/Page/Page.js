@@ -25,7 +25,7 @@ const StyledPage = styled.main`
       ${props => props.theme.colors.primary},
       ${props => props.theme.colors.primary}
     );
-    background-position: bottom left;
+    background-position: bottom 8% left;
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};

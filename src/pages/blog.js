@@ -20,7 +20,6 @@ export default () => {
                 slug={data.slug}
                 body={data.body}
                 excerpt={data.excerpt}
-                tags={data.tags}
                 categories={data.categories}
                 seo={seo}
               />

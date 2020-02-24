@@ -73,7 +73,7 @@ const TextColor = styled.span`
 `
 const HomeText = styled.div`
   color: ${props => props.theme.colors.white};
-  font-size: 26px;
+  font-size: 25.7px;
   opacity: 0;
   position: absolute;
   top: -14px;

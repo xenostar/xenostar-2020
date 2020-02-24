@@ -9,16 +9,14 @@ export const BlogItem = ({
   body = 'Lorem Ipsum',
   excerpt = 'Lorem Ipsum.',
   categories,
-  tags = 'Tag',
   seo,
   ...props
 }) => {
   const [catList, setCatList] = useState([])
 
   useEffect(() => {
-    const newCats = categories.split(', ')
-    console.log(newCats)
-    setCatList(newCats)
+    const splitCats = categories.split(', ')
+    setCatList(splitCats)
   }, [categories])
 
   return (
@@ -29,13 +27,12 @@ export const BlogItem = ({
         </Anchor>
       </Title>
       {/* <div dangerouslySetInnerHTML={{ __html: body }} /> */}
-      <p>{excerpt}</p>
+      <Excerpt>{excerpt}</Excerpt>
       <Categories>
         {catList.map((data, i) => (
           <Category key={i}>{data}</Category>
         ))}
       </Categories>
-      <Tags>{tags}</Tags>
     </StyledBlogItem>
   )
 }
@@ -46,14 +43,13 @@ BlogItem.propTypes = {
   body: PropTypes.string,
   excerpt: PropTypes.string,
   categories: PropTypes.string,
-  tags: PropTypes.string,
   seo: PropTypes.object,
 }
 
 const StyledBlogItem = styled.div`
-  display: block;
-  grid-area: ${({ number }) => number};
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: ${props => props.theme.layout.paddingHuge};
   :first-child {
     margin-top: 0;
   }
@@ -62,11 +58,16 @@ const Title = styled.h3``
 const Categories = styled.div`
   display: flex;
 `
+const Excerpt = styled.p``
 const Category = styled.div`
   background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
   font-size: 12px;
-  padding: 8px;
+  /* text-transform: uppercase; */
+  margin-left: 6px;
+  padding: 6px 8px;
   border-radius: 100px;
+  :first-child {
+    margin-left: 0;
+  }
 `
-const Tags = styled.p``

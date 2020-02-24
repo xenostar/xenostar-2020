@@ -20,12 +20,12 @@ const StyledPage = styled.main`
   h6 a,
   p a {
     background-image:
-    ${props => props.theme.colors.gradient},
-    linear-gradient(
-      ${props => props.theme.colors.primary},
-      ${props => props.theme.colors.primary}
-    );
-    background-position: bottom 8% left;
+      ${props => props.theme.colors.gradient},
+      linear-gradient(
+        ${props => props.theme.colors.lightBlue},
+        ${props => props.theme.colors.lightBlue}
+      );
+    background-position: bottom 0% left;
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};
@@ -39,7 +39,7 @@ const StyledPage = styled.main`
   h5 a:hover,
   h6 a:hover,
   p a:hover {
-    background-size: 200% 30%, 100% 30%;
+    background-size: 100% 30%, 100% 30%;
   }
 
   p a {

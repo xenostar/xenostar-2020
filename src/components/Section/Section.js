@@ -5,7 +5,7 @@ export const Section = styled.section`
   justify-content: center;
   padding-top: ${props => props.theme.layout.paddingHuge};
   padding-right: ${props => props.theme.layout.padding};
-  padding-bottom: ${props => props.theme.layout.paddingHuge};
+  padding-bottom: ${props => props.theme.layout.paddingBig};
   padding-left: ${props => props.theme.layout.padding};
   width: 100%;
 `

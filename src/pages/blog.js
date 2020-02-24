@@ -18,6 +18,7 @@ export default () => {
                 key={data.title}
                 title={data.title}
                 slug={data.slug}
+                publishDate={data.publishDate}
                 body={data.body}
                 excerpt={data.excerpt}
                 categories={data.categories}

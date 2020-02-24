@@ -6,6 +6,7 @@ import { Anchor } from 'components'
 export const BlogItem = ({
   title = 'Post Title',
   slug = 'post-title',
+  publishDate,
   body = 'Lorem Ipsum',
   excerpt = 'Lorem Ipsum.',
   categories,
@@ -26,6 +27,7 @@ export const BlogItem = ({
           {title}
         </Anchor>
       </Title>
+      <div>{publishDate}</div>
       {/* <div dangerouslySetInnerHTML={{ __html: body }} /> */}
       <Excerpt>{excerpt}</Excerpt>
       <Categories>

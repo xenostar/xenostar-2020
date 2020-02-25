@@ -22,7 +22,7 @@ export default () => {
                 body={data.body}
                 excerpt={data.excerpt}
                 categories={data.categories}
-                seo={seo}
+                seo={data.seo}
               />
             ))}
           </Col>

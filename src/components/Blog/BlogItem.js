@@ -42,6 +42,7 @@ export const BlogItem = ({
 BlogItem.propTypes = {
   title: PropTypes.string,
   slug: PropTypes.string,
+  publishDate: PropTypes.string,
   body: PropTypes.string,
   excerpt: PropTypes.string,
   categories: PropTypes.string,

@@ -27,8 +27,7 @@ export const BlogPost = ({
           {title}
         </Anchor>
       </Title>
-      <div>{publishDate}</div>
-      {/* <div dangerouslySetInnerHTML={{ __html: body }} /> */}
+      <Date>{publishDate}</Date>
       <Excerpt>{excerpt}</Excerpt>
       <Categories>
         {catList.map((data, i) => (
@@ -58,15 +57,15 @@ const StyledBlogPost = styled.div`
   }
 `
 const Title = styled.h3``
+const Excerpt = styled.p``
+const Date = styled.p``
 const Categories = styled.div`
   display: flex;
 `
-const Excerpt = styled.p``
 const Category = styled.div`
   background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
   font-size: 12px;
-  /* text-transform: uppercase; */
   margin-left: 6px;
   padding: 6px 8px;
   border-radius: 100px;

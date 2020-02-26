@@ -30,6 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/Post.js`),
           context: {
             slug: data.slug,
+            data: data,
           },
         })
       })

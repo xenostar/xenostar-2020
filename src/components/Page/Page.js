@@ -34,6 +34,7 @@ const StyledPage = styled.main`
     padding: 0 2px;
     transition: 0.2s background ease-out;
   }
+
   h1 a:hover,
   h2 a:hover,
   h3 a:hover,
@@ -47,5 +48,4 @@ const StyledPage = styled.main`
   p a {
     font-weight: ${props => props.theme.fonts.bold};
   }
-
 `

@@ -7,10 +7,10 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Xenostar`,
-    subTitle: `Studios`,
-    description: `Xenostar.net is the official website of Bryan Leewood.`,
-    author: `Bryan Leewood`,
+    title: `Unused - Xenostar Studios`,
+    subTitle: `Unused - XS`,
+    description: `Unused - Xenostar.net is the official website of Bryan Leewood.`,
+    author: `Unused - Bryan Leewood`,
     siteUrl: `https://xenostar-2020.netlify.com/`,
   },
   plugins: [
@@ -63,11 +63,6 @@ module.exports = {
             variants: [`400`]
           },
           {
-            family: `Ubuntu`,
-            subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `700i`, `800`, `800i`]
-          },
-          {
             family: `Montserrat`,
             subsets: [`latin`],
             variants: [`400`, `400i`, `500`, `500i`, `600`, `600i`,  `700`, `700i`, `800`, `800i`, `900`, `900i`]
@@ -94,7 +89,6 @@ module.exports = {
      *
      */
     `gatsby-plugin-sitemap`,
-    // `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-helmet-async`,
     {
       resolve: `gatsby-plugin-manifest`,

@@ -29,7 +29,6 @@ export const theme = {
   fonts: {
     bebasNeue: `'Bebas Neue', cursive`,
     openSans: `'Open Sans', sans-serif`,
-    ubuntu: `'Ubuntu', sans-serif`,
     montserrat: `'Montserrat', sans-serif`,
     boldSemi: '600',
     bold: '700',

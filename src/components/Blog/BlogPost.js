@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Anchor } from 'components'
 
-export const BlogItem = ({
+export const BlogPost = ({
   title = 'Post Title',
   slug = 'post-title',
   publishDate,
@@ -21,7 +21,7 @@ export const BlogItem = ({
   }, [categories])
 
   return (
-    <StyledBlogItem {...props}>
+    <StyledBlogPost {...props}>
       <Title>
         <Anchor to={'/blog/' + slug}>
           {title}
@@ -35,11 +35,11 @@ export const BlogItem = ({
           <Category key={i}>{data}</Category>
         ))}
       </Categories>
-    </StyledBlogItem>
+    </StyledBlogPost>
   )
 }
 
-BlogItem.propTypes = {
+BlogPost.propTypes = {
   title: PropTypes.string,
   slug: PropTypes.string,
   publishDate: PropTypes.string,
@@ -49,7 +49,7 @@ BlogItem.propTypes = {
   seo: PropTypes.object,
 }
 
-const StyledBlogItem = styled.div`
+const StyledBlogPost = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${props => props.theme.layout.paddingHuge};

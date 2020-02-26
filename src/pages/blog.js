@@ -1,10 +1,10 @@
 import React from 'react'
-import { Page, SEO, Header, Section, Row, Col, BlogItem, Footer } from 'components'
-import { useBlogApi, useBlogItemApi } from 'hooks'
+import { Page, SEO, Header, Section, Row, Col, BlogPost, Footer } from 'components'
+import { useBlogApi, useBlogPostApi } from 'hooks'
 
 export default () => {
   const { seo, introText } = useBlogApi()
-  const { items } = useBlogItemApi()
+  const { items } = useBlogPostApi()
 
   return (
     <Page>
@@ -14,7 +14,7 @@ export default () => {
         <Row>
           <Col>
             {items.map(data => (
-              <BlogItem
+              <BlogPost
                 key={data.title}
                 title={data.title}
                 slug={data.slug}

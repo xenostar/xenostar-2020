@@ -1,9 +1,9 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-export const useBlogItemApi = () => {
-  const { allDatoCmsBlogItem } = useStaticQuery(graphql`
+export const useBlogPostApi = () => {
+  const { allDatoCmsBlogPost } = useStaticQuery(graphql`
     query {
-      allDatoCmsBlogItem(sort: {fields: publishDate, order: DESC}) {
+      allDatoCmsBlogPost(sort: {fields: publishDate, order: DESC}) {
         items: nodes {
           title
           slug
@@ -21,5 +21,5 @@ export const useBlogItemApi = () => {
     }
   `)
 
-  return allDatoCmsBlogItem
+  return allDatoCmsBlogPost
 }

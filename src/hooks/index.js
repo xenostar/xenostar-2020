@@ -1,6 +1,6 @@
 export * from './useAboutApi'
 export * from './useBlogApi'
-export * from './useBlogItemApi'
+export * from './useBlogPostApi'
 export * from './useHomeApi'
 export * from './usePortfolioApi'
 export * from './usePortfolioItemApi'

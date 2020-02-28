@@ -21,6 +21,7 @@ const Grid = styled.div`
   grid-gap: 1px;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: auto;
+  padding-bottom: ${props => props.theme.layout.padding};
   transition: ${props => props.theme.transitions.default};
   width: 100%;
   grid-template-areas:

@@ -10,7 +10,6 @@ export const useBlogPostApi = () => {
           publishDate(formatString: "MMMM Do, YYYY", locale: "en")
           body
           excerpt
-          tags
           categories
           seo {
             title

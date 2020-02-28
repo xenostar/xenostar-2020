@@ -9,6 +9,7 @@ import {
   Col,
   Footer,
 } from 'components'
+import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
 const Post = ({ pageContext: { data } }) => {
   const [catList, setCatList] = useState([])
@@ -21,13 +22,17 @@ const Post = ({ pageContext: { data } }) => {
   return (
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
-      <HeaderPost title={data.title} date={data.publishDate} introText={data.excerpt} />
+      <HeaderPost
+        title={data.title}
+        date={data.publishDate}
+        introText={data.excerpt}
+      />
       <Section>
         <Row>
           <Col>
             <Body dangerouslySetInnerHTML={{ __html: data.body }} />
             <Categories>
-              <CategoryFiled>Filed Under</CategoryFiled>
+              <FaFolder/>
               {catList.map((data, i) => (
                 <Category key={i}>{data}</Category>
                 ))}
@@ -50,24 +55,18 @@ const Categories = styled.div`
   display: flex;
   align-items: center;
 `
-const CategoryFiled = styled.div`
+const FaFolder = styled(FaFolder_)`
   color: ${props => props.theme.colors.lightGrey};
-  cursor: default;
-  font-size: 14px;
-  font-weight: ${props => props.theme.fonts.bold};
-  text-transform: uppercase;
-  user-select: none;
+  font-size: 21px;
 `
 const Category = styled.div`
   background-color: ${props => props.theme.colors.primary};
   border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.white};
-  cursor: default;
   font-size: 14px;
   font-weight: ${props => props.theme.fonts.bold};
   margin-left: ${props => props.theme.layout.borderRadius};
   padding: 8px 10px;
-  user-select: none;
 `
 
 export default Post

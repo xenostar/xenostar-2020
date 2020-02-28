@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col as Col_, Social } from 'components'
-import { IoIosHeart } from 'react-icons/io'
+import { IoIosHeart as IoIosHeart_ } from 'react-icons/io'
 import { media } from 'utils'
 
 export const Footer = () => (
   <StyledFooter>
     <Row>
-      <Col width="50%">
+      <Col width="49%">
         <Text>Built with <IoIosHeart /> by Xenostar.</Text>
       </Col>
       <Col align="flex-end" justify="space-between" width="49%">
@@ -33,4 +33,15 @@ const Col = styled(Col_)`
     width: 100%;
   `}
 `
-const Text = styled.h5``
+const Text = styled.h5`
+  align-items: center;
+  display: flex;
+`
+const IoIosHeart = styled(IoIosHeart_)`
+  font-size: 21px;
+  margin: 0 ${props => props.theme.layout.borderRadius};
+  transition: ${props => props.theme.transitions.default};
+  :hover {
+    color: ${props => props.theme.colors.primary};
+  }
+`

@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: ${props => props.theme.fonts.montserrat};
     line-height: 1.5;
-    user-select: none;
   }
 
   h1 {
@@ -70,19 +69,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6,
-  p, ol, ul, code, blockquote, pre {
+  blockquote, p, ol, ul, code, pre {
     margin-bottom: ${props => props.theme.layout.margin};
   }
 
-  pre,
-  code {
+  code,
+  pre {
     background-color: ${props => props.theme.colors.secondary};
     border-radius: ${props => props.theme.layout.borderRadius};
     color: ${props => props.theme.colors.white};
     padding: ${props => props.theme.layout.padding};
-  }
-
-  .gatsby-plugin-transition-link-portal {
-    cursor: pointer;
   }
 `

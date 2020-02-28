@@ -14,9 +14,7 @@ export const BlogPost = ({
 }) => (
   <StyledBlogPost {...props}>
     <Title>
-      <Anchor to={'/blog/' + slug}>
-        {title}
-      </Anchor>
+      <Anchor to={'/blog/' + slug}>{title}</Anchor>
     </Title>
     <BlogDate>{publishDate}</BlogDate>
     <Excerpt>{excerpt}</Excerpt>
@@ -35,7 +33,7 @@ BlogPost.propTypes = {
 const StyledBlogPost = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: ${props => props.theme.layout.paddingHuge};
+  margin-top: ${props => props.theme.layout.marginHuge};
   :first-child {
     margin-top: 0;
   }

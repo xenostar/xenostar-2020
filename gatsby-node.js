@@ -12,7 +12,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           publishDate(formatString: "MMMM Do, YYYY", locale: "en")
           body
           excerpt
-          tags
           categories
           seo {
             title

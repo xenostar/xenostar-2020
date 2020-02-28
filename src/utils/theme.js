@@ -4,8 +4,10 @@ export const theme = {
     // gradient: 'linear-gradient(to right, #ec56f4, #90c7a8)',
     // primary: '#90c7a8',
     // gradient: 'linear-gradient(to right, #49a19a, #90c7a8)',
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #379189, #90c7a8)',
     primary: '#90c7a8',
-    gradient: 'linear-gradient(to right, #379189, #90c7a8)',
+    gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
     // primary: '#90c7a8',
     // gradient: 'linear-gradient(to right, #8764b2, #90c7a8)',
     // primary: '#90c7a8',
@@ -20,7 +22,7 @@ export const theme = {
     tertiary: 'rgba(35, 33, 33, 1)', // #232121
     lightBlue: 'rgba(199, 227, 211, 1)', // #c7e3d3
     background: 'rgba(255, 255, 255, 1)', // #fff
-    // background: '#E0E5EC', // For use with Neumorphism
+    lightGrey: '#999',
     transparent: 'rgba(0, 0, 0, 0)', // Transparent
     white: 'rgba(255, 255, 255, 1)', // #fff
     black: 'rgba(0, 0, 0, 1)', // #000
@@ -58,10 +60,12 @@ export const theme = {
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '62.5rem', // 1000px
+    paddingSmall: '0.9375rem', // 15px
     padding: '1.875rem', // 30px
     paddingBig: '3.75rem', // 60px
     paddingHuge: '5.625rem', // 90px
     paddingGiant: '7.5rem', // 120px
+    marginSmall: '0.9375rem', // 15px
     margin: '1.875rem', // 30px
     marginBig: '3.75rem', // 60px
     marginHuge: '5.625rem', // 90px

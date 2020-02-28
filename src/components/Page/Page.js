@@ -31,7 +31,6 @@ const StyledPage = styled.main`
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
     border-radius: ${props => props.theme.layout.borderRadiusSmall};
-    padding: 0 2px;
     transition: 0.2s background ease-out;
   }
 

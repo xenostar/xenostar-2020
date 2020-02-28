@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Anchor } from 'components'
+import { Anchor, BlogDate } from 'components'
 
 export const BlogPost = ({
   title = 'Post Title',
@@ -9,34 +9,19 @@ export const BlogPost = ({
   publishDate,
   body = 'Lorem Ipsum',
   excerpt = 'Lorem Ipsum.',
-  categories,
   seo,
   ...props
-}) => {
-  const [catList, setCatList] = useState([])
-
-  useEffect(() => {
-    const splitCats = categories.split(', ')
-    setCatList(splitCats)
-  }, [categories])
-
-  return (
-    <StyledBlogPost {...props}>
-      <Title>
-        <Anchor to={'/blog/' + slug}>
-          {title}
-        </Anchor>
-      </Title>
-      <Date>{publishDate}</Date>
-      <Excerpt>{excerpt}</Excerpt>
-      <Categories>
-        {catList.map((data, i) => (
-          <Category key={i}>{data}</Category>
-        ))}
-      </Categories>
-    </StyledBlogPost>
-  )
-}
+}) => (
+  <StyledBlogPost {...props}>
+    <Title>
+      <Anchor to={'/blog/' + slug}>
+        {title}
+      </Anchor>
+    </Title>
+    <BlogDate>{publishDate}</BlogDate>
+    <Excerpt>{excerpt}</Excerpt>
+  </StyledBlogPost>
+)
 
 BlogPost.propTypes = {
   title: PropTypes.string,
@@ -44,7 +29,6 @@ BlogPost.propTypes = {
   publishDate: PropTypes.string,
   body: PropTypes.string,
   excerpt: PropTypes.string,
-  categories: PropTypes.string,
   seo: PropTypes.object,
 }
 
@@ -58,18 +42,3 @@ const StyledBlogPost = styled.div`
 `
 const Title = styled.h3``
 const Excerpt = styled.p``
-const Date = styled.p``
-const Categories = styled.div`
-  display: flex;
-`
-const Category = styled.div`
-  background-color: ${props => props.theme.colors.primary};
-  color: ${props => props.theme.colors.white};
-  font-size: 12px;
-  margin-left: 6px;
-  padding: 6px 8px;
-  border-radius: 100px;
-  :first-child {
-    margin-left: 0;
-  }
-`

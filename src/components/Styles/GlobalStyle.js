@@ -54,6 +54,13 @@ export const GlobalStyle = createGlobalStyle`
     line-height: ${props => props.theme.fonts.defaultLineHeight};
   }
 
+  blockquote {
+    border-left: 12px solid #eee;
+    padding-top: ${props => props.theme.layout.paddingSmall};
+    padding-bottom: ${props => props.theme.layout.paddingSmall};
+    padding-left: ${props => props.theme.layout.padding};
+  }
+
   ul {
     list-style-position: inside;
     list-style-type: disc;
@@ -63,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6,
-  p, ol, ul, code, pre {
+  p, ol, ul, code, blockquote, pre {
     margin-bottom: ${props => props.theme.layout.margin};
   }
 

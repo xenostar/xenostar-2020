@@ -35,9 +35,6 @@ const Col = styled(Col_)`
   margin-bottom: 0;
 `
 const Title = styled.h1`
-  span {
-    color: ${props => props.theme.colors.primary};
-  }
   ${media.tablet`
     font-size: 10.5vw;
   `}

@@ -14,7 +14,9 @@ export * from './Social/SocialIcon'
 export * from './Social/Social'
 
 export * from './Headers/Header'
+export * from './Headers/HeaderPost'
 export * from './Headers/HeaderHome'
+
 export * from './Footer/Footer'
 
 export * from './PageName/PageName'
@@ -34,6 +36,7 @@ export * from './MobileNav/MobileNav'
 export * from './Portfolio/PortfolioGrid'
 export * from './Portfolio/PortfolioItem'
 
+export * from './Blog/BlogDate'
 export * from './Blog/BlogPost'
 
 export * from './Page/Page'

@@ -36,5 +36,5 @@ const Row = styled(Row_)`
   flex-direction: row;
   justify-content: space-between;
   max-width: none;
-  padding: ${props => props.theme.layout.padding};
+  padding: ${props => props.theme.layout.spacing};
 `

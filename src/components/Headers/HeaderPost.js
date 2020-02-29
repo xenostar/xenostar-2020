@@ -8,7 +8,10 @@ export const HeaderPost = ({ title, date, introText }) => (
     <Row>
       <Col>
         <Title>{title}</Title>
-        <BlogDate>{date}</BlogDate>
+        <Meta>
+          <BlogDate>{date}</BlogDate>
+          <Share>Share Buttons</Share>
+        </Meta>
         <IntroText>{introText}</IntroText>
       </Col>
     </Row>
@@ -19,8 +22,8 @@ const StyledHeaderPost = styled.header`
   display: flex;
   justify-content: center;
   padding-top: 9.125rem; /* 146px */
-  padding-right: ${props => props.theme.layout.padding};
-  padding-left: ${props => props.theme.layout.padding};
+  padding-right: ${props => props.theme.layout.spacing};
+  padding-left: ${props => props.theme.layout.spacing};
 `
 const Col = styled(Col_)`
   margin-bottom: 0;
@@ -29,6 +32,13 @@ const Title = styled.h2`
   ${media.tablet`
     font-size: 10.5vw;
   `}
+`
+const Meta = styled.div`
+  display: flex;
+  margin-bottom: ${props => props.theme.layout.spacing};
+`
+const Share = styled.div`
+  display: flex;
 `
 const IntroText = styled.h5`
   color: ${props => props.theme.colors.primary};

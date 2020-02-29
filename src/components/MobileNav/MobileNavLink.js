@@ -23,7 +23,7 @@ const Anchor = styled(Anchor_)`
   justify-content: flex-end;
   line-height: 60px;
   transition: ${props => props.theme.transitions.default};
-  padding: ${props => props.theme.layout.padding};
+  padding: ${props => props.theme.layout.spacing};
   &.active,
   :hover {
     background-color: ${props => props.theme.colors.primary};

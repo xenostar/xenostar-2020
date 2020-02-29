@@ -46,10 +46,10 @@ const Post = ({ pageContext: { data } }) => {
 }
 
 const Section = styled(Section_)`
-  padding-top: ${props => props.theme.layout.padding};
+  padding-top: ${props => props.theme.layout.spacing};
 `
 const Body = styled.div`
-  margin-bottom: ${props => props.theme.layout.padding};
+  margin-bottom: ${props => props.theme.layout.spacing};
 `
 const Categories = styled.div`
   display: flex;

@@ -18,7 +18,7 @@ const StyledMobileNavClose = styled.div`
   display: flex;
   justify-content: right;
   height: 5rem;
-  margin: ${props => props.theme.layout.padding};
+  margin: ${props => props.theme.layout.spacing};
 `
 const IoMdClose = styled(IoMdClose_)`
   background-color: ${props => props.theme.colors.white};

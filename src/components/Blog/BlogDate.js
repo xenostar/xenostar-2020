@@ -9,7 +9,7 @@ export const BlogDate = ({ children }) => (
   </StyledBlogDate>
 )
 
-const StyledBlogDate = styled.p`
+const StyledBlogDate = styled.div`
   align-items: center;
   display: flex;
   color: ${props => props.theme.colors.lightGrey};

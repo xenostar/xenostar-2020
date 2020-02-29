@@ -55,9 +55,9 @@ export const GlobalStyle = createGlobalStyle`
 
   blockquote {
     border-left: 12px solid #eee;
-    padding-top: ${props => props.theme.layout.paddingSmall};
-    padding-bottom: ${props => props.theme.layout.paddingSmall};
-    padding-left: ${props => props.theme.layout.padding};
+    padding-top: ${props => props.theme.layout.spacingSmall};
+    padding-bottom: ${props => props.theme.layout.spacingSmall};
+    padding-left: ${props => props.theme.layout.spacing};
   }
 
   ul {
@@ -70,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6,
   blockquote, p, ol, ul, code, pre {
-    margin-bottom: ${props => props.theme.layout.margin};
+    margin-bottom: ${props => props.theme.layout.spacing};
   }
 
   code,
@@ -78,6 +78,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.colors.secondary};
     border-radius: ${props => props.theme.layout.borderRadius};
     color: ${props => props.theme.colors.white};
-    padding: ${props => props.theme.layout.padding};
+    padding: ${props => props.theme.layout.spacing};
   }
 `

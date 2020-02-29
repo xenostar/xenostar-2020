@@ -21,7 +21,7 @@ const Grid = styled.div`
   grid-gap: 1px;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: auto;
-  padding-bottom: ${props => props.theme.layout.padding};
+  padding-bottom: ${props => props.theme.layout.spacing};
   transition: ${props => props.theme.transitions.default};
   width: 100%;
   grid-template-areas:
@@ -35,6 +35,6 @@ const Grid = styled.div`
     '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .'
   ;
   :hover {
-    grid-gap: ${props => props.theme.layout.padding};
+    grid-gap: ${props => props.theme.layout.spacing};
   }
 `

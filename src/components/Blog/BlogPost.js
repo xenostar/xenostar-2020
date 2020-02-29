@@ -33,7 +33,7 @@ BlogPost.propTypes = {
 const StyledBlogPost = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: ${props => props.theme.layout.marginHuge};
+  margin-top: ${props => props.theme.layout.spacingHuge};
   :first-child {
     margin-top: 0;
   }

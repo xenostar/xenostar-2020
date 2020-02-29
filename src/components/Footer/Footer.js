@@ -22,10 +22,10 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   margin-top: auto;
-  padding-top: ${props => props.theme.layout.paddingBig};
-  padding-right: ${props => props.theme.layout.padding};
-  padding-bottom: ${props => props.theme.layout.padding};
-  padding-left: ${props => props.theme.layout.padding};
+  padding-top: ${props => props.theme.layout.spacingBig};
+  padding-right: ${props => props.theme.layout.spacing};
+  padding-bottom: ${props => props.theme.layout.spacing};
+  padding-left: ${props => props.theme.layout.spacing};
 `
 const Col = styled(Col_)`
   ${media.tablet`

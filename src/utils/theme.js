@@ -60,16 +60,11 @@ export const theme = {
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '62.5rem', // 1000px
-    paddingSmall: '0.9375rem', // 15px
-    padding: '1.875rem', // 30px
-    paddingBig: '3.75rem', // 60px
-    paddingHuge: '5.625rem', // 90px
-    paddingGiant: '7.5rem', // 120px
-    marginSmall: '0.9375rem', // 15px
-    margin: '1.875rem', // 30px
-    marginBig: '3.75rem', // 60px
-    marginHuge: '5.625rem', // 90px
-    marginGiant: '7.5rem', // 120px
+    spacingSmall: '0.9375rem', // 15px
+    spacing: '1.875rem', // 30px
+    spacingBig: '3.75rem', // 60px
+    spacingHuge: '5.625rem', // 90px
+    spacingGiant: '7.5rem', // 120px
     topBar: '6px'
   },
   breakpoints: {

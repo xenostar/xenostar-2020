@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Anchor, BlogDate } from 'components'
+import { Anchor, BlogDate as BlogDate_ } from 'components'
 
 export const BlogPost = ({
   title = 'Post Title',
@@ -39,4 +39,7 @@ const StyledBlogPost = styled.div`
   }
 `
 const Title = styled.h3``
+const BlogDate = styled(BlogDate_)`
+  margin-bottom: ${props => props.theme.layout.spacing};
+`
 const Excerpt = styled.p``

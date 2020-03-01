@@ -13,6 +13,10 @@ export * from './Anchor/Anchor'
 export * from './Social/SocialIcon'
 export * from './Social/Social'
 
+export * from './Blog/BlogDate'
+export * from './Blog/BlogPost'
+export * from './Blog/BlogShare'
+
 export * from './Headers/Header'
 export * from './Headers/HeaderPost'
 export * from './Headers/HeaderHome'
@@ -35,9 +39,6 @@ export * from './MobileNav/MobileNav'
 
 export * from './Portfolio/PortfolioGrid'
 export * from './Portfolio/PortfolioItem'
-
-export * from './Blog/BlogDate'
-export * from './Blog/BlogPost'
 
 export * from './Page/Page'
 export * from './SEO/SEO'

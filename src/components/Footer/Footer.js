@@ -41,7 +41,7 @@ const IoIosHeart = styled(IoIosHeart_)`
   font-size: 21px;
   margin: 0 ${props => props.theme.layout.borderRadius};
   transition: ${props => props.theme.transitions.default};
-  :hover {
+  ${Text}:hover & {
     color: ${props => props.theme.colors.primary};
   }
 `

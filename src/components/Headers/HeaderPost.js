@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col as Col_, BlogDate } from 'components'
+import { Row, Col as Col_, BlogDate, BlogShare as BlogShare_ } from 'components'
 import { media } from 'utils'
 
 export const HeaderPost = ({ title, date, introText }) => (
@@ -10,7 +10,7 @@ export const HeaderPost = ({ title, date, introText }) => (
         <Title>{title}</Title>
         <Meta>
           <BlogDate>{date}</BlogDate>
-          <Share>Share Buttons</Share>
+          <BlogShare />
         </Meta>
         <IntroText>{introText}</IntroText>
       </Col>
@@ -36,9 +36,10 @@ const Title = styled.h2`
 const Meta = styled.div`
   display: flex;
   margin-bottom: ${props => props.theme.layout.spacing};
+  width: 100%;
 `
-const Share = styled.div`
-  display: flex;
+const BlogShare = styled(BlogShare_)`
+  margin-left: ${props => props.theme.layout.spacingSmall};
 `
 const IntroText = styled.h5`
   color: ${props => props.theme.colors.primary};

@@ -39,7 +39,9 @@ const Meta = styled.div`
   width: 100%;
 `
 const BlogShare = styled(BlogShare_)`
+  border-left: 1px solid #ddd;
   margin-left: ${props => props.theme.layout.spacingSmall};
+  padding-left: ${props => props.theme.layout.spacingSmall};
 `
 const IntroText = styled.h5`
   color: ${props => props.theme.colors.primary};

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Row, Col as Col_, Social } from 'components'
 import { IoIosHeart as IoIosHeart_ } from 'react-icons/io'
 import { media } from 'utils'
@@ -10,7 +10,7 @@ export const Footer = () => (
       <Col width="49%">
         <Text>Built with <IoIosHeart /> by Xenostar.</Text>
       </Col>
-      <Col align="flex-end" justify="space-between" width="49%">
+      <Col width="49%" align="flex-end" justify="space-between">
         <Social />
       </Col>
     </Row>
@@ -37,11 +37,21 @@ const Text = styled.h5`
   align-items: center;
   display: flex;
 `
+const HeartBeat = keyframes`
+  0% { transform: scale(1); }
+  5% { transform: scale(1.1); }
+  10% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+`
 const IoIosHeart = styled(IoIosHeart_)`
+  cursor: none;
   font-size: 21px;
   margin: 0 ${props => props.theme.layout.borderRadius};
   transition: ${props => props.theme.transitions.default};
   ${Text}:hover & {
+    animation: ${HeartBeat} 2.5s infinite;
     color: ${props => props.theme.colors.primary};
   }
 `

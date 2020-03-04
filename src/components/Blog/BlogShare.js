@@ -4,13 +4,13 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 
 export const BlogShare = ({...props }) => (
   <StyledBlogShare {...props}>
-    <Link href="#" target="_blank" rel="noopener noreferrer">
+    <Link href="https://www.facebook.com/sharer/sharer.php?u=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name" target="_blank" rel="noopener noreferrer">
       <FaFacebookF />
     </Link>
-    <Link href="#" target="_blank" rel="noopener noreferrer">
+    <Link href="https://twitter.com/share?url=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name&text=&via=xen0star" target="_blank" rel="noopener noreferrer">
       <FaTwitter />
     </Link>
-    <Link href="#" target="_blank" rel="noopener noreferrer">
+    <Link href="https://www.linkedin.com/shareArticle?mini=true&url=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name&title=&summary=&source=" target="_blank" rel="noopener noreferrer">
       <FaLinkedinIn />
     </Link>
   </StyledBlogShare>

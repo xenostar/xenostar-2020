@@ -11,7 +11,8 @@ module.exports = {
     subTitle: `Unused - XS`,
     description: `Unused - Xenostar.net is the official website of Bryan Leewood.`,
     author: `Unused - Bryan Leewood`,
-    siteUrl: `https://xenostar-2020.netlify.com/`,
+    // siteUrl: `https://www.xenostar.net`,
+    siteUrl: `https://xenostar-2020.netlify.com`,
   },
   plugins: [
     /**

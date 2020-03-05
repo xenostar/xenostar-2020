@@ -1,32 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaFacebookSquare, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
+import { useStoreState } from 'easy-peasy'
+import { useSiteMetaData } from 'hooks'
 
-export const BlogShare = ({ ...props }) => (
-  <StyledBlogShare {...props}>
-    <Link
-      href="https://www.facebook.com/sharer/sharer.php?u=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaFacebookSquare />
-    </Link>
-    <Link
-      href="https://twitter.com/share?url=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name&text=&via=xen0star"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaTwitter />
-    </Link>
-    <Link
-      href="https://www.linkedin.com/shareArticle?mini=true&url=https://xenostar-2020.netlify.com/blog/even-a-fourth-post-with-longer-name&title=&summary=&source="
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaLinkedinIn />
-    </Link>
-  </StyledBlogShare>
-)
+export const BlogShare = props => {
+  const pathName = useStoreState(state => state.page.pathName)
+  const { siteUrl } = useSiteMetaData()
+  const url = siteUrl + pathName
+
+  return (
+    <StyledBlogShare {...props}>
+      <Link
+        href={`https://twitter.com/share?url=${url}&text=&via=xen0star`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaTwitter />
+      </Link>
+      <Link
+        href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaFacebookF />
+      </Link>
+      <Link
+        href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=&summary=&source=`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedinIn />
+      </Link>
+    </StyledBlogShare>
+  )
+}
 
 const StyledBlogShare = styled.div`
   display: flex;

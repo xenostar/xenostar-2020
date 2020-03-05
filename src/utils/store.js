@@ -5,6 +5,10 @@ export const store = createStore({
     currentPage: '',
     setCurrentPage: action((state, newPage) => {
       state.currentPage = newPage
+    }),
+    pathName: '',
+    setPathName: action((state, newPathName) => {
+      state.pathName = newPathName
     })
   },
   nav: {

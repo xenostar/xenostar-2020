@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Row, Col as Col_ } from 'components'
 import { media } from 'utils'
 
-export const Header = ({ title, introText }) => (
+export const Header = ({
+  introText = 'Ipsum',
+  title = 'Lorem',
+}) => (
   <StyledHeader>
     <Row>
       <Col>
@@ -17,6 +21,11 @@ export const Header = ({ title, introText }) => (
     </Row>
   </StyledHeader>
 )
+
+Header.propTypes = {
+  introText: PropTypes.string,
+  title: PropTypes.string,
+}
 
 const StyledHeader = styled.header`
   display: flex;

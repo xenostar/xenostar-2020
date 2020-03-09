@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import {
   Page,
   SEO,
@@ -11,8 +12,12 @@ import {
 } from 'components'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
-const Post = ({ pageContext: { data } }) => {
+const Post = ({
+  location: { pathname },
+  pageContext: { data }
+}) => {
   const [catList, setCatList] = useState([])
+  console.log("Pathname", pathname)
 
   useEffect(() => {
     const splitCats = data.categories.split(', ')
@@ -23,19 +28,20 @@ const Post = ({ pageContext: { data } }) => {
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
       <HeaderPost
-        title={data.title}
         date={data.publishDate}
         introText={data.excerpt}
+        pathname={pathname}
+        title={data.title}
       />
       <Section>
         <Row>
           <Col>
             <Body dangerouslySetInnerHTML={{ __html: data.body }} />
             <Categories>
-              <FaFolder/>
+              <FaFolder />
               {catList.map((data, i) => (
                 <Category key={i}>{data}</Category>
-                ))}
+              ))}
             </Categories>
           </Col>
         </Row>
@@ -43,6 +49,11 @@ const Post = ({ pageContext: { data } }) => {
       <Footer />
     </Page>
   )
+}
+
+Post.propTypes = {
+  location: PropTypes.object,
+  pageContext: PropTypes.object,
 }
 
 const Section = styled(Section_)`

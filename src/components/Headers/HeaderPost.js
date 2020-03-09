@@ -1,22 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Row, Col as Col_, BlogDate, BlogShare as BlogShare_ } from 'components'
 import { media } from 'utils'
 
-export const HeaderPost = ({ title, date, introText }) => (
+export const HeaderPost = ({
+  date = 'Date',
+  introText = 'Ipsum',
+  pathname = '',
+  title = 'Lorem',
+}) => (
   <StyledHeaderPost>
     <Row>
       <Col>
         <Title>{title}</Title>
         <Meta>
           <BlogDate>{date}</BlogDate>
-          <BlogShare />
+          <BlogShare pathName={pathname} />
         </Meta>
         <IntroText>{introText}</IntroText>
       </Col>
     </Row>
   </StyledHeaderPost>
 )
+
+HeaderPost.propTypes = {
+  date: PropTypes.string,
+  introText: PropTypes.string,
+  title: PropTypes.string
+}
 
 const StyledHeaderPost = styled.header`
   display: flex;

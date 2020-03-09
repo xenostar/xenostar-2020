@@ -8,7 +8,7 @@ import { routes } from 'utils'
 export const PortfolioItem = ({
   area = false,
   featuredImage: { fluid, alt = '' },
-  name = '',
+  name = 'Item Name',
   number,
 }) => (
   <StyledPortfolioItem area={area} number={'a' + number} className={'a' + number}>

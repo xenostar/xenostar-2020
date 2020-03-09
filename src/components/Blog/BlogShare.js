@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
-import { useStoreState } from 'easy-peasy'
 import { useSiteMetaData } from 'hooks'
 
-export const BlogShare = props => {
-  const pathName = useStoreState(state => state.page.pathName)
+export const BlogShare = ({
+  pathName = '',
+  ...props
+}) => {
   const { siteUrl } = useSiteMetaData()
   const url = siteUrl + pathName
 
@@ -34,6 +36,10 @@ export const BlogShare = props => {
       </Link>
     </StyledBlogShare>
   )
+}
+
+BlogShare.propTypes = {
+  pathName: PropTypes.string,
 }
 
 const StyledBlogShare = styled.div`

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, HeaderHome, PortfolioGrid, PortfolioItem, Footer } from 'components'
+import { Page, HeaderHome, PortfolioGridHome, PortfolioItem, Footer } from 'components'
 import { usePortfolioItemApi } from 'hooks'
 
 export default () => {
@@ -8,10 +8,11 @@ export default () => {
   return (
     <Page>
       <HeaderHome />
-      <PortfolioGrid>
+      <PortfolioGridHome>
         {items.map((data, i) => (
           <PortfolioItem
-            key={i}
+            key={data.name}
+            area={true}
             featuredImage={data.featuredImage}
             image={data.image}
             name={data.name}
@@ -19,7 +20,7 @@ export default () => {
             slug={data.slug}
           />
         ))}
-      </PortfolioGrid>
+      </PortfolioGridHome>
       <Footer />
     </Page>
   )

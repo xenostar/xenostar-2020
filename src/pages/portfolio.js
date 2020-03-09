@@ -1,30 +1,37 @@
 import React from 'react'
-import { Page, SEO, Header, Section, Row, Col, Footer } from 'components'
-import { usePortfolioApi } from 'hooks'
+import {
+  Page,
+  SEO,
+  Header,
+  // Section,
+  // Row,
+  // Col,
+  PortfolioGrid,
+  PortfolioItem,
+  Footer,
+} from 'components'
+import { usePortfolioApi, usePortfolioItemApi } from 'hooks'
 
 export default () => {
   const { seo, introText } = usePortfolioApi()
+  const { items } = usePortfolioItemApi()
 
   return (
     <Page>
       <SEO title={seo.title} description={seo.description} />
       <Header title={seo.title} introText={introText} />
-      <Section>
-        <Row>
-          <Col>
-            <p>
-              Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim qui
-              Lorem ea sunt exercitation sunt Lorem sit do. Est laborum nostrud
-              dolor sit cupidatat nisi ut incididunt. Qui aliqua ea cupidatat
-              deserunt aute anim velit culpa id cupidatat. Esse culpa officia nisi
-              commodo duis excepteur minim dolore deserunt et. Est eiusmod id ut
-              eu qui ex quis magna incididunt enim officia pariatur consectetur.
-              Amet nisi do nisi tempor dolore labore dolore sit sit laborum dolore
-              commodo commodo veniam.
-            </p>
-          </Col>
-        </Row>
-      </Section>
+      <PortfolioGrid>
+        {items.map((data, i) => (
+          <PortfolioItem
+            key={data.name}
+            featuredImage={data.featuredImage}
+            image={data.image}
+            name={data.name}
+            number={i + 1}
+            slug={data.slug}
+          />
+        ))}
+      </PortfolioGrid>
       <Footer />
     </Page>
   )

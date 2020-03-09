@@ -6,11 +6,12 @@ import Img from 'gatsby-image'
 import { routes } from 'utils'
 
 export const PortfolioItem = ({
+  area = false,
   featuredImage: { fluid, alt = '' },
   name = '',
   number,
 }) => (
-  <StyledPortfolioItem number={'a' + number} className={'a' + number}>
+  <StyledPortfolioItem area={area} number={'a' + number} className={'a' + number}>
     <Anchor to={routes.portfolio}>
       <Image fluid={fluid} alt={alt} />
       <Name>{name}</Name>
@@ -19,6 +20,7 @@ export const PortfolioItem = ({
 )
 
 PortfolioItem.propTypes = {
+  area: PropTypes.bool,
   featuredImage: PropTypes.object,
   image: PropTypes.object,
   name: PropTypes.string,
@@ -28,7 +30,7 @@ PortfolioItem.propTypes = {
 
 const StyledPortfolioItem = styled.div`
   display: block;
-  grid-area: ${({ number }) => number};
+  grid-area: ${({ area, number }) => area ? number : '' };
 `
 const Anchor = styled(Anchor_)`
   display: block;

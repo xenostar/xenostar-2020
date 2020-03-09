@@ -38,6 +38,7 @@ export * from './MobileNav/MobileNavLinks'
 export * from './MobileNav/MobileNav'
 
 export * from './Portfolio/PortfolioGrid'
+export * from './Portfolio/PortfolioGridHome'
 export * from './Portfolio/PortfolioItem'
 
 export * from './Page/Page'

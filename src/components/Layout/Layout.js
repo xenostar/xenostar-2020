@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import PropTypes from 'prop-types'
 import { StoreProvider } from 'easy-peasy'
 import { HelmetProvider } from 'react-helmet-async'
 import { store, theme } from 'utils'
@@ -31,6 +32,11 @@ const Layout = ({ children, location }) => (
     </StoreProvider>
   </ThemeProvider>
 )
+
+Layout.propTypes = {
+  children: PropTypes.any,
+  location: PropTypes.object,
+}
 
 const StyledLayout = styled.div`
   display: flex;

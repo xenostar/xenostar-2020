@@ -9,7 +9,6 @@ export const Nav = () => (
     <NavLink to={routes.portfolio} partiallyActive={true}>portfolio</NavLink>
     <NavLink to={routes.about}>about</NavLink>
     <NavLink to={routes.blog} partiallyActive={true}>blog</NavLink>
-    {/* <NavLink to={routes.components}>components</NavLink> */}
   </StyledNav>
 )
 

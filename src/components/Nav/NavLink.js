@@ -10,8 +10,8 @@ export const NavLink = ({ to = '/', children, ...props }) => (
 )
 
 NavLink.propTypes = {
-  to: PropTypes.string,
   children: PropTypes.any,
+  to: PropTypes.string,
 }
 
 const Anchor = styled(Anchor_)`

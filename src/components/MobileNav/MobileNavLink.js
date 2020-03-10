@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Anchor as Anchor_ } from 'components'
 
-export const MobileNavLink = ({ to = '/', children, ...props }) => (
+export const MobileNavLink = ({ children, to = '/', ...props }) => (
   <Anchor to={to} {...props}>
     {children}
   </Anchor>
 )
 
 MobileNavLink.propTypes = {
-  to: PropTypes.string,
   children: PropTypes.any,
+  to: PropTypes.string,
 }
 
 const Anchor = styled(Anchor_)`

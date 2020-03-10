@@ -30,7 +30,7 @@ const Post = ({
       <HeaderPost
         date={data.publishDate}
         introText={data.excerpt}
-        pathname={pathname}
+        pathName={pathname}
         title={data.title}
       />
       <Section>

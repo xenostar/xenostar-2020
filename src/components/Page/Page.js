@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 export const Page = ({ children }) => (
   <StyledPage>
     {children}
   </StyledPage>
 )
+
+Page.propTypes = {
+  children: PropTypes.any,
+}
 
 const StyledPage = styled.main`
   background-color: ${props => props.theme.colors.white};

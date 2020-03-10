@@ -5,8 +5,8 @@ import { Row, Col as Col_ } from 'components'
 import { media } from 'utils'
 
 export const Header = ({
-  introText = 'Ipsum',
-  title = 'Lorem',
+  introText = 'Lorem Ipsum',
+  title = 'Lorem Ipsum',
 }) => (
   <StyledHeader>
     <Row>

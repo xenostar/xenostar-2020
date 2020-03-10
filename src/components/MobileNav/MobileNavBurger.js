@@ -4,11 +4,11 @@ import { media } from 'utils'
 import { useStoreActions } from 'easy-peasy'
 import { FiMenu as FiMenu_ } from 'react-icons/fi'
 
-export const MobileNavBurger = () => {
+export const MobileNavBurger = props => {
   const openNav = useStoreActions(actions => actions.nav.openNav)
 
   return (
-    <StyledMobileNavBurger onClick={openNav}>
+    <StyledMobileNavBurger onClick={openNav} {...props}>
       <FiMenu />
     </StyledMobileNavBurger>
   )

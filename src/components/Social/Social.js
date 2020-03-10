@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { SocialIcon as SocialIcon_ } from 'components'
 import { useSocialInfo } from 'hooks'
 
@@ -17,6 +18,10 @@ export const Social = props => {
       ))}
     </StyledSocial>
   )
+}
+
+Social.propTypes = {
+  children: PropTypes.any,
 }
 
 const StyledSocial = styled.div`

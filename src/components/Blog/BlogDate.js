@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FaCalendarAlt as FaCalendarAlt_ } from 'react-icons/fa'
 
 export const BlogDate = ({ children, ...props }) => (
@@ -8,6 +9,10 @@ export const BlogDate = ({ children, ...props }) => (
     {children}
   </StyledBlogDate>
 )
+
+BlogDate.propTypes = {
+  children: PropTypes.any,
+}
 
 const StyledBlogDate = styled.div`
   align-items: center;

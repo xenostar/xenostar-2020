@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Section, Row as Row_ } from 'components'
 
 export const PortfolioGrid = ({ children }) => (
@@ -11,6 +12,10 @@ export const PortfolioGrid = ({ children }) => (
     </Row>
   </StyledPortfolioGrid>
 )
+
+PortfolioGrid.propTypes = {
+  children: PropTypes.any,
+}
 
 const StyledPortfolioGrid = styled(Section)``
 const Row = styled(Row_)`

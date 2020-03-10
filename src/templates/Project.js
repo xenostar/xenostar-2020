@@ -12,7 +12,7 @@ import {
 } from 'components'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
-const Post = ({ location: { pathname }, pageContext: { data } }) => {
+const Project = ({ location: { pathname }, pageContext: { data } }) => {
   const [catList, setCatList] = useState([])
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Post = ({ location: { pathname }, pageContext: { data } }) => {
   )
 }
 
-Post.propTypes = {
+Project.propTypes = {
   location: PropTypes.object,
   pageContext: PropTypes.object,
 }
@@ -76,4 +76,4 @@ const Category = styled.div`
   padding: 8px 10px;
 `
 
-export default Post
+export default Project

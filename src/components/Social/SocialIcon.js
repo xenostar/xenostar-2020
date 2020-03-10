@@ -11,7 +11,7 @@ import {
   FaTwitter,
 } from 'react-icons/fa'
 
-export const SocialIcon = ({ href, icon, ...props }) => {
+export const SocialIcon = ({ href = '#', icon, ...props }) => {
   const Icons = {
     Dribbble: <FaDribbble />,
     Email: <FaRegEnvelope />,

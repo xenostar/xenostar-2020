@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { Anchor, BlogDate as BlogDate_ } from 'components'
 
 export const BlogPost = ({
-  title = 'Post Title',
-  slug = 'post-title',
-  publishDate,
   body = 'Lorem Ipsum',
   excerpt = 'Lorem Ipsum.',
+  publishDate,
   seo,
+  slug = 'post-title',
+  title = 'Post Title',
   ...props
 }) => (
   <StyledBlogPost {...props}>
@@ -22,12 +22,12 @@ export const BlogPost = ({
 )
 
 BlogPost.propTypes = {
-  title: PropTypes.string,
-  slug: PropTypes.string,
-  publishDate: PropTypes.string,
   body: PropTypes.string,
   excerpt: PropTypes.string,
+  publishDate: PropTypes.string,
   seo: PropTypes.object,
+  slug: PropTypes.string,
+  title: PropTypes.string,
 }
 
 const StyledBlogPost = styled.div`

@@ -25,9 +25,8 @@ export default () => {
           <PortfolioItem
             key={data.name}
             featuredImage={data.featuredImage}
-            image={data.image}
             name={data.name}
-            number={i + 1}
+            number={i}
             slug={data.slug}
           />
         ))}

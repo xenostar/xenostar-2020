@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Anchor as Anchor_ } from 'components'
 
-export const NavLink = ({ to = '/', children, ...props }) => (
+export const NavLink = ({ children, to = '/', ...props }) => (
   <Anchor to={to} {...props}>
     {children}
   </Anchor>

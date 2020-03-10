@@ -28,13 +28,13 @@ export const Anchor = ({
 Anchor.propTypes = {
   activeClassName: PropTypes.string,
   bg: PropTypes.string,
+  children: PropTypes.any,
   direction: PropTypes.oneOf([
     'up',
     'down',
     'left',
     'right',
   ]),
-  children: PropTypes.any,
   to: PropTypes.string,
 }
 

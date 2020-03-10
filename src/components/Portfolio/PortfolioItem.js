@@ -10,9 +10,10 @@ export const PortfolioItem = ({
   featuredImage: { fluid, alt = '' },
   name = 'Item Name',
   number,
+  slug = '',
 }) => (
-  <StyledPortfolioItem area={area} number={'a' + number} className={'a' + number}>
-    <Anchor to={routes.portfolio}>
+  <StyledPortfolioItem area={area} number={'a' + (number + 1)} className={'a' + number}>
+    <Anchor to={routes.portfolio + '#' + slug}>
       <Image fluid={fluid} alt={alt} />
       <Name>{name}</Name>
     </Anchor>
@@ -22,7 +23,6 @@ export const PortfolioItem = ({
 PortfolioItem.propTypes = {
   area: PropTypes.bool,
   featuredImage: PropTypes.object,
-  image: PropTypes.object,
   name: PropTypes.string,
   number: PropTypes.number,
   slug: PropTypes.string,

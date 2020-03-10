@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet-async'
 import { useSeoApi } from 'hooks'
 
 export const SEO = ({
-  lang = 'en',
-  title = '',
   description = '',
+  lang = 'en',
   meta = [],
+  title = '',
 }) => {
   const { globalSeo: site } = useSeoApi()
   const metaDescription = description || site.fallbackSeo.description

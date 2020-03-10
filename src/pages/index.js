@@ -14,9 +14,8 @@ export default () => {
             key={data.name}
             area={true}
             featuredImage={data.featuredImage}
-            image={data.image}
             name={data.name}
-            number={i + 1}
+            number={i}
             slug={data.slug}
           />
         ))}

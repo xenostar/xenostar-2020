@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Anchor, BlogDate as BlogDate_ } from 'components'
+import { routes } from 'utils'
 
 export const BlogPost = ({
   body = 'Lorem Ipsum',
@@ -14,7 +15,7 @@ export const BlogPost = ({
 }) => (
   <StyledBlogPost {...props}>
     <Title>
-      <Anchor to={'/blog/' + slug}>{title}</Anchor>
+      <Anchor to={routes.blog + '/' + slug}>{title}</Anchor>
     </Title>
     <BlogDate>{publishDate}</BlogDate>
     <Excerpt>{excerpt}</Excerpt>

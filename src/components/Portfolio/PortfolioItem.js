@@ -13,7 +13,7 @@ export const PortfolioItem = ({
   slug = '',
 }) => (
   <StyledPortfolioItem area={area} number={'a' + (number + 1)} className={'a' + number}>
-    <Anchor to={routes.portfolio + '#' + slug}>
+    <Anchor to={routes.portfolio + '/' + slug}>
       <Image fluid={fluid} alt={alt} />
       <Name>{name}</Name>
     </Anchor>

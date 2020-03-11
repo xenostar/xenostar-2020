@@ -8,7 +8,6 @@ export const usePortfolioItemApi = () => {
           name
           description
           tools
-          slug
           image {
             fluid(maxWidth: 450) {
               ...GatsbyDatoCmsFluid
@@ -22,6 +21,11 @@ export const usePortfolioItemApi = () => {
             }
             alt
             title
+          }
+          slug
+          seo {
+            title
+            description
           }
         }
       }

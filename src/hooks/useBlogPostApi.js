@@ -6,11 +6,11 @@ export const useBlogPostApi = () => {
       allDatoCmsBlogPost(sort: {fields: publishDate, order: DESC}) {
         items: nodes {
           title
-          slug
           publishDate(formatString: "MMMM Do, YYYY", locale: "en")
           body
           excerpt
           categories
+          slug
           seo {
             title
             description

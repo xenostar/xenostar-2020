@@ -2,6 +2,7 @@ const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  const blogTemplate = path.resolve(`./src/templates/Post.js`)
 
   const result = await graphql(`
     {
@@ -30,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allDatoCmsBlogPost.nodes.map(data => {
     createPage({
       path: `blog/${data.slug}`,
-      component: path.resolve(`./src/templates/Post.js`),
+      component: blogTemplate,
       context: {
         data: data,
       },

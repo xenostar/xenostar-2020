@@ -58,7 +58,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `portfolio/${data.slug}`,
       component: projectTemplate,
       context: {
-        data: data,
+        // data: data,
+        slug: data.slug,
       },
     })
   })

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import {
   Page,
@@ -12,7 +13,7 @@ import {
 } from 'components'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
-const Post = ({ location: { pathname }, pageContext: { data } }) => {
+const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
   const [catList, setCatList] = useState([])
 
   useEffect(() => {
@@ -49,8 +50,25 @@ const Post = ({ location: { pathname }, pageContext: { data } }) => {
 
 Post.propTypes = {
   location: PropTypes.object,
-  pageContext: PropTypes.object,
+  data: PropTypes.object,
 }
+
+export const query = graphql`
+  query($slug: String!) {
+    datoCmsBlogPost(slug: {eq: $slug}) {
+      title
+      publishDate(formatString: "MMMM Do, YYYY", locale: "en")
+      body
+      excerpt
+      categories
+      slug
+      seo {
+        title
+        description
+      }
+    }
+  }
+`
 
 const Section = styled(Section_)`
   padding-top: ${props => props.theme.layout.spacing};

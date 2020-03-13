@@ -9,28 +9,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     {
       posts: allDatoCmsBlogPost(sort: {fields: publishDate, order: DESC}) {
         items: nodes {
-          title
-          publishDate(formatString: "MMMM Do, YYYY", locale: "en")
-          body
-          excerpt
-          categories
           slug
-          seo {
-            title
-            description
-          }
         }
       }
       projects: allDatoCmsPortfolioItem(sort: {order: ASC, fields: position}, limit: 16) {
         items: nodes {
-          name
-          description
-          tools
           slug
-          seo {
-            title
-            description
-          }
         }
       }
     }
@@ -47,7 +31,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `blog/${data.slug}`,
       component: postTemplate,
       context: {
-        data: data,
+        // data: data,
+        slug: data.slug,
       },
     })
   })
@@ -58,7 +43,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `portfolio/${data.slug}`,
       component: projectTemplate,
       context: {
-        // data: data,
         slug: data.slug,
       },
     })

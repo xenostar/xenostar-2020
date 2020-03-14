@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import {
   Page,
   SEO,
+  HeaderProject,
   Section as Section_,
   Row,
   Col,
@@ -17,6 +18,7 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
   return (
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
+      <HeaderProject name={data.name} />
       <Section>
         <Row>
           <Col>

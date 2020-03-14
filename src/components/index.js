@@ -19,6 +19,7 @@ export * from './Blog/BlogShare'
 
 export * from './Headers/Header'
 export * from './Headers/HeaderPost'
+export * from './Headers/HeaderProject'
 export * from './Headers/HeaderHome'
 
 export * from './Footer/Footer'

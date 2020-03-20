@@ -7,7 +7,7 @@ import { routes } from 'utils'
 
 export const PortfolioItem = ({
   area = false,
-  featuredImage: { fluid, alt = '' },
+  featuredImage: { fluid, alt = '', title = '' },
   name = 'Item Name',
   number,
   slug = '',
@@ -25,6 +25,7 @@ PortfolioItem.propTypes = {
   featuredImage: PropTypes.exact({
     fluid: PropTypes.object,
     alt: PropTypes.string,
+    title: PropTypes.string,
   }),
   name: PropTypes.string,
   number: PropTypes.number,

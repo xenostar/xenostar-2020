@@ -22,7 +22,10 @@ export const PortfolioItem = ({
 
 PortfolioItem.propTypes = {
   area: PropTypes.bool,
-  featuredImage: PropTypes.object,
+  featuredImage: PropTypes.exact({
+    fluid: PropTypes.object,
+    alt: PropTypes.string,
+  }),
   name: PropTypes.string,
   number: PropTypes.number,
   slug: PropTypes.string,

@@ -25,7 +25,6 @@ const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
       <HeaderPost
-        test={test}
         date={data.publishDate}
         introText={data.excerpt}
         pathName={pathname}

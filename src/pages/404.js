@@ -1,7 +1,7 @@
 import React from 'react'
 import { Page, SEO, Section, Row, Footer } from 'components'
 
-export default () => (
+const FourZeroFour = () => (
   <Page>
     <SEO title="404" />
     <Section>
@@ -12,3 +12,5 @@ export default () => (
     <Footer />
   </Page>
 )
+
+export default FourZeroFour

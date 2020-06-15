@@ -15,9 +15,7 @@ export const HeaderHome = () => {
             Hi, I'm <span>Bryan</span>
             <br />I make <Anchor to={routes.portfolio}>things</Anchor>
           </Title>
-          <IntroText>
-            {introText}
-          </IntroText>
+          <IntroText>{introText}</IntroText>
         </Col>
       </Row>
     </StyledHeader>

@@ -7,7 +7,7 @@ export const SEO = ({
   description = '',
   lang = 'en',
   meta = [],
-  title = '',
+  title = ''
 }) => {
   const { globalSeo: site } = useSeoApi()
   const metaDescription = description || site.fallbackSeo.description
@@ -20,14 +20,14 @@ export const SEO = ({
       defaultTitle={site.siteName}
       titleTemplate={`${site.siteName} | %s`}
       meta={[
-        { name: 'description', content: metaDescription, },
-        { property: 'og:title', content: metaTitle, },
-        { property: 'og:description', content: metaDescription, },
-        { property: 'og:type', content: 'website', },
-        { name: 'twitter:card', content: site.fallbackSeo.twitterCard, },
-        { name: 'twitter:creator', content: site.twitterAccount, },
-        { name: 'twitter:title', content: metaTitle, },
-        { name: 'twitter:description', content: metaDescription, },
+        { name: 'description', content: metaDescription },
+        { property: 'og:title', content: metaTitle },
+        { property: 'og:description', content: metaDescription },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: site.fallbackSeo.twitterCard },
+        { name: 'twitter:creator', content: site.twitterAccount },
+        { name: 'twitter:title', content: metaTitle },
+        { name: 'twitter:description', content: metaDescription }
       ].concat(meta)}
     />
   )
@@ -37,5 +37,5 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
+  title: PropTypes.string
 }

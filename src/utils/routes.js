@@ -3,5 +3,5 @@ export const routes = {
   about: '/about',
   portfolio: '/portfolio',
   blog: '/blog',
-  components: '/components',
+  components: '/components'
 }

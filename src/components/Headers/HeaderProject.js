@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 import { Row, Col as Col_ } from 'components'
 import { media } from 'utils'
 
-export const HeaderProject = ({
-  name = 'Lorem Ipsum',
-}) => (
+export const HeaderProject = ({ name = 'Lorem Ipsum' }) => (
   <StyledHeaderProject>
     <Row>
       <Col>

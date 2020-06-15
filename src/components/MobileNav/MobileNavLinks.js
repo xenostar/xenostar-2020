@@ -6,9 +6,13 @@ import { routes } from 'utils'
 export const MobileNavLinks = props => (
   <StyledMobileNavLinks {...props}>
     <MobileNavLink to={routes.home}>Home</MobileNavLink>
-    <MobileNavLink to={routes.portfolio} partiallyActive={true}>Portfolio</MobileNavLink>
+    <MobileNavLink to={routes.portfolio} partiallyActive={true}>
+      Portfolio
+    </MobileNavLink>
     <MobileNavLink to={routes.about}>About</MobileNavLink>
-    <MobileNavLink to={routes.blog} partiallyActive={true}>Blog</MobileNavLink>
+    <MobileNavLink to={routes.blog} partiallyActive={true}>
+      Blog
+    </MobileNavLink>
   </StyledMobileNavLinks>
 )
 

@@ -8,7 +8,7 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
+  FaTwitter
 } from 'react-icons/fa'
 
 export const SocialIcon = ({ href = '#', icon, ...props }) => {
@@ -19,7 +19,7 @@ export const SocialIcon = ({ href = '#', icon, ...props }) => {
     Github: <FaGithub />,
     Instagram: <FaInstagram />,
     LinkedIn: <FaLinkedinIn />,
-    Twitter: <FaTwitter />,
+    Twitter: <FaTwitter />
   }
 
   return (
@@ -31,7 +31,7 @@ export const SocialIcon = ({ href = '#', icon, ...props }) => {
 
 SocialIcon.propTypes = {
   href: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.string
 }
 
 const Link = styled.a`

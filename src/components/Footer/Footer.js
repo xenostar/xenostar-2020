@@ -8,7 +8,9 @@ export const Footer = () => (
   <StyledFooter>
     <Row>
       <Col width="49%">
-        <Text>Built with <IoIosHeart /> by Xenostar.</Text>
+        <Text>
+          Built with <IoIosHeart /> by Xenostar.
+        </Text>
       </Col>
       <Col width="49%" align="flex-end" justify="space-between">
         <Social />

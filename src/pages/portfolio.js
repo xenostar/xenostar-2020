@@ -8,11 +8,11 @@ import {
   // Col,
   PortfolioGrid,
   PortfolioItem,
-  Footer,
+  Footer
 } from 'components'
 import { usePortfolioApi, usePortfolioItemApi } from 'hooks'
 
-export default () => {
+const Portfolio = () => {
   const { seo, introText } = usePortfolioApi()
   const { items } = usePortfolioItemApi()
 
@@ -35,3 +35,5 @@ export default () => {
     </Page>
   )
 }
+
+export default Portfolio

@@ -21,12 +21,9 @@ Col.propTypes = {
     'flex-end',
     'baseline',
     'initial',
-    'inherit',
+    'inherit'
   ]),
-  direction: PropTypes.oneOf([
-    'column',
-    'column-reverse',
-  ]),
+  direction: PropTypes.oneOf(['column', 'column-reverse']),
   justify: PropTypes.oneOf([
     'justify-content',
     'flex-end',
@@ -34,7 +31,7 @@ Col.propTypes = {
     'space-between',
     'space-around',
     'initial',
-    'inherit',
+    'inherit'
   ]),
-  width: PropTypes.string,
+  width: PropTypes.string
 }

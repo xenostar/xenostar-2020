@@ -1,7 +1,7 @@
 import React from 'react'
 import { SEO, Page, Header, Section, Row, Col, Footer } from 'components'
 
-export default () => (
+const Components () => (
   <Page>
     <SEO title="Components" />
     <Header title="Components" desc="This page probably won't exist." />
@@ -43,3 +43,5 @@ export default () => (
     <Footer />
   </Page>
 )
+
+export default Components

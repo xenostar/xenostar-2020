@@ -26,7 +26,7 @@ export const theme = {
     transparent: 'rgba(0, 0, 0, 0)', // Transparent
     white: 'rgba(255, 255, 255, 1)', // #fff
     black: 'rgba(0, 0, 0, 1)', // #000
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)',
+    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
   },
   fonts: {
     bebasNeue: `'Bebas Neue', cursive`,
@@ -45,21 +45,22 @@ export const theme = {
     h3Size: '2em',
     h4Size: '1.5em',
     h5Size: '1.25em',
-    h6Size: '1em',
+    h6Size: '1em'
   },
   transforms: {
-    active: 'translateY(3px)',
+    active: 'translateY(3px)'
   },
   transitions: {
     default: '0.3s all ease',
     fast: '0.2s all ease',
-    slow: '0.4s all ease',
+    slow: '0.4s all ease'
   },
   layout: {
     borderRadius: '6px',
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '62.5rem', // 1000px
+    spacingTiny: '0.625rem', // 10px
     spacingSmall: '0.9375rem', // 15px
     spacing: '1.875rem', // 30px
     spacingBig: '3.75rem', // 60px

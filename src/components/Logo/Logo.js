@@ -5,10 +5,7 @@ import { routes } from 'utils'
 
 export const Logo = () => (
   <StyledLogo>
-    <Anchor
-      direction="left"
-      to={routes.home}
-    >
+    <Anchor direction="left" to={routes.home}>
       <Text>
         X<TextColor>S</TextColor>
         <HomeText>Home</HomeText>

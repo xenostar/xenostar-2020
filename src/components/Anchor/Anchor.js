@@ -6,10 +6,10 @@ import { Link as Link_ } from 'gatsby'
 import { routes } from 'utils'
 
 export const Anchor = ({
-  activeClassName = "active",
-  bg = "#90c7a8",
-  direction = "right",
-  children = "Link Text",
+  activeClassName = 'active',
+  // bg = '#90c7a8',
+  // direction = 'right',
+  children = 'Link Text',
   to = routes.home,
   ...props
 }) => (
@@ -28,14 +28,9 @@ export const Anchor = ({
 Anchor.propTypes = {
   activeClassName: PropTypes.string,
   bg: PropTypes.string,
-  children: PropTypes.element,
-  direction: PropTypes.oneOf([
-    'up',
-    'down',
-    'left',
-    'right',
-  ]),
-  to: PropTypes.string,
+  children: PropTypes.node,
+  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
+  to: PropTypes.string
 }
 
 const Link = styled(Link_)``

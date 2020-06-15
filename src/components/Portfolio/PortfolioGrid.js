@@ -6,15 +6,13 @@ import { Section, Row as Row_ } from 'components'
 export const PortfolioGrid = ({ children }) => (
   <StyledPortfolioGrid>
     <Row>
-      <Grid>
-        {children}
-      </Grid>
+      <Grid>{children}</Grid>
     </Row>
   </StyledPortfolioGrid>
 )
 
 PortfolioGrid.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 }
 
 const StyledPortfolioGrid = styled(Section)``

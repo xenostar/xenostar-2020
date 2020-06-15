@@ -11,7 +11,7 @@ import {
   ResetStyle,
   GlobalStyle,
   TopBar,
-  MobileNav,
+  MobileNav
 } from 'components'
 
 const Layout = ({ children, location }) => (
@@ -35,7 +35,7 @@ const Layout = ({ children, location }) => (
 
 Layout.propTypes = {
   children: PropTypes.any,
-  location: PropTypes.object,
+  location: PropTypes.object
 }
 
 const StyledLayout = styled.div`

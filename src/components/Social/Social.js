@@ -9,11 +9,7 @@ export const Social = props => {
   return (
     <StyledSocial {...props}>
       {items.map((data, i) => (
-        <SocialIcon
-          key={i}
-          href={data.url}
-          icon={data.profileType}
-        />
+        <SocialIcon key={i} href={data.url} icon={data.profileType} />
       ))}
     </StyledSocial>
   )

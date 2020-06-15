@@ -2,14 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-export const Page = ({ children }) => (
-  <StyledPage>
-    {children}
-  </StyledPage>
-)
+export const Page = ({ children }) => <StyledPage>{children}</StyledPage>
 
 Page.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 }
 
 const StyledPage = styled.main`
@@ -26,8 +22,7 @@ const StyledPage = styled.main`
   h5 a,
   h6 a,
   p a {
-    background-image:
-      ${props => props.theme.colors.gradient},
+    background-image: ${props => props.theme.colors.gradient},
       linear-gradient(
         ${props => props.theme.colors.lightBlue},
         ${props => props.theme.colors.lightBlue}

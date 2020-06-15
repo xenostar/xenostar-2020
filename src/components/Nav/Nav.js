@@ -6,9 +6,13 @@ import { media, routes } from 'utils'
 export const Nav = () => (
   <StyledNav>
     <NavLink to={routes.home}>home</NavLink>
-    <NavLink to={routes.portfolio} partiallyActive={true}>portfolio</NavLink>
+    <NavLink to={routes.portfolio} partiallyActive={true}>
+      portfolio
+    </NavLink>
     <NavLink to={routes.about}>about</NavLink>
-    <NavLink to={routes.blog} partiallyActive={true}>blog</NavLink>
+    <NavLink to={routes.blog} partiallyActive={true}>
+      blog
+    </NavLink>
   </StyledNav>
 )
 

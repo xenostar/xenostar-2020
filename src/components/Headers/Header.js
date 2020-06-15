@@ -6,17 +6,13 @@ import { media } from 'utils'
 
 export const Header = ({
   introText = 'Lorem Ipsum',
-  title = 'Lorem Ipsum',
+  title = 'Lorem Ipsum'
 }) => (
   <StyledHeader>
     <Row>
       <Col>
-        <Title>
-          {title}
-        </Title>
-        <IntroText>
-          {introText}
-        </IntroText>
+        <Title>{title}</Title>
+        <IntroText>{introText}</IntroText>
       </Col>
     </Row>
   </StyledHeader>
@@ -24,7 +20,7 @@ export const Header = ({
 
 Header.propTypes = {
   introText: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string
 }
 
 const StyledHeader = styled.header`

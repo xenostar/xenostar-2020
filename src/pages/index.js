@@ -1,8 +1,14 @@
 import React from 'react'
-import { Page, HeaderHome, PortfolioGridHome, PortfolioItem, Footer } from 'components'
+import {
+  Page,
+  HeaderHome,
+  PortfolioGridHome,
+  PortfolioItem,
+  Footer
+} from 'components'
 import { usePortfolioItemApi } from 'hooks'
 
-export default () => {
+const Index = () => {
   const { items } = usePortfolioItemApi()
 
   return (
@@ -24,3 +30,5 @@ export default () => {
     </Page>
   )
 }
+
+export default Index

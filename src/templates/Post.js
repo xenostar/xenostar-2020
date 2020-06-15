@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import 'highlight.js/styles/atom-one-dark.css'
 import {
   Page,
   SEO,
@@ -9,9 +12,20 @@ import {
   Section as Section_,
   Row,
   Col,
-  Footer,
+  Footer
 } from 'components'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
+
+hljs.registerLanguage('javascript', javascript)
+hljs.configure({
+  languages: ['javascript']
+})
+hljs.addPlugin({
+  'after:highlightBlock': ({ block, result }) => {
+    // move the language from the result into the dataset
+    block.dataset.language = result.language
+  }
+})
 
 const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
   const [catList, setCatList] = useState([])
@@ -20,6 +34,12 @@ const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
     const splitCats = data.categories.split(', ')
     setCatList(splitCats)
   }, [data.categories])
+
+  useEffect(() => {
+    document.querySelectorAll('pre').forEach(block => {
+      hljs.highlightBlock(block)
+    })
+  }, [data])
 
   return (
     <Page>
@@ -50,12 +70,12 @@ const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
 
 Post.propTypes = {
   location: PropTypes.object,
-  data: PropTypes.object,
+  data: PropTypes.object
 }
 
 export const query = graphql`
   query($slug: String!) {
-    datoCmsBlogPost(slug: {eq: $slug}) {
+    datoCmsBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY", locale: "en")
       body
@@ -75,6 +95,7 @@ const Section = styled(Section_)`
 `
 const Body = styled.div`
   margin-bottom: ${props => props.theme.layout.spacing};
+  max-width: 100%;
 `
 const Categories = styled.div`
   display: flex;

@@ -10,7 +10,7 @@ import {
   Section as Section_,
   Row,
   Col,
-  Footer,
+  Footer
 } from 'components'
 
 const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
@@ -32,12 +32,12 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
 }
 
 Project.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object
 }
 
 export const query = graphql`
   query($slug: String!) {
-    datoCmsPortfolioItem(slug: {eq: $slug}) {
+    datoCmsPortfolioItem(slug: { eq: $slug }) {
       name
       description
       tools

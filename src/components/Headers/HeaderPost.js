@@ -8,7 +8,7 @@ export const HeaderPost = ({
   date = 'Date',
   introText = 'Lorem Ipsum',
   pathName = '',
-  title = 'Lorem Ipsum',
+  title = 'Lorem Ipsum'
 }) => (
   <StyledHeaderPost>
     <Row>

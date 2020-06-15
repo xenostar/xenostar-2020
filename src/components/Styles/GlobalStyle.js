@@ -73,11 +73,17 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: ${props => props.theme.layout.spacing};
   }
 
-  code,
-  pre {
-    background-color: ${props => props.theme.colors.secondary};
+  pre.hljs {
     border-radius: ${props => props.theme.layout.borderRadius};
-    color: ${props => props.theme.colors.white};
     padding: ${props => props.theme.layout.spacing};
+    position: relative;
+  }
+  [data-language]:before {
+    content: attr(data-language);
+    opacity: 0.25;
+    right: ${props => props.theme.layout.spacingTiny};
+    position: absolute;
+    text-transform: capitalize;
+    top: 10px;
   }
 `

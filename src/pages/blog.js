@@ -1,8 +1,17 @@
 import React from 'react'
-import { Page, SEO, Header, Section, Row, Col, BlogPost, Footer } from 'components'
+import {
+  Page,
+  SEO,
+  Header,
+  Section,
+  Row,
+  Col,
+  BlogPost,
+  Footer
+} from 'components'
 import { useBlogApi, useBlogPostApi } from 'hooks'
 
-export default () => {
+const Blog = () => {
   const { seo, introText } = useBlogApi()
   const { items } = useBlogPostApi()
 
@@ -32,3 +41,5 @@ export default () => {
     </Page>
   )
 }
+
+export default Blog

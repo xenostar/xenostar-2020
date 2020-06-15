@@ -5,9 +5,7 @@ import { Section, Row as Row_ } from 'components'
 export const PortfolioGridHome = ({ children }) => (
   <StyledPortfolioGridHome>
     <Row>
-      <Grid>
-        {children}
-      </Grid>
+      <Grid>{children}</Grid>
     </Row>
   </StyledPortfolioGridHome>
 )
@@ -32,8 +30,7 @@ const Grid = styled.div`
     '.   a16 a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  a9  .'
     '.   .   a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  .   .'
     '.   .   .   a10 a11 a11 a7  a7  a7  a7  a13 .   .   .'
-    '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .'
-  ;
+    '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .';
   :hover {
     grid-gap: ${props => props.theme.layout.spacing};
   }

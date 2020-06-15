@@ -40,8 +40,9 @@ export const MobileNav = () => {
 }
 
 const StyledMobileNav = styled.nav`
-  border-top: ${props => props.theme.layout.topBar} solid ${props => props.theme.colors.primary};
-  background-color: rgba(255,255,255,0.95);
+  border-top: ${props => props.theme.layout.topBar} solid
+    ${props => props.theme.colors.primary};
+  background-color: rgba(255, 255, 255, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -53,7 +54,8 @@ const StyledMobileNav = styled.nav`
   overflow-y: auto;
   position: fixed;
   transition: ${props => props.theme.transitions.slow};
-  transform: ${props => props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
+  transform: ${props =>
+    props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: 200;
 `

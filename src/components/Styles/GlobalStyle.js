@@ -81,8 +81,8 @@ export const GlobalStyle = createGlobalStyle`
   [data-language]:before {
     content: attr(data-language);
     opacity: 0.25;
-    right: ${props => props.theme.layout.spacingTiny};
     position: absolute;
+    right: ${props => props.theme.layout.spacingTiny};
     text-transform: capitalize;
     top: ${props => props.theme.layout.spacingTiny};
   }

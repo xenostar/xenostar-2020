@@ -12,7 +12,7 @@ module.exports = {
     description: `Xenostar.net is the official website of Bryan Leewood.`,
     author: `Bryan Leewood`,
     // siteUrl: `https://www.xenostar.net`,
-    siteUrl: `https://xenostar-2020.netlify.com`,
+    siteUrl: `https://xenostar-2020.netlify.com`
   },
   plugins: [
     /**
@@ -23,15 +23,15 @@ module.exports = {
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        apiToken: process.env.DATO_API_TOKEN,
-      },
+        apiToken: process.env.DATO_API_TOKEN
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets/`,
-      },
+        path: `${__dirname}/src/assets/`
+      }
     },
 
     /**
@@ -47,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -66,22 +66,29 @@ module.exports = {
           {
             family: `Montserrat`,
             subsets: [`latin`],
-            variants: [`400`, `400i`, `500`, `500i`, `600`, `600i`,  `700`, `700i`, `800`, `800i`, `900`, `900i`]
-          },
-        ],
-      },
+            variants: [
+              `400`,
+              `400i`,
+              `500`,
+              `500i`,
+              `600`,
+              `600i`,
+              `700`,
+              `700i`,
+              `800`,
+              `800i`,
+              `900`,
+              `900i`
+            ]
+          }
+        ]
+      }
     },
-    // {
-    //   resolve: `gatsby-plugin-transition-link`,
-    //   options: {
-    //     layout: require.resolve(`./src/components/Layout/Layout`),
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/Layout/Layout`),
-      },
+        component: require.resolve(`./src/components/Layout/Layout`)
+      }
     },
 
     /**
@@ -102,9 +109,9 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/assets/icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/assets/icon.png` // This path is relative to the root of the site.
+      }
     },
-    `gatsby-plugin-offline`, // MUST be after gatsby-plugin-manifest
+    `gatsby-plugin-offline` // MUST be after gatsby-plugin-manifest
   ]
 }

@@ -29,7 +29,9 @@ export const SEO = ({
         { name: 'twitter:title', content: metaTitle },
         { name: 'twitter:description', content: metaDescription }
       ].concat(meta)}
-    />
+    >
+      <link rel="preconnect" href="https://www.datocms-assets.com/" />
+    </Helmet>
   )
 }
 

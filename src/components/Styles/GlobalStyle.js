@@ -84,6 +84,6 @@ export const GlobalStyle = createGlobalStyle`
     right: ${props => props.theme.layout.spacingTiny};
     position: absolute;
     text-transform: capitalize;
-    top: 10px;
+    top: ${props => props.theme.layout.spacingTiny};
   }
 `

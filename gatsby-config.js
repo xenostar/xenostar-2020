@@ -12,7 +12,7 @@ module.exports = {
     description: `Xenostar.net is the official website of Bryan Leewood.`,
     author: `Bryan Leewood`,
     // siteUrl: `https://www.xenostar.net`,
-    siteUrl: `https://xenostar-2020.netlify.com`
+    siteUrl: `https://xenostar-2020.netlify.app`
   },
   plugins: [
     /**

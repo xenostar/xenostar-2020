@@ -34,7 +34,7 @@ const Layout = ({ children, location }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
   location: PropTypes.object
 }
 

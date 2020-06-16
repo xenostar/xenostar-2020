@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const Page = ({ children }) => <StyledPage>{children}</StyledPage>
 
 Page.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.node
 }
 
 const StyledPage = styled.main`

@@ -10,7 +10,7 @@ export const NavLink = ({ children, to = '/', ...props }) => (
 )
 
 NavLink.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
   to: PropTypes.string
 }
 

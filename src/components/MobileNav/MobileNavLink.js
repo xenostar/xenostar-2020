@@ -10,7 +10,7 @@ export const MobileNavLink = ({ children, to = '/', ...props }) => (
 )
 
 MobileNavLink.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
   to: PropTypes.string
 }
 

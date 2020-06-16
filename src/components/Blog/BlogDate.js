@@ -11,7 +11,7 @@ export const BlogDate = ({ children, ...props }) => (
 )
 
 BlogDate.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node
 }
 
 const StyledBlogDate = styled.div`

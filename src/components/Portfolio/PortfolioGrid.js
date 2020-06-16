@@ -12,7 +12,7 @@ export const PortfolioGrid = ({ children }) => (
 )
 
 PortfolioGrid.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.node
 }
 
 const StyledPortfolioGrid = styled(Section)``

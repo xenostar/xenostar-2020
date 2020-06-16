@@ -14,17 +14,17 @@ import {
   MobileNav
 } from 'components'
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children, path }) => (
   <ThemeProvider theme={theme}>
     <StoreProvider store={store}>
       <HelmetProvider>
         <StyledLayout>
-          <StoreSync location={location} />
+          <StoreSync path={path} />
           <SEO />
           <NormalizeStyle />
           <ResetStyle />
           <GlobalStyle />
-          <TopBar />
+          <TopBar path={path} />
           <MobileNav />
           {children}
         </StyledLayout>
@@ -35,7 +35,7 @@ const Layout = ({ children, location }) => (
 
 Layout.propTypes = {
   children: PropTypes.node,
-  location: PropTypes.object
+  path: PropTypes.string
 }
 
 const StyledLayout = styled.div`

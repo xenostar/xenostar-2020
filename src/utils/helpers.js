@@ -1,5 +1,13 @@
 import { theme } from 'utils'
 import { css } from 'styled-components'
+import { routes } from 'utils'
+
+export const isBlogPost = path => {
+  const pageParams = getPageParams(path)
+  return pageParams[0] === routes.blog.substr(1) && pageParams[1]
+}
+
+export const getPageParams = path => path.substr(1).split('/')
 
 export const getRandomInt = (min, max) => {
   min = Math.ceil(min)

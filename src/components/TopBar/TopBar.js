@@ -1,17 +1,28 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Row as Row_, Logo, Nav, MobileNavBurger } from 'components'
+import { Row as Row_, Logo, BackButton, Nav, MobileNavBurger } from 'components'
+import { isBlogPost, routes } from 'utils'
 
-export const TopBar = () => (
-  <StyledTopBar>
-    <Gradient />
-    <Row>
-      <Logo />
-      <Nav />
-      <MobileNavBurger />
-    </Row>
-  </StyledTopBar>
-)
+export const TopBar = ({ path }) => {
+  return (
+    <StyledTopBar>
+      <Gradient />
+      <Row>
+        <Logo />
+        {isBlogPost(path) && (
+          <BackButton to={routes.blog}>Back to Blog</BackButton>
+        )}
+        <Nav />
+        <MobileNavBurger />
+      </Row>
+    </StyledTopBar>
+  )
+}
+
+TopBar.propTypes = {
+  path: PropTypes.string
+}
 
 const StyledTopBar = styled.div`
   display: flex;

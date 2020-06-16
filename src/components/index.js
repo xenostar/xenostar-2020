@@ -10,6 +10,8 @@ export * from './Col/Col'
 
 export * from './Anchor/Anchor'
 
+export * from './BackButton/BackButton'
+
 export * from './Social/SocialIcon'
 export * from './Social/Social'
 

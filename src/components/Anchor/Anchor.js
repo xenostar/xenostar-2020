@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Link as Link_ } from 'gatsby'
+import { Link } from 'gatsby'
 import { routes } from 'utils'
 
 export const Anchor = ({
@@ -20,5 +19,3 @@ Anchor.propTypes = {
   children: PropTypes.node,
   to: PropTypes.string
 }
-
-const Link = styled(Link_)``

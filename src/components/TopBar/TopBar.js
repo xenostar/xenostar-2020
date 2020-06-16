@@ -2,23 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Row as Row_, Logo, BackButton, Nav, MobileNavBurger } from 'components'
-import { isBlogPost, routes } from 'utils'
+import { isSubPage, routes } from 'utils'
 
-export const TopBar = ({ path }) => {
-  return (
-    <StyledTopBar>
-      <Gradient />
-      <Row>
-        <Logo />
-        {isBlogPost(path) && (
-          <BackButton to={routes.blog}>Back to Blog</BackButton>
-        )}
-        <Nav />
-        <MobileNavBurger />
-      </Row>
-    </StyledTopBar>
-  )
-}
+export const TopBar = ({ path }) => (
+  <StyledTopBar>
+    <Gradient />
+    <Row>
+      <Logo />
+      {isSubPage(path, routes.blog) && (
+        <BackButton to={routes.blog}>Back to Blog</BackButton>
+      )}
+      {isSubPage(path, routes.portfolio) && (
+        <BackButton to={routes.portfolio}>Back to Portfolio</BackButton>
+      )}
+      <Nav />
+      <MobileNavBurger />
+    </Row>
+  </StyledTopBar>
+)
 
 TopBar.propTypes = {
   path: PropTypes.string

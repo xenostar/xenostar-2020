@@ -1,14 +1,27 @@
-import { theme } from 'utils'
 import { css } from 'styled-components'
-import { routes } from 'utils'
+import { routes, theme } from 'utils'
 
-export const isBlogPost = path => {
+/**
+ * What kind of sub page are we on?
+ * @param {*} path Current page path supplied from Gatsby.
+ * @param {*} route The route you're trying to match to.
+ */
+export const isSubPage = (path, route) => {
   const pageParams = getPageParams(path)
-  return pageParams[0] === routes.blog.substr(1) && pageParams[1]
+  return pageParams[0] === routes[route.substr(1)].substr(1) && pageParams[1]
 }
 
+/**
+ * Break down URLs into easy to parse chunks, removes initial slash.
+ * @param {*} path Accepts a path in the format of '/blog/test-post'.
+ */
 export const getPageParams = path => path.substr(1).split('/')
 
+/**
+ * Generate a random integer, geez man.
+ * @param {Number} min A minimum number range.
+ * @param {Number} max A maximum number range.
+ */
 export const getRandomInt = (min, max) => {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -17,7 +30,7 @@ export const getRandomInt = (min, max) => {
 }
 
 /**
- * Iterate through the sizes and create a media template
+ * Iterate through the sizes and create a media query.
  */
 export const media = Object.keys(theme.breakpoints).reduce(
   (accumulator, label) => {

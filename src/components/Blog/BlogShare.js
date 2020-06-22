@@ -4,10 +4,7 @@ import PropTypes from 'prop-types'
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { useSiteMetaData } from 'hooks'
 
-export const BlogShare = ({
-  pathName = '',
-  ...props
-}) => {
+export const BlogShare = ({ pathName = '', ...props }) => {
   const { siteUrl } = useSiteMetaData()
   const url = siteUrl + pathName
 
@@ -39,7 +36,7 @@ export const BlogShare = ({
 }
 
 BlogShare.propTypes = {
-  pathName: PropTypes.string,
+  pathName: PropTypes.string
 }
 
 const StyledBlogShare = styled.div`

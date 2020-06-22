@@ -5,10 +5,8 @@ import { Anchor, BlogDate as BlogDate_ } from 'components'
 import { routes } from 'utils'
 
 export const BlogPost = ({
-  body = 'Lorem Ipsum',
   excerpt = 'Lorem Ipsum.',
   publishDate,
-  seo,
   slug = 'post-title',
   title = 'Post Title',
   ...props
@@ -23,12 +21,10 @@ export const BlogPost = ({
 )
 
 BlogPost.propTypes = {
-  body: PropTypes.string,
   excerpt: PropTypes.string,
   publishDate: PropTypes.string,
-  seo: PropTypes.object,
   slug: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string
 }
 
 const StyledBlogPost = styled.div`

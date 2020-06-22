@@ -25,13 +25,10 @@ const Blog = () => {
             {items.map(data => (
               <BlogPost
                 key={data.title}
-                title={data.title}
-                slug={data.slug}
-                publishDate={data.publishDate}
-                body={data.body}
                 excerpt={data.excerpt}
-                categories={data.categories}
-                seo={data.seo}
+                publishDate={data.publishDate}
+                slug={data.slug}
+                title={data.title}
               />
             ))}
           </Col>

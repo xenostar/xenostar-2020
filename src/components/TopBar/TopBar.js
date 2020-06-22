@@ -10,10 +10,10 @@ export const TopBar = ({ path }) => (
     <Row>
       <Logo />
       {isSubPage(path, routes.blog) && (
-        <BackButton to={routes.blog}>Back to Blog</BackButton>
+        <BackButton to={routes.blog}>back to blog</BackButton>
       )}
       {isSubPage(path, routes.portfolio) && (
-        <BackButton to={routes.portfolio}>Back to Portfolio</BackButton>
+        <BackButton to={routes.portfolio}>back to portfolio</BackButton>
       )}
       <Nav />
       <MobileNavBurger />

@@ -1,20 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { Anchor as Anchor_ } from 'components'
+import { Anchor } from 'components'
 
-export const MobileNavLink = ({ children, to = '/', ...props }) => (
-  <Anchor to={to} {...props}>
-    {children}
-  </Anchor>
-)
-
-MobileNavLink.propTypes = {
-  children: PropTypes.node,
-  to: PropTypes.string
-}
-
-const Anchor = styled(Anchor_)`
+export const MobileNavLink = styled(Anchor)`
   color: ${props => props.theme.colors.primary};
   display: flex;
   font-family: ${props => props.theme.fonts.montserrat};

@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Anchor as Anchor_ } from 'components'
+import { NavLink as NavLink_ } from 'components'
 
-export const BackButton = props => <Anchor {...props} />
+export const BackButton = props => <NavLink {...props} />
 
-const Anchor = styled(Anchor_)`
-  align-items: center;
-  display: inline-flex;
+const NavLink = styled(NavLink_)`
   margin-left: ${props => props.theme.layout.spacing};
   margin-right: auto;
+  padding: 0;
   pointer-events: auto;
 `

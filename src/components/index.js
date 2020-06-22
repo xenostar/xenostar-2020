@@ -10,8 +10,6 @@ export * from './Col/Col'
 
 export * from './Anchor/Anchor'
 
-export * from './BackButton/BackButton'
-
 export * from './Social/SocialIcon'
 export * from './Social/Social'
 
@@ -33,6 +31,8 @@ export * from './TopBar/TopBar'
 
 export * from './Nav/NavLink'
 export * from './Nav/Nav'
+
+export * from './BackButton/BackButton'
 
 export * from './MobileNav/MobileNavBurger'
 export * from './MobileNav/MobileNavClose'

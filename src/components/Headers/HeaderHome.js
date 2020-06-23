@@ -12,7 +12,7 @@ export const HeaderHome = () => {
       <Row>
         <Col>
           <Title>
-            Hi, I'm <span>Bryan</span>
+            Hi, I&apos;m <span>Bryan</span>
             <br />I make <Anchor to={routes.portfolio}>things</Anchor>
           </Title>
           <IntroText>{introText}</IntroText>

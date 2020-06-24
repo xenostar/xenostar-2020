@@ -14,8 +14,6 @@ export const Typography = styled.p`
       ? h5
       : size === 'h6'
       ? h6
-      : size === 'p'
-      ? p
       : p}
 `
 

@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Row, Col as Col_, Typography } from 'components'
+import { Row, Col as Col_, Typography as Typography_ } from 'components'
 import { media } from 'utils'
 
 export const HeaderProject = ({ name = 'Lorem Ipsum' }) => (
   <StyledHeaderProject>
     <Row>
       <Col>
-        <Name as="h1" size="h2">
+        <Typography as="h1" size="h2">
           {name}
-        </Name>
+        </Typography>
       </Col>
     </Row>
   </StyledHeaderProject>
@@ -30,7 +30,7 @@ const StyledHeaderProject = styled.header`
 const Col = styled(Col_)`
   margin-bottom: 0;
 `
-const Name = styled(Typography)`
+const Typography = styled(Typography_)`
   ${media.tablet`
     font-size: 10.5vw;
   `}

@@ -19,11 +19,6 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${props => props.theme.fonts.montserrat};
-    line-height: 1.5;
-  }
-
   h1, h2, h3, h4, h5, h6,
   blockquote, p, ol, ul, code, pre {
     margin-bottom: ${props => props.theme.layout.spacing};

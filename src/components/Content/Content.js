@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: ${props => props.theme.fonts.montserrat};
+    line-height: ${props => props.theme.fonts.defaultLineHeight};
+  }
+
   h1 {
     font-size: ${props => props.theme.fonts.h1Size};
     font-weight: ${props => props.theme.fonts.boldBlack};

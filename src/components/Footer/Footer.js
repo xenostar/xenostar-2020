@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Row, Col as Col_, Social } from 'components'
+import { Row, Col as Col_, Typography, Social } from 'components'
 import { IoIosHeart as IoIosHeart_ } from 'react-icons/io'
 import { media } from 'utils'
 
@@ -8,7 +8,7 @@ export const Footer = () => (
   <StyledFooter>
     <Row>
       <Col width="49%">
-        <Text>
+        <Text as="h4" size="h5">
           Built with <IoIosHeart /> by Xenostar.
         </Text>
       </Col>
@@ -35,7 +35,7 @@ const Col = styled(Col_)`
     width: 100%;
   `}
 `
-const Text = styled.h5`
+const Text = styled(Typography)`
   align-items: center;
   display: flex;
 `

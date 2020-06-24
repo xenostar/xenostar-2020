@@ -11,29 +11,27 @@ import {
   FaTwitter
 } from 'react-icons/fa'
 
-export const SocialIcon = ({ href = '#', icon, ...props }) => {
-  const Icons = {
-    Dribbble: <FaDribbble />,
-    Email: <FaRegEnvelope />,
-    Facebook: <FaFacebookF />,
-    Github: <FaGithub />,
-    Instagram: <FaInstagram />,
-    LinkedIn: <FaLinkedinIn />,
-    Twitter: <FaTwitter />
-  }
-
-  return (
-    <Link
-      aria-label={icon}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      {...props}
-    >
-      {Icons[icon]}
-    </Link>
-  )
+const Icons = {
+  Dribbble: <FaDribbble />,
+  Email: <FaRegEnvelope />,
+  Facebook: <FaFacebookF />,
+  Github: <FaGithub />,
+  Instagram: <FaInstagram />,
+  LinkedIn: <FaLinkedinIn />,
+  Twitter: <FaTwitter />
 }
+
+export const SocialIcon = ({ href = '#', icon, ...props }) => (
+  <Link
+    aria-label={icon}
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    {...props}
+  >
+    {Icons[icon]}
+  </Link>
+)
 
 SocialIcon.propTypes = {
   href: PropTypes.string,

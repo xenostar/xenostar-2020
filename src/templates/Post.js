@@ -9,6 +9,7 @@ import {
   Section as Section_,
   Row,
   Col,
+  Content as Content_,
   Footer
 } from 'components'
 import hljs from 'highlight.js/lib/core'
@@ -53,7 +54,7 @@ const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
       <Section>
         <Row>
           <Col>
-            <Body dangerouslySetInnerHTML={{ __html: data.body }} />
+            <Content dangerouslySetInnerHTML={{ __html: data.body }} />
             <Categories>
               <FaFolder />
               {catList.map((data, i) => (
@@ -93,7 +94,7 @@ export const query = graphql`
 const Section = styled(Section_)`
   padding-top: ${props => props.theme.layout.spacing};
 `
-const Body = styled.div`
+const Content = styled(Content_)`
   margin-bottom: ${props => props.theme.layout.spacing};
   max-width: 100%;
 `

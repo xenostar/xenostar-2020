@@ -1,5 +1,14 @@
 import React from 'react'
-import { Page, SEO, Header, Section, Row, Col, Footer } from 'components'
+import {
+  Page,
+  SEO,
+  Header,
+  Section,
+  Row,
+  Col,
+  Typography,
+  Footer
+} from 'components'
 import { useAboutApi } from 'hooks'
 
 const About = () => {
@@ -12,7 +21,7 @@ const About = () => {
       <Section>
         <Row>
           <Col>
-            <p>
+            <Typography>
               Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim
               qui Lorem ea sunt exercitation sunt Lorem sit do. Est laborum
               nostrud dolor sit cupidatat nisi ut incididunt. Qui aliqua ea
@@ -21,8 +30,8 @@ const About = () => {
               eiusmod id ut eu qui ex quis magna incididunt enim officia
               pariatur consectetur. Amet nisi do nisi tempor dolore labore
               dolore sit sit laborum dolore commodo commodo veniam.
-            </p>
-            <p>
+            </Typography>
+            <Typography>
               Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim
               qui Lorem ea sunt exercitation sunt Lorem sit do. Est laborum
               nostrud dolor sit cupidatat nisi ut incididunt. Qui aliqua ea
@@ -31,7 +40,7 @@ const About = () => {
               eiusmod id ut eu qui ex quis magna incididunt enim officia
               pariatur consectetur. Amet nisi do nisi tempor dolore labore
               dolore sit sit laborum dolore commodo commodo veniam.
-            </p>
+            </Typography>
           </Col>
         </Row>
       </Section>

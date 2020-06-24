@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Anchor, BlogDate as BlogDate_ } from 'components'
+import { Typography, Anchor, BlogDate as BlogDate_ } from 'components'
 import { routes } from 'utils'
 
 export const BlogPost = ({
@@ -12,11 +12,11 @@ export const BlogPost = ({
   ...props
 }) => (
   <StyledBlogPost {...props}>
-    <Title>
+    <Typography as="h3" size="h3">
       <Anchor to={routes.blog.url + '/' + slug}>{title}</Anchor>
-    </Title>
+    </Typography>
     <BlogDate>{publishDate}</BlogDate>
-    <Excerpt>{excerpt}</Excerpt>
+    <Typography>{excerpt}</Typography>
   </StyledBlogPost>
 )
 
@@ -35,8 +35,6 @@ const StyledBlogPost = styled.div`
     margin-top: 0;
   }
 `
-const Title = styled.h3``
 const BlogDate = styled(BlogDate_)`
   margin-bottom: ${props => props.theme.layout.spacing};
 `
-const Excerpt = styled.p``

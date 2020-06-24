@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Row, Col as Col_, Anchor } from 'components'
+import styled, { css } from 'styled-components'
+import { Row, Col as Col_, Typography, Anchor } from 'components'
 import { useHomeApi } from 'hooks'
 import { media, routes } from 'utils'
 
@@ -11,11 +11,13 @@ export const HeaderHome = () => {
     <StyledHeader>
       <Row>
         <Col>
-          <Title>
+          <Title as="h1" size="h1">
             Hi, I&apos;m <span>Bryan</span>
             <br />I make <Anchor to={routes.portfolio.url}>things</Anchor>
           </Title>
-          <IntroText>{introText}</IntroText>
+          <Typography as="h2" size="h3">
+            {introText}
+          </Typography>
         </Col>
       </Row>
     </StyledHeader>
@@ -32,9 +34,8 @@ const StyledHeader = styled.header`
 const Col = styled(Col_)`
   margin-bottom: 0;
 `
-const Title = styled.h1`
+const Title = styled(Typography)`
   ${media.tablet`
     font-size: 10.5vw;
   `}
 `
-const IntroText = styled.h3``

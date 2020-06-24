@@ -9,6 +9,7 @@ import {
   Section as Section_,
   Row,
   Col,
+  Content as Content_,
   ProjectItem,
   Footer
 } from 'components'
@@ -22,7 +23,7 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
       <Section>
         <Row>
           <Col width="47%">
-            <Body dangerouslySetInnerHTML={{ __html: data.description }} />
+            <Content dangerouslySetInnerHTML={{ __html: data.description }} />
           </Col>
           <Col width="47%">
             <ProjectItem image={data.image} />
@@ -70,7 +71,7 @@ export const query = graphql`
 const Section = styled(Section_)`
   padding-top: ${props => props.theme.layout.spacing};
 `
-const Body = styled.div`
+const Content = styled(Content_)`
   margin-bottom: ${props => props.theme.layout.spacing};
   max-width: 100%;
 `

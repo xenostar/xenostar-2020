@@ -5,12 +5,12 @@ import { routes } from 'utils'
 
 export const MobileNavLinks = props => (
   <StyledMobileNavLinks {...props}>
-    <MobileNavLink to={routes.home}>Home</MobileNavLink>
-    <MobileNavLink to={routes.portfolio} partiallyActive={true}>
+    <MobileNavLink to={routes.home.url}>Home</MobileNavLink>
+    <MobileNavLink to={routes.portfolio.url} partiallyActive={true}>
       Portfolio
     </MobileNavLink>
-    <MobileNavLink to={routes.about}>About</MobileNavLink>
-    <MobileNavLink to={routes.blog} partiallyActive={true}>
+    <MobileNavLink to={routes.about.url}>About</MobileNavLink>
+    <MobileNavLink to={routes.blog.url} partiallyActive={true}>
       Blog
     </MobileNavLink>
   </StyledMobileNavLinks>

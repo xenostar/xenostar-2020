@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Section, Row as Row_ } from 'components'
+import { Section as StyledPortfolioGridHome, Row as Row_ } from 'components'
 
 export const PortfolioGridHome = ({ children }) => (
   <StyledPortfolioGridHome>
@@ -10,7 +11,10 @@ export const PortfolioGridHome = ({ children }) => (
   </StyledPortfolioGridHome>
 )
 
-const StyledPortfolioGridHome = styled(Section)``
+PortfolioGridHome.propTypes = {
+  children: PropTypes.node
+}
+
 const Row = styled(Row_)`
   max-width: 87.5rem; /* 1400px */
 `

@@ -1,7 +1,22 @@
 export const routes = {
-  home: '/',
-  about: '/about',
-  portfolio: '/portfolio',
-  blog: '/blog',
-  components: '/components'
+  home: {
+    name: 'home',
+    url: '/'
+  },
+  about: {
+    name: 'about',
+    url: '/about'
+  },
+  portfolio: {
+    name: 'portfolio',
+    url: '/portfolio'
+  },
+  blog: {
+    name: 'blog',
+    url: '/blog'
+  },
+  components: {
+    name: 'components',
+    url: '/components'
+  }
 }

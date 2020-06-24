@@ -1,9 +1,8 @@
 import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
 import PropTypes from 'prop-types'
+import styled, { ThemeProvider } from 'styled-components'
 import { StoreProvider } from 'easy-peasy'
 import { HelmetProvider } from 'react-helmet-async'
-import { store, theme } from 'utils'
 import {
   StoreSync,
   SEO,
@@ -13,10 +12,11 @@ import {
   TopBar,
   MobileNav
 } from 'components'
+import { store, theme } from 'utils'
 
 const Layout = ({ children, path }) => (
-  <ThemeProvider theme={theme}>
-    <StoreProvider store={store}>
+  <StoreProvider store={store}>
+    <ThemeProvider theme={theme}>
       <HelmetProvider>
         <StyledLayout>
           <StoreSync path={path} />
@@ -29,8 +29,8 @@ const Layout = ({ children, path }) => (
           {children}
         </StyledLayout>
       </HelmetProvider>
-    </StoreProvider>
-  </ThemeProvider>
+    </ThemeProvider>
+  </StoreProvider>
 )
 
 Layout.propTypes = {

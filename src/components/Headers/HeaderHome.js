@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col as Col_, Anchor } from 'components'
-import { media, routes } from 'utils'
 import { useHomeApi } from 'hooks'
+import { media, routes } from 'utils'
 
 export const HeaderHome = () => {
   const { introText } = useHomeApi()
@@ -13,7 +13,7 @@ export const HeaderHome = () => {
         <Col>
           <Title>
             Hi, I&apos;m <span>Bryan</span>
-            <br />I make <Anchor to={routes.portfolio}>things</Anchor>
+            <br />I make <Anchor to={routes.portfolio.url}>things</Anchor>
           </Title>
           <IntroText>{introText}</IntroText>
         </Col>

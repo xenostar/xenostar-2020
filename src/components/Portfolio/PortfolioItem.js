@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { Anchor as Anchor_ } from 'components'
 import Img from 'gatsby-image'
 import { routes } from 'utils'
@@ -10,11 +10,15 @@ export const PortfolioItem = ({
   featuredImage: { fluid, alt = '', title = '' },
   name = 'Item Name',
   number,
-  slug = '',
+  slug = ''
 }) => (
-  <StyledPortfolioItem area={area} number={'a' + (number + 1)} className={'a' + number}>
-    <Anchor to={routes.portfolio + '/' + slug}>
-      <Image fluid={fluid} alt={alt} />
+  <StyledPortfolioItem
+    area={area}
+    number={'a' + (number + 1)}
+    className={'a' + number}
+  >
+    <Anchor to={routes.portfolio.url + '/' + slug}>
+      <Image fluid={fluid} alt={alt} title={title} />
       <Name>{name}</Name>
     </Anchor>
   </StyledPortfolioItem>
@@ -25,16 +29,16 @@ PortfolioItem.propTypes = {
   featuredImage: PropTypes.exact({
     fluid: PropTypes.object,
     alt: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.string
   }),
   name: PropTypes.string,
   number: PropTypes.number,
-  slug: PropTypes.string,
+  slug: PropTypes.string
 }
 
 const StyledPortfolioItem = styled.div`
   display: block;
-  grid-area: ${({ area, number }) => area ? number : '' };
+  grid-area: ${({ area, number }) => (area ? number : '')};
 `
 const Anchor = styled(Anchor_)`
   display: block;

@@ -9,11 +9,13 @@ export const TopBar = ({ path }) => (
     <Gradient />
     <Row>
       <Logo />
-      {isSubPage(path, routes.blog) && (
-        <BackButton to={routes.blog}>back to blog</BackButton>
+      {isSubPage(path, routes.blog.name) && (
+        <BackButton to={routes.blog.url}>back to {routes.blog.name}</BackButton>
       )}
-      {isSubPage(path, routes.portfolio) && (
-        <BackButton to={routes.portfolio}>back to portfolio</BackButton>
+      {isSubPage(path, routes.portfolio.name) && (
+        <BackButton to={routes.portfolio.url}>
+          back to {routes.portfolio.name}
+        </BackButton>
       )}
       <Nav />
       <MobileNavBurger />

@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { FaCalendarAlt as FaCalendarAlt_ } from 'react-icons/fa'
 
 export const BlogDate = ({ children, ...props }) => (

@@ -6,7 +6,7 @@ import { routes } from 'utils'
 export const Anchor = ({
   activeClassName = 'active',
   children = 'Link Text',
-  to = routes.home,
+  to = routes.home.url,
   ...props
 }) => (
   <Link activeClassName={activeClassName} to={to} {...props}>

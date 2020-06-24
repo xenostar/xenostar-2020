@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { useStoreActions } from 'easy-peasy'
 
 export const StoreSync = ({ path }) => {

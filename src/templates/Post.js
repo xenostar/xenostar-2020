@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
-import hljs from 'highlight.js/lib/core'
-import javascript from 'highlight.js/lib/languages/javascript'
-import 'highlight.js/styles/atom-one-dark.css'
 import {
   Page,
   SEO,
@@ -14,6 +11,9 @@ import {
   Col,
   Footer
 } from 'components'
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import 'highlight.js/styles/atom-one-dark.css'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
 hljs.registerLanguage('javascript', javascript)

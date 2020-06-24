@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 export const Col = styled.div`
   align-items: ${({ align }) => align ?? 'flex-start'};

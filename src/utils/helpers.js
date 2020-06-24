@@ -8,12 +8,12 @@ import { routes, theme } from 'utils'
  */
 export const isSubPage = (path, route) => {
   const pageParams = getPageParams(path)
-  return pageParams[0] === routes[route.substr(1)].substr(1) && pageParams[1]
+  return pageParams[0] === routes[route].name && pageParams[1]
 }
 
 /**
  * Break down URLs into easy to parse chunks, removes initial slash.
- * @param {*} path Accepts a path in the format of '/blog/test-post'.
+ * @param {*} path Accepts a Gatsby path in the format of '/blog/test-post'.
  */
 export const getPageParams = path => path.substr(1).split('/')
 

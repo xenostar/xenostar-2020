@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { Row, Col as Col_, BlogDate, BlogShare as BlogShare_ } from 'components'
 import { media } from 'utils'
 

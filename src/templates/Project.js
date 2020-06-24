@@ -1,5 +1,4 @@
 import React from 'react'
-// import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -10,19 +9,23 @@ import {
   Section as Section_,
   Row,
   Col,
+  ProjectItem,
   Footer
 } from 'components'
 
 const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
-  // console.log(data)
+  console.log(data)
   return (
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
       <HeaderProject name={data.name} />
       <Section>
         <Row>
-          <Col>
-            <p>Project Information coming soon!</p>
+          <Col width="47%">
+            <Body dangerouslySetInnerHTML={{ __html: data.description }} />
+          </Col>
+          <Col width="47%">
+            <ProjectItem image={data.image} />
           </Col>
         </Row>
       </Section>
@@ -66,6 +69,10 @@ export const query = graphql`
 
 const Section = styled(Section_)`
   padding-top: ${props => props.theme.layout.spacing};
+`
+const Body = styled.div`
+  margin-bottom: ${props => props.theme.layout.spacing};
+  max-width: 100%;
 `
 
 export default Project

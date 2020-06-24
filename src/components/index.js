@@ -44,5 +44,7 @@ export * from './Portfolio/PortfolioGrid'
 export * from './Portfolio/PortfolioGridHome'
 export * from './Portfolio/PortfolioItem'
 
+export * from './Project/ProjectItem'
+
 export * from './Page/Page'
 export * from './SEO/SEO'

@@ -4,13 +4,14 @@ import styled from 'styled-components'
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { useSiteMetaData } from 'hooks'
 
-export const BlogShare = ({ pathName = '', ...props }) => {
+export const BlogShare = ({ path = '', ...props }) => {
   const { siteUrl } = useSiteMetaData()
-  const url = siteUrl + pathName
+  const url = siteUrl + path
 
   return (
     <StyledBlogShare {...props}>
       <Link
+        aria-label="Twitter"
         href={`https://twitter.com/share?url=${url}&text=&via=xen0star`}
         target="_blank"
         rel="noopener noreferrer"
@@ -18,6 +19,7 @@ export const BlogShare = ({ pathName = '', ...props }) => {
         <FaTwitter />
       </Link>
       <Link
+        aria-label="Facebook"
         href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -25,6 +27,7 @@ export const BlogShare = ({ pathName = '', ...props }) => {
         <FaFacebookF />
       </Link>
       <Link
+        aria-label="LinkedIn"
         href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=&summary=&source=`}
         target="_blank"
         rel="noopener noreferrer"
@@ -36,7 +39,7 @@ export const BlogShare = ({ pathName = '', ...props }) => {
 }
 
 BlogShare.propTypes = {
-  pathName: PropTypes.string
+  path: PropTypes.string
 }
 
 const StyledBlogShare = styled.div`

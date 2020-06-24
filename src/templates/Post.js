@@ -27,7 +27,7 @@ hljs.addPlugin({
   }
 })
 
-const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
+const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const [catList, setCatList] = useState([])
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
       <HeaderPost
         date={data.publishDate}
         introText={data.excerpt}
-        pathName={pathname}
+        path={path}
         title={data.title}
       />
       <Section>
@@ -69,8 +69,8 @@ const Post = ({ location: { pathname }, data: { datoCmsBlogPost: data } }) => {
 }
 
 Post.propTypes = {
-  location: PropTypes.object,
-  data: PropTypes.object
+  data: PropTypes.object,
+  path: PropTypes.string
 }
 
 export const query = graphql`

@@ -53,9 +53,9 @@ const StyledMobileNav = styled.nav`
   left: 0;
   overflow-y: auto;
   position: fixed;
-  transition: ${props => props.theme.transitions.slow};
+  transition: ${props => props.theme.transitions.fast};
   transform: ${props =>
     props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
-  z-index: 200;
+  z-index: ${props => props.theme.zIndex.drawer};
 `

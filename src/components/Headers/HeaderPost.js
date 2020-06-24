@@ -7,7 +7,7 @@ import { media } from 'utils'
 export const HeaderPost = ({
   date = 'Date',
   introText = 'Lorem Ipsum',
-  pathName = '',
+  path = '',
   title = 'Lorem Ipsum'
 }) => (
   <StyledHeaderPost>
@@ -16,7 +16,7 @@ export const HeaderPost = ({
         <Title>{title}</Title>
         <Meta>
           <BlogDate>{date}</BlogDate>
-          <BlogShare pathName={pathName} />
+          <BlogShare path={path} />
         </Meta>
         <IntroText>{introText}</IntroText>
       </Col>
@@ -27,7 +27,7 @@ export const HeaderPost = ({
 HeaderPost.propTypes = {
   date: PropTypes.string,
   introText: PropTypes.string,
-  pathName: PropTypes.string,
+  path: PropTypes.string,
   title: PropTypes.string
 }
 

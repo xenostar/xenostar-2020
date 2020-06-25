@@ -18,9 +18,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
 hljs.registerLanguage('javascript', javascript)
-hljs.configure({
-  languages: ['javascript']
-})
+hljs.configure({ languages: ['javascript'] })
 hljs.addPlugin({
   'after:highlightBlock': ({ block, result }) => {
     // move the language from the result into the dataset

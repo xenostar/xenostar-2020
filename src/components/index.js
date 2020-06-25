@@ -1,3 +1,5 @@
+export * from './Test/Test'
+
 export * from './Styles/NormalizeStyle'
 export * from './Styles/ResetStyle'
 export * from './Styles/GlobalStyle'

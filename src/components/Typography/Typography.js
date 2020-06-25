@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
 export const Typography = styled.p`
@@ -16,6 +17,10 @@ export const Typography = styled.p`
       ? h6
       : p}
 `
+
+Typography.propTypes = {
+  size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+}
 
 const h1 = css`
   font-family: ${props => props.theme.fonts.montserrat};

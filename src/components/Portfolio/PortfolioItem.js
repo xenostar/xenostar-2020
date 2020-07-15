@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Anchor as Anchor_ } from 'components'
 import Img from 'gatsby-image'
-import { routes } from 'utils'
+import { Anchor as Anchor_ } from 'components'
+import { media, routes } from 'utils'
 
 export const PortfolioItem = ({
   area = false,
@@ -39,6 +39,9 @@ PortfolioItem.propTypes = {
 const StyledPortfolioItem = styled.div`
   display: block;
   grid-area: ${({ area, number }) => (area ? number : '')};
+  ${media.tablet`
+    grid-area: auto;
+  `}
 `
 const Anchor = styled(Anchor_)`
   display: block;

@@ -3,9 +3,6 @@ import {
   Page,
   SEO,
   Header,
-  // Section,
-  // Row,
-  // Col,
   PortfolioGrid,
   PortfolioItem,
   Footer

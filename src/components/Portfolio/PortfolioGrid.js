@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Section as StyledPortfolioGrid, Row as Row_ } from 'components'
+import { media } from 'utils'
 
 export const PortfolioGrid = ({ children }) => (
   <StyledPortfolioGrid>
@@ -29,4 +30,8 @@ const Grid = styled.div`
   :hover {
     grid-gap: ${props => props.theme.layout.spacing};
   }
+  ${media.phone`
+    grid-gap: ${props => props.theme.layout.spacingTiny};
+    grid-template-columns: repeat(2, 1fr);
+  `}
 `

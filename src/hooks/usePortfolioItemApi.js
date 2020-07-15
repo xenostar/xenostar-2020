@@ -10,6 +10,7 @@ export const usePortfolioItemApi = () => {
         items: nodes {
           name
           description
+          link
           tools
           image {
             fluid(maxWidth: 450) {

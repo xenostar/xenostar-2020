@@ -22,11 +22,11 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
       <HeaderProject name={data.name} />
       <Section>
         <Row>
-          <Col width="47%">
-            <Content dangerouslySetInnerHTML={{ __html: data.description }} />
-          </Col>
-          <Col width="47%">
+          <Col width="48%">
             <ProjectItem image={data.image} />
+          </Col>
+          <Col width="48%">
+            <Content dangerouslySetInnerHTML={{ __html: data.description }} />
           </Col>
         </Row>
       </Section>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Row, Col as Col_, Typography as Typography_, Social } from 'components'
-import { IoIosHeart as IoIosHeart_ } from 'react-icons/io'
+import { FaHeart as FaHeart_ } from 'react-icons/fa'
 import { media } from 'utils'
 
 export const Footer = () => (
@@ -9,7 +9,7 @@ export const Footer = () => (
     <Row>
       <Col width="49%">
         <Typography as="p" size="h5">
-          Built with <IoIosHeart /> by Xenostar.
+          Built with <FaHeart /> by Xenostar.
         </Typography>
       </Col>
       <Col width="49%" align="flex-end" justify="space-between">
@@ -47,9 +47,8 @@ const HeartBeat = keyframes`
   50% { transform: scale(1); }
   100% { transform: scale(1); }
 `
-const IoIosHeart = styled(IoIosHeart_)`
+const FaHeart = styled(FaHeart_)`
   cursor: none;
-  font-size: 21px;
   margin: 0 ${props => props.theme.layout.borderRadius};
   transition: ${props => props.theme.transitions.default};
   ${Typography}:hover & {

@@ -17,6 +17,19 @@ module.exports = {
   plugins: [
     /**
      *
+     * Dev Plugins
+     *
+     */
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        devMode: false,
+        analyzerPort: 3002
+      }
+    },
+
+    /**
+     *
      * Source Plugins
      *
      */

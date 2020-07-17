@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
@@ -12,10 +12,10 @@ import {
   Content as Content_,
   Footer
 } from 'components'
+import { FaFolderOpen as FaFolderOpen_ } from 'react-icons/fa'
 import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
 import 'highlight.js/styles/atom-one-dark.css'
-import { FaFolder as FaFolder_ } from 'react-icons/fa'
 
 hljs.registerLanguage('javascript', javascript)
 hljs.configure({ languages: ['javascript'] })
@@ -27,12 +27,7 @@ hljs.addPlugin({
 })
 
 const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
-  const [catList, setCatList] = useState([])
-
-  useEffect(() => {
-    const splitCats = data.categories.split(', ')
-    setCatList(splitCats)
-  }, [data.categories])
+  const categories = data.categories.split(', ')
 
   useEffect(() => {
     document.querySelectorAll('pre').forEach(block => {
@@ -54,8 +49,8 @@ const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
           <Col>
             <Content dangerouslySetInnerHTML={{ __html: data.body }} />
             <Categories>
-              <FaFolder />
-              {catList.map((data, i) => (
+              <FaFolderOpen />
+              {categories.map((data, i) => (
                 <Category key={i}>{data}</Category>
               ))}
             </Categories>
@@ -100,7 +95,7 @@ const Categories = styled.div`
   display: flex;
   align-items: center;
 `
-const FaFolder = styled(FaFolder_)`
+const FaFolderOpen = styled(FaFolderOpen_)`
   color: ${props => props.theme.colors.lightGrey};
   font-size: 21px;
 `

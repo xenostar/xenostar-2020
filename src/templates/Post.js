@@ -19,12 +19,12 @@ import 'highlight.js/styles/atom-one-dark.css'
 
 hljs.registerLanguage('javascript', javascript)
 hljs.configure({ languages: ['javascript'] })
-hljs.addPlugin({
-  'after:highlightBlock': ({ block, result }) => {
-    // move the language from the result into the dataset
-    block.dataset.language = result.language
-  }
-})
+// hljs.addPlugin({
+//   'after:highlightBlock': ({ block, result }) => {
+//     // move the language from the result into the dataset
+//     block.dataset.language = result.language
+//   }
+// })
 
 const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const categories = data.categories.split(', ')

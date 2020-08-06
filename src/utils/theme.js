@@ -59,7 +59,8 @@ export const theme = {
     borderRadius: '6px',
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
-    maxWidthFixed: '62.5rem', // 1000px
+    // maxWidthFixed: '62.5rem', // 1000px
+    maxWidthFixed: '56.25em', // 900px
     spacingTiny: '0.625rem', // 10px
     spacingSmall: '0.9375rem', // 15px
     spacing: '1.875rem', // 30px

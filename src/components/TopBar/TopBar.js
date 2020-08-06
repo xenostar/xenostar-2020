@@ -46,9 +46,6 @@ const Gradient = styled.div`
   width: 100%;
 `
 const Row = styled(Row_)`
-  align-content: center;
-  flex-direction: row;
-  justify-content: space-between;
   max-width: none;
   padding: ${props => props.theme.layout.spacing};
 `

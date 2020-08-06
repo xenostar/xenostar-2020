@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Section as StyledPortfolioGrid, Row as Row_ } from 'components'
+import { Section as StyledPortfolioGrid, Row } from 'components'
 import { media } from 'utils'
 
 export const PortfolioGrid = ({ children }) => (
@@ -16,9 +16,6 @@ PortfolioGrid.propTypes = {
   children: PropTypes.node
 }
 
-const Row = styled(Row_)`
-  max-width: 62.5rem; /* 1000px */
-`
 const Grid = styled.div`
   display: grid;
   grid-gap: 1px;

@@ -18,9 +18,4 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.secondary};
     text-decoration: none;
   }
-
-  h1, h2, h3, h4, h5, h6,
-  blockquote, p, ol, ul, code, pre {
-    margin-bottom: ${props => props.theme.layout.spacing};
-  }
 `

@@ -11,7 +11,7 @@ export const HeaderHome = () => {
     <StyledHeader>
       <Row>
         <Col>
-          <Title as="h1" size="h1">
+          <Title as="h1" size="h1" mb>
             Hi, I&apos;m <span>Bryan</span>
             <br />I make <Anchor to={routes.portfolio.url}>things</Anchor>
           </Title>

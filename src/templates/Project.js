@@ -1,21 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
-import PropTypes from 'prop-types'
 import {
   Page,
   SEO,
   HeaderProject,
   Section as Section_,
-  Row,
-  Col,
-  Content as Content_,
+  Row as Row_,
+  Col as Col_,
+  Content,
+  ProjectInfo,
   ProjectItem,
   Footer
 } from 'components'
+import { media } from 'utils'
 
 const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
+  console.group()
   console.log(data)
+  console.groupEnd()
   return (
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
@@ -26,6 +30,7 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
             <ProjectItem image={data.image} />
           </Col>
           <Col width="48%">
+            <ProjectInfo link={data.link} tools={data.tools} />
             <Content dangerouslySetInnerHTML={{ __html: data.description }} />
           </Col>
         </Row>
@@ -44,6 +49,7 @@ export const query = graphql`
     datoCmsPortfolioItem(slug: { eq: $slug }) {
       name
       description
+      link
       tools
       image {
         fluid(maxWidth: 450) {
@@ -71,9 +77,15 @@ export const query = graphql`
 const Section = styled(Section_)`
   padding-top: ${props => props.theme.layout.spacing};
 `
-const Content = styled(Content_)`
-  margin-bottom: ${props => props.theme.layout.spacing};
-  max-width: 100%;
+const Row = styled(Row_)`
+  ${media.phablet`
+    flex-direction: column;
+  `}
+`
+const Col = styled(Col_)`
+  ${media.phablet`
+    width: 100%;
+  `}
 `
 
 export default Project

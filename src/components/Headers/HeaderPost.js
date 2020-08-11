@@ -19,7 +19,7 @@ export const HeaderPost = ({
   <StyledHeaderPost>
     <Row>
       <Col>
-        <Title as="h1" size="h2">
+        <Title as="h1" size="h2" mb>
           {title}
         </Title>
         <Meta>

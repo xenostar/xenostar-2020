@@ -12,7 +12,7 @@ export const BlogPost = ({
   ...props
 }) => (
   <StyledBlogPost {...props}>
-    <Typography as="h3" size="h3">
+    <Typography as="h3" size="h3" mb>
       <Anchor to={routes.blog.url + '/' + slug}>{title}</Anchor>
     </Typography>
     <BlogDate>{publishDate}</BlogDate>

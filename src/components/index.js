@@ -50,6 +50,7 @@ export * from './Portfolio/PortfolioGrid'
 export * from './Portfolio/PortfolioGridHome'
 export * from './Portfolio/PortfolioItem'
 
+export * from './Project/ProjectInfo'
 export * from './Project/ProjectItem'
 
 export * from './Page/Page'

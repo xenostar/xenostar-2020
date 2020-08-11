@@ -38,7 +38,6 @@ const Col = styled(Col_)`
   margin-bottom: 0;
 `
 const Title = styled(Typography)`
-  margin-bottom: 0;
   span {
     color: ${props => props.theme.colors.primary};
   }

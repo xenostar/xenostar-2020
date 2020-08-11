@@ -9,6 +9,7 @@ export const Content = styled.div`
   h6 {
     font-family: ${props => props.theme.fonts.montserrat};
     line-height: ${props => props.theme.fonts.defaultLineHeight};
+    margin-bottom: ${props => props.theme.layout.spacing};
   }
 
   h1 {
@@ -40,10 +41,12 @@ export const Content = styled.div`
     font-size: ${props => props.theme.fonts.defaultSize};
     font-weight: ${props => props.theme.fonts.defaultWeight};
     line-height: ${props => props.theme.fonts.defaultLineHeight};
+    margin-bottom: ${props => props.theme.layout.spacing};
   }
 
   blockquote {
     border-left: 12px solid #eee;
+    margin-bottom: ${props => props.theme.layout.spacing};
     padding-top: ${props => props.theme.layout.spacingSmall};
     padding-bottom: ${props => props.theme.layout.spacingSmall};
     padding-left: ${props => props.theme.layout.spacing};
@@ -57,8 +60,10 @@ export const Content = styled.div`
     list-style-position: inside;
   }
 
+  code,
   pre.hljs {
     border-radius: ${props => props.theme.layout.borderRadius};
+    margin-bottom: ${props => props.theme.layout.spacing};
     padding: ${props => props.theme.layout.spacing};
     position: relative;
   }

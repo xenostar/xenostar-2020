@@ -24,8 +24,8 @@ const StyledPage = styled.main`
   p a {
     background-image: ${props => props.theme.colors.gradient},
       linear-gradient(
-        ${props => props.theme.colors.lightBlue},
-        ${props => props.theme.colors.lightBlue}
+        ${props => props.theme.colors.lightGreen},
+        ${props => props.theme.colors.lightGreen}
       );
     background-position: bottom 0% left;
     background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { useStoreActions } from 'easy-peasy'
+import PropTypes from 'prop-types'
 
 export const StoreSync = ({ path }) => {
   const setCurrentPage = useStoreActions(actions => actions.page.setCurrentPage)

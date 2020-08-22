@@ -1,18 +1,23 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Anchor as Anchor_ } from 'components'
 import { routes } from 'utils'
 
-export const Logo = () => (
+export const Logo = ({ collapsed = false }) => (
   <StyledLogo>
-    <Anchor direction="left" to={routes.home.url}>
-      <Text>
+    <Anchor collapsed={collapsed ? 1 : 0} to={routes.home.url}>
+      <Text collapsed={collapsed}>
         X<TextColor>S</TextColor>
-        <HomeText>Home</HomeText>
+        <HomeText collapsed={collapsed}>Home</HomeText>
       </Text>
     </Anchor>
   </StyledLogo>
 )
+
+Logo.propTypes = {
+  collapsed: PropTypes.bool
+}
 
 const StyledLogo = styled.div`
   border-radius: ${props => props.theme.layout.borderRadius};
@@ -33,14 +38,14 @@ const Anchor = styled(Anchor_)`
   color: ${props => props.theme.colors.white};
   display: inline-flex;
   font-family: ${props => props.theme.fonts.bebasNeue};
-  font-size: 3.75em; /* 60px */
-  height: 5rem; /* 80px */
+  font-size: ${props => (props.collapsed ? '1.75rem' : '3.75rem')};
+  height: ${props => (props.collapsed ? '2.5rem' : '5rem')};
   justify-content: center;
   line-height: 1;
   pointer-events: auto;
   position: relative;
   transition: ${props => props.theme.transitions.default};
-  width: 5rem; /* 80px */
+  width: ${props => (props.collapsed ? '2.5rem' : '5rem')};
   :hover {
     background-color: ${props => props.theme.colors.transparent};
   }
@@ -57,7 +62,7 @@ const Anchor = styled(Anchor_)`
   }
 `
 const Text = styled.div`
-  padding-top: 0.4375rem; /* 7px */
+  padding-top: ${props => (props.collapsed ? '0.2375rem' : '0.4375rem')};
   position: relative;
 `
 const TextColor = styled.span`
@@ -71,10 +76,11 @@ const TextColor = styled.span`
 const HomeText = styled.div`
   color: ${props => props.theme.colors.white};
   font-size: 25.7px;
+  font-size: ${props => (props.collapsed ? '12px' : '25.7px')};
   opacity: 0;
   position: absolute;
-  top: -14px;
-  right: -4px;
+  top: ${props => (props.collapsed ? '-6px' : '-14px')};
+  right: ${props => (props.collapsed ? '-2px' : '-4px')};
   transform: rotate(-90deg) translateZ(0);
   transform-origin: bottom right;
   transition: ${props => props.theme.transitions.default};

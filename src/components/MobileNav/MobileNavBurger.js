@@ -17,7 +17,6 @@ export const MobileNavBurger = props => {
 const StyledMobileNavBurger = styled.div`
   align-items: center;
   display: none;
-  height: 5rem;
   pointer-events: auto;
   ${media.tablet`
     display: flex;

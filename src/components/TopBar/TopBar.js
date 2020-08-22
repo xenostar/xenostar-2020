@@ -6,21 +6,21 @@ import { isSubPage, routes } from 'utils'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 export const TopBar = ({ path }) => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [isSmall, setIsSmall] = useState(false)
 
   useScrollPosition(({ currPos }) => {
-    if (Math.abs(currPos.y) >= 50) {
-      setCollapsed(true)
+    if (Math.abs(currPos.y) >= 30) {
+      setIsSmall(true)
     } else {
-      setCollapsed(false)
+      setIsSmall(false)
     }
   })
 
   return (
-    <StyledTopBar collapsed={collapsed}>
+    <StyledTopBar isSmall={isSmall}>
       <Gradient />
-      <Row collapsed={collapsed}>
-        <Logo collapsed={collapsed} />
+      <Row isSmall={isSmall}>
+        <Logo isSmall={isSmall} />
         {isSubPage(path, routes.blog.name) && (
           <BackButton to={routes.blog.url}>
             back to {routes.blog.name}
@@ -44,12 +44,12 @@ TopBar.propTypes = {
 
 const StyledTopBar = styled.div`
   background-color: ${props =>
-    props.collapsed ? 'rgba(255,255,255,0.95)' : 'transparent'};
-  box-shadow: ${props => props.collapsed && `0 0 8px rgba(0, 0, 0, 0.1)`};
+    props.isSmall ? 'rgba(255,255,255,0.95)' : 'transparent'};
+  box-shadow: ${props => props.isSmall && `0 0 8px rgba(0, 0, 0, 0.1)`};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  pointer-events: none;
+  pointer-events: ${props => props.collapsed && 'none'};
   position: fixed;
   top: 0;
   right: 0;
@@ -67,7 +67,7 @@ const Gradient = styled.div`
 const Row = styled(Row_)`
   max-width: none;
   padding: ${props =>
-    props.collapsed
+    props.isSmall
       ? props.theme.layout.spacingSmall
       : props.theme.layout.spacing};
   padding-left: ${props => props.theme.layout.spacing};

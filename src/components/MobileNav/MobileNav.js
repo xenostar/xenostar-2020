@@ -32,7 +32,7 @@ export const MobileNav = () => {
   }, [isNavOpen, closeNav])
 
   return (
-    <StyledMobileNav ref={node} open={isNavOpen}>
+    <StyledMobileNav ref={node} isNavOpen={isNavOpen}>
       <MobileNavClose />
       <MobileNavLinks />
     </StyledMobileNav>
@@ -55,7 +55,7 @@ const StyledMobileNav = styled.nav`
   position: fixed;
   transition: ${props => props.theme.transitions.fast};
   transform: ${props =>
-    props.open ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
+    props.isNavOpen ? 'translate3d(0,0,0)' : 'translate3d(100%,0,0)'};
   user-select: none;
   z-index: ${props => props.theme.zIndex.drawer};
 `

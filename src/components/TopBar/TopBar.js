@@ -19,7 +19,7 @@ export const TopBar = ({ path }) => {
   return (
     <StyledTopBar isSmall={isSmall}>
       <Gradient />
-      <Row isSmall={isSmall}>
+      <Row isSmall={isSmall} wrap="nowrap">
         <Logo isSmall={isSmall} />
         {isSubPage(path, routes.blog.name) && (
           <BackButton to={routes.blog.url}>

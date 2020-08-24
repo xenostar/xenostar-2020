@@ -6,7 +6,7 @@ import { routes } from 'utils'
 
 export const Logo = ({ isSmall = false }) => (
   <StyledLogo>
-    <Anchor small={isSmall ? 1 : 0} to={routes.home.url}>
+    <Anchor $isSmall={isSmall} to={routes.home.url}>
       <Text isSmall={isSmall}>
         X<TextColor>S</TextColor>
         <HomeText isSmall={isSmall}>Home</HomeText>
@@ -38,14 +38,14 @@ const Anchor = styled(Anchor_)`
   color: ${props => props.theme.colors.white};
   display: inline-flex;
   font-family: ${props => props.theme.fonts.bebasNeue};
-  font-size: ${props => (props.small ? '1.75rem' : '3.75rem')};
-  height: ${props => (props.small ? '2.5rem' : '5rem')};
+  font-size: ${props => (props.$isSmall ? '1.75rem' : '3.75rem')};
+  height: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   justify-content: center;
   line-height: 1;
   pointer-events: auto;
   position: relative;
   transition: ${props => props.theme.transitions.default};
-  width: ${props => (props.small ? '2.5rem' : '5rem')};
+  width: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   :hover {
     background-color: ${props => props.theme.colors.transparent};
   }

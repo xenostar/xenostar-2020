@@ -21,7 +21,7 @@ module.exports = {
      *
      */
     {
-      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
         devMode: false,
         analyzerPort: 3002
@@ -62,25 +62,24 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `700i`, `800`, `800i`]
-          },
-          {
-            family: `Bebas Neue`,
-            subsets: [`latin`],
-            variants: [`400`]
-          },
-          {
-            family: `Montserrat`,
-            subsets: [`latin`],
-            variants: [`700`, `700i`, `800`, `800i`, `900`, `900i`]
-          }
-        ]
+        fonts: {
+          google: [
+            {
+              family: `Open Sans`,
+              variants: [`400`, `400i`, `700`, `700i`, `800`, `800i`]
+            },
+            {
+              family: `Bebas Neue`,
+              variants: [`400`]
+            },
+            {
+              family: `Montserrat`,
+              variants: [`700`, `700i`, `800`, `800i`, `900`, `900i`]
+            }
+          ]
+        }
       }
     },
     {

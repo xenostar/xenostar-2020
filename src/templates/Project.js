@@ -30,8 +30,8 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
             <ProjectItem image={data.image} />
           </Col>
           <Col width="48%">
-            <ProjectInfo link={data.link} tools={data.tools} />
             <Content dangerouslySetInnerHTML={{ __html: data.description }} />
+            <ProjectInfo link={data.link} tools={data.tools} />
           </Col>
         </Row>
       </Section>

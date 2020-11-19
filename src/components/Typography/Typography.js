@@ -17,10 +17,12 @@ export const Typography = styled.p`
       ? h6
       : p}
   margin-bottom: ${props => props.mb && props.theme.layout.spacing};
+  ${({ noWrap }) => noWrap && noWrapText};
 `
 
 Typography.propTypes = {
-  size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+  size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  noWrap: PropTypes.bool
 }
 
 const h1 = css`
@@ -66,4 +68,9 @@ const p = css`
   font-size: ${props => props.theme.fonts.defaultSize};
   font-weight: ${props => props.theme.fonts.defaultWeight};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
+`
+const noWrapText = css`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `

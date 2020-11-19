@@ -61,6 +61,7 @@ export const theme = {
     maxWidth: '60vw',
     maxWidthFixed: '56.25em', // 900px
     // maxWidthFixed: '62.5rem', // 1000px
+    spacingMicro: '0.3125rem', // 5px
     spacingTiny: '0.625rem', // 10px
     spacingSmall: '0.9375rem', // 15px
     spacing: '1.875rem', // 30px

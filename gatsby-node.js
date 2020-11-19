@@ -7,12 +7,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     {
-      posts: allDatoCmsBlogPost(sort: {fields: publishDate, order: DESC}) {
+      posts: allDatoCmsBlogPost(sort: { fields: publishDate, order: DESC }) {
         items: nodes {
           slug
         }
       }
-      projects: allDatoCmsPortfolioItem(sort: {order: ASC, fields: position}, limit: 16) {
+      projects: allDatoCmsPortfolioItem(
+        sort: { order: ASC, fields: position }
+        limit: 16
+      ) {
         items: nodes {
           slug
         }
@@ -31,8 +34,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `blog/${data.slug}`,
       component: postTemplate,
       context: {
-        slug: data.slug,
-      },
+        slug: data.slug
+      }
     })
   })
 
@@ -42,8 +45,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `portfolio/${data.slug}`,
       component: projectTemplate,
       context: {
-        slug: data.slug,
-      },
+        slug: data.slug
+      }
     })
   })
 }

@@ -26,6 +26,7 @@ Col.propTypes = {
   direction: PropTypes.oneOf(['column', 'column-reverse']),
   justify: PropTypes.oneOf([
     'justify-content',
+    'flex-start',
     'flex-end',
     'center',
     'space-between',

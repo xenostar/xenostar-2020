@@ -25,6 +25,7 @@ Row.propTypes = {
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   justify: PropTypes.oneOf([
     'justify-content',
+    'flex-start',
     'flex-end',
     'center',
     'space-between',

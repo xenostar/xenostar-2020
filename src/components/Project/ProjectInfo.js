@@ -56,13 +56,13 @@ const Icon = styled.div`
   border-radius: ${props => props.theme.layout.borderRadius} 0 0
     ${props => props.theme.layout.borderRadius};
   display: flex;
-  padding: 0 ${props => props.theme.layout.spacingMicro};
+  padding: 0 ${props => props.theme.layout.spacingTiny};
 `
 const Typography = styled(Typography_)`
   background-color: ${props => props.theme.colors.lightGreen};
   border-radius: 0 ${props => props.theme.layout.borderRadius}
     ${props => props.theme.layout.borderRadius} 0;
   font-weight: bold;
-  font-size: 0.75em;
-  padding: ${props => props.theme.layout.spacingMicro};
+  font-size: 0.8125em;
+  padding: ${props => props.theme.layout.spacingTiny};
 `

@@ -10,7 +10,7 @@ export const MobileNavLink = styled(Anchor)`
   justify-content: flex-end;
   line-height: 60px;
   transition: ${props => props.theme.transitions.default};
-  padding: ${props => props.theme.layout.spacing};
+  padding: ${props => props.theme.layout.spacing.default};
   &.active,
   :hover {
     background-color: ${props => props.theme.colors.primary};

@@ -45,8 +45,8 @@ const StyledHeaderPost = styled.header`
   display: flex;
   justify-content: center;
   padding-top: 9.125rem; /* 146px */
-  padding-right: ${props => props.theme.layout.spacing};
-  padding-left: ${props => props.theme.layout.spacing};
+  padding-right: ${props => props.theme.layout.spacing.default};
+  padding-left: ${props => props.theme.layout.spacing.default};
 `
 const Col = styled(Col_)`
   margin-bottom: 0;
@@ -58,13 +58,13 @@ const Title = styled(Typography)`
 `
 const Meta = styled.div`
   display: flex;
-  margin-bottom: ${props => props.theme.layout.spacing};
+  margin-bottom: ${props => props.theme.layout.spacing.default};
   width: 100%;
 `
 const BlogShare = styled(BlogShare_)`
   border-left: 1px solid #ddd;
-  margin-left: ${props => props.theme.layout.spacingSmall};
-  padding-left: ${props => props.theme.layout.spacingSmall};
+  margin-left: ${props => props.theme.layout.spacing.small};
+  padding-left: ${props => props.theme.layout.spacing.small};
 `
 const IntroText = styled(Typography)`
   color: ${props => props.theme.colors.primary};

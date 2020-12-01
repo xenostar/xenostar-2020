@@ -24,7 +24,7 @@ const Grid = styled.div`
   grid-gap: 1px;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: auto;
-  padding-bottom: ${props => props.theme.layout.spacing};
+  padding-bottom: ${props => props.theme.layout.spacing.default};
   transition: ${props => props.theme.transitions.default};
   width: 100%;
   grid-template-areas:
@@ -37,14 +37,14 @@ const Grid = styled.div`
     '.   .   .   a10 a11 a11 a7  a7  a7  a7  a13 .   .   .'
     '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .';
   :hover {
-    grid-gap: ${props => props.theme.layout.spacing};
+    grid-gap: ${props => props.theme.layout.spacing.default};
   }
   ${media.tablet`
     grid-template-areas: none;
     grid-template-columns: repeat(3, 1fr);
   `}
   ${media.phone`
-    grid-gap: ${props => props.theme.layout.spacingTiny};
+    grid-gap: ${props => props.theme.layout.spacing.tiny};
     grid-template-columns: repeat(2, 1fr);
   `}
 `

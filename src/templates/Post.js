@@ -85,10 +85,10 @@ export const query = graphql`
 `
 
 const Section = styled(Section_)`
-  padding-top: ${props => props.theme.layout.spacing};
+  padding-top: ${props => props.theme.layout.spacing.default};
 `
 const Content = styled(Content_)`
-  margin-bottom: ${props => props.theme.layout.spacing};
+  margin-bottom: ${props => props.theme.layout.spacing.default};
   max-width: 100%;
 `
 const Categories = styled.div`

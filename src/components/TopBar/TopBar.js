@@ -68,9 +68,9 @@ const Row = styled(Row_)`
   max-width: none;
   padding: ${props =>
     props.isSmall
-      ? props.theme.layout.spacingSmall
-      : props.theme.layout.spacing};
-  padding-left: ${props => props.theme.layout.spacing};
-  padding-right: ${props => props.theme.layout.spacing};
+      ? props.theme.layout.spacing.small
+      : props.theme.layout.spacing.default};
+  padding-left: ${props => props.theme.layout.spacing.default};
+  padding-right: ${props => props.theme.layout.spacing.default};
   transition: ${props => props.theme.transitions.default};
 `

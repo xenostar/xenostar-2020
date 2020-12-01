@@ -21,14 +21,14 @@ const Grid = styled.div`
   grid-gap: 1px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  padding-bottom: ${props => props.theme.layout.spacing};
+  padding-bottom: ${props => props.theme.layout.spacing.default};
   transition: ${props => props.theme.transitions.default};
   width: 100%;
   :hover {
-    grid-gap: ${props => props.theme.layout.spacing};
+    grid-gap: ${props => props.theme.layout.spacing.default};
   }
   ${media.phone`
-    grid-gap: ${props => props.theme.layout.spacingTiny};
+    grid-gap: ${props => props.theme.layout.spacing.tiny};
     grid-template-columns: repeat(2, 1fr);
   `}
 `

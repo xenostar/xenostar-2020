@@ -51,8 +51,8 @@ export const theme = {
     active: 'translateY(3px)'
   },
   transitions: {
-    default: '0.3s all ease',
     fast: '0.2s all ease',
+    default: '0.3s all ease',
     slow: '0.4s all ease'
   },
   layout: {
@@ -60,14 +60,15 @@ export const theme = {
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '56.25em', // 900px
-    // maxWidthFixed: '62.5rem', // 1000px
-    spacingMicro: '0.3125rem', // 5px
-    spacingTiny: '0.625rem', // 10px
-    spacingSmall: '0.9375rem', // 15px
-    spacing: '1.875rem', // 30px
-    spacingBig: '3.75rem', // 60px
-    spacingHuge: '5.625rem', // 90px
-    spacingGiant: '7.5rem', // 120px
+    spacing: {
+      micro: '0.3125rem', // 5px,
+      tiny: '0.625rem', // 10px,
+      small: '0.9375rem', // 15px
+      default: '1.875rem', // 30px,
+      big: '3.75rem', // 60px,
+      huge: '5.625rem', // 90px
+      giant: '7.5rem' // 120px
+    },
     topBar: '6px'
   },
   breakpoints: {

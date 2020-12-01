@@ -11,7 +11,12 @@ export const ProjectInfo = ({
   <StyledProjectInfo>
     <Row align="center" justify="flex-start">
       {link && (
-        <Resource>
+        <Resource
+          as="a"
+          href="https://www.google.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Icon>
             <FaLink />
           </Icon>

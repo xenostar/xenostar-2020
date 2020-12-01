@@ -25,8 +25,8 @@ export const SocialIcon = ({ href = '#', icon, ...props }) => (
   <Link
     aria-label={icon}
     href={href}
-    target="_blank"
     rel="noopener noreferrer"
+    target="_blank"
     {...props}
   >
     {Icons[icon]}

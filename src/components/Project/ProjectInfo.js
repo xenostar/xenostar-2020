@@ -35,17 +35,17 @@ ProjectInfo.propTypes = {
 
 const StyledProjectInfo = styled.div`
   display: flex;
-  margin-top: ${props => props.theme.layout.spacing.default};
+  margin-top: ${props => props.theme.spacing.default};
   width: 100%;
 `
 const Row = styled(Row_)`
-  margin-top: -${props => props.theme.layout.spacing.tiny};
+  margin-top: -${props => props.theme.spacing.tiny};
 `
 const Resource = styled.div`
   align-items: stretch;
   display: flex;
-  margin-top: ${props => props.theme.layout.spacing.tiny};
-  margin-right: ${props => props.theme.layout.spacing.tiny};
+  margin-top: ${props => props.theme.spacing.tiny};
+  margin-right: ${props => props.theme.spacing.tiny};
   :last-child {
     margin-right: 0;
   }
@@ -56,7 +56,7 @@ const Icon = styled.div`
   border-radius: ${props => props.theme.layout.borderRadius} 0 0
     ${props => props.theme.layout.borderRadius};
   display: flex;
-  padding: 0 ${props => props.theme.layout.spacing.tiny};
+  padding: 0 ${props => props.theme.spacing.tiny};
 `
 const Typography = styled(Typography_)`
   background-color: ${props => props.theme.colors.lightGreen};
@@ -64,5 +64,5 @@ const Typography = styled(Typography_)`
     ${props => props.theme.layout.borderRadius} 0;
   font-weight: bold;
   font-size: 0.8125em;
-  padding: ${props => props.theme.layout.spacing.tiny};
+  padding: ${props => props.theme.spacing.tiny};
 `

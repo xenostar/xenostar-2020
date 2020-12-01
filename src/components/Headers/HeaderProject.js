@@ -24,8 +24,8 @@ const StyledHeaderProject = styled.header`
   display: flex;
   justify-content: center;
   padding-top: 9.125rem; /* 146px */
-  padding-right: ${props => props.theme.layout.spacing.default};
-  padding-left: ${props => props.theme.layout.spacing.default};
+  padding-right: ${props => props.theme.spacing.default};
+  padding-left: ${props => props.theme.spacing.default};
 `
 const Col = styled(Col_)`
   margin-bottom: 0;

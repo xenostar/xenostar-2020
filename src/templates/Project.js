@@ -75,7 +75,7 @@ export const query = graphql`
 `
 
 const Section = styled(Section_)`
-  padding-top: ${props => props.theme.layout.spacing.default};
+  padding-top: ${props => props.theme.spacing.default};
 `
 const Row = styled(Row_)`
   ${media.phablet`

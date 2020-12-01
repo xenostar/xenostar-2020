@@ -49,7 +49,7 @@ const Link = styled.a`
   color: ${props => props.theme.colors.lightGrey};
   display: flex;
   font-size: 21px;
-  margin-left: ${props => props.theme.layout.spacing.small};
+  margin-left: ${props => props.theme.spacing.small};
   :first-child {
     margin-left: 0;
   }

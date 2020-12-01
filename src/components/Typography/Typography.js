@@ -16,7 +16,7 @@ export const Typography = styled.p`
       : size === 'h6'
       ? h6
       : p}
-  margin-bottom: ${props => props.mb && props.theme.layout.spacing.default};
+  margin-bottom: ${props => props.mb && props.theme.spacing.default};
   ${({ noWrap }) => noWrap && noWrapText};
 `
 

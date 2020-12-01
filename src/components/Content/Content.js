@@ -9,7 +9,7 @@ export const Content = styled.div`
   h6 {
     font-family: ${props => props.theme.fonts.montserrat};
     line-height: ${props => props.theme.fonts.defaultLineHeight};
-    margin-bottom: ${props => props.theme.layout.spacing.default};
+    margin-bottom: ${props => props.theme.spacing.default};
   }
 
   h1 {
@@ -41,15 +41,15 @@ export const Content = styled.div`
     font-size: ${props => props.theme.fonts.defaultSize};
     font-weight: ${props => props.theme.fonts.defaultWeight};
     line-height: ${props => props.theme.fonts.defaultLineHeight};
-    margin-bottom: ${props => props.theme.layout.spacing.default};
+    margin-bottom: ${props => props.theme.spacing.default};
   }
 
   blockquote {
     border-left: 12px solid #eee;
-    margin-bottom: ${props => props.theme.layout.spacing.default};
-    padding-top: ${props => props.theme.layout.spacing.small};
-    padding-bottom: ${props => props.theme.layout.spacing.small};
-    padding-left: ${props => props.theme.layout.spacing.default};
+    margin-bottom: ${props => props.theme.spacing.default};
+    padding-top: ${props => props.theme.spacing.small};
+    padding-bottom: ${props => props.theme.spacing.small};
+    padding-left: ${props => props.theme.spacing.default};
   }
 
   ul {
@@ -63,16 +63,16 @@ export const Content = styled.div`
   code,
   pre.hljs {
     border-radius: ${props => props.theme.layout.borderRadius};
-    margin-bottom: ${props => props.theme.layout.spacing.default};
-    padding: ${props => props.theme.layout.spacing.default};
+    margin-bottom: ${props => props.theme.spacing.default};
+    padding: ${props => props.theme.spacing.default};
     position: relative;
   }
   [data-language]:before {
     content: attr(data-language);
     opacity: 0.25;
     position: absolute;
-    right: ${props => props.theme.layout.spacing.tiny};
+    right: ${props => props.theme.spacing.tiny};
     text-transform: capitalize;
-    top: ${props => props.theme.layout.spacing.tiny};
+    top: ${props => props.theme.spacing.tiny};
   }
 `

@@ -1,4 +1,10 @@
 export const theme = {
+  breakpoints: {
+    desktop: 1200,
+    tablet: 960,
+    phablet: 720,
+    phone: 480
+  },
   colors: {
     // primary: '#90c7a8',
     // gradient: 'linear-gradient(to right, #ec56f4, #90c7a8)',
@@ -47,6 +53,22 @@ export const theme = {
     h5Size: '1.25em',
     h6Size: '1em'
   },
+  layout: {
+    borderRadius: '6px',
+    borderRadiusSmall: '1px',
+    maxWidth: '60vw',
+    maxWidthFixed: '56.25em', // 900px
+    topBar: '6px'
+  },
+  spacing: {
+    micro: '0.3125rem', // 5px,
+    tiny: '0.625rem', // 10px,
+    small: '0.9375rem', // 15px
+    default: '1.875rem', // 30px,
+    big: '3.75rem', // 60px,
+    huge: '5.625rem', // 90px
+    giant: '7.5rem' // 120px
+  },
   transforms: {
     active: 'translateY(3px)'
   },
@@ -54,28 +76,6 @@ export const theme = {
     fast: '0.2s all ease',
     default: '0.3s all ease',
     slow: '0.4s all ease'
-  },
-  layout: {
-    borderRadius: '6px',
-    borderRadiusSmall: '1px',
-    maxWidth: '60vw',
-    maxWidthFixed: '56.25em', // 900px
-    spacing: {
-      micro: '0.3125rem', // 5px,
-      tiny: '0.625rem', // 10px,
-      small: '0.9375rem', // 15px
-      default: '1.875rem', // 30px,
-      big: '3.75rem', // 60px,
-      huge: '5.625rem', // 90px
-      giant: '7.5rem' // 120px
-    },
-    topBar: '6px'
-  },
-  breakpoints: {
-    desktop: 1200,
-    tablet: 960,
-    phablet: 720,
-    phone: 480
   },
   zIndex: {
     mobileStepper: 1000,

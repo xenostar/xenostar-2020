@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Row as Row_, Typography as Typography_ } from 'components'
-import { FaLink, FaWrench } from 'react-icons/fa'
+import { Chip, ChipLink, Row as Row_ } from 'components'
 
 export const ProjectInfo = ({
   link = 'https://www.google.com',
@@ -10,25 +9,8 @@ export const ProjectInfo = ({
 }) => (
   <StyledProjectInfo>
     <Row align="center" justify="flex-start">
-      {link && (
-        <Resource
-          as="a"
-          href="https://www.google.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Icon>
-            <FaLink />
-          </Icon>
-          <Typography noWrap>{link}</Typography>
-        </Resource>
-      )}
-      <Resource>
-        <Icon>
-          <FaWrench />
-        </Icon>
-        <Typography noWrap>{tools}</Typography>
-      </Resource>
+      {link && <ChipLink href={link} text={link} />}
+      <Chip text={tools} />
     </Row>
   </StyledProjectInfo>
 )
@@ -45,29 +27,4 @@ const StyledProjectInfo = styled.div`
 `
 const Row = styled(Row_)`
   margin-top: -${props => props.theme.spacing.tiny};
-`
-const Resource = styled.div`
-  align-items: stretch;
-  display: flex;
-  margin-top: ${props => props.theme.spacing.tiny};
-  margin-right: ${props => props.theme.spacing.tiny};
-  :last-child {
-    margin-right: 0;
-  }
-`
-const Icon = styled.div`
-  align-items: center;
-  background-color: ${props => props.theme.colors.primary};
-  border-radius: ${props => props.theme.layout.borderRadius} 0 0
-    ${props => props.theme.layout.borderRadius};
-  display: flex;
-  padding: 0 ${props => props.theme.spacing.tiny};
-`
-const Typography = styled(Typography_)`
-  background-color: ${props => props.theme.colors.lightGreen};
-  border-radius: 0 ${props => props.theme.layout.borderRadius}
-    ${props => props.theme.layout.borderRadius} 0;
-  font-weight: bold;
-  font-size: 0.8125em;
-  padding: ${props => props.theme.spacing.tiny};
 `

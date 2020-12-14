@@ -1,5 +1,3 @@
-export * from './Test/Test'
-
 export * from './Styles/NormalizeStyle'
 export * from './Styles/ResetStyle'
 export * from './Styles/GlobalStyle'
@@ -18,6 +16,9 @@ export * from './Typography/Typography'
 
 export * from './Social/SocialIcon'
 export * from './Social/Social'
+
+export * from './Chip/Chip'
+export * from './Chip/ChipLink'
 
 export * from './Blog/BlogDate'
 export * from './Blog/BlogPost'

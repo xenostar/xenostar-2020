@@ -1,15 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import {
-  SEO,
-  Page,
-  Header,
-  Section,
-  Row,
-  Col,
-  Test as Test_,
-  Footer
-} from 'components'
+import { SEO, Page, Header, Section, Row, Col, Footer } from 'components'
 
 const Components = () => (
   <Page>
@@ -18,8 +8,6 @@ const Components = () => (
     <Section>
       <Row>
         <Col>
-          {/* <Test variant={1}>Fails</Test> */}
-          <Test variant="test">Succeeds</Test>
           <h1>Header 1</h1>
           <h2>Header 2</h2>
           <h3>Header 3</h3>
@@ -55,10 +43,5 @@ const Components = () => (
     <Footer />
   </Page>
 )
-
-const Test = styled(Test_)`
-  color: red;
-`
-Test.propTypes = Test_.propTypes
 
 export default Components

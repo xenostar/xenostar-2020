@@ -3,3 +3,7 @@
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
+
+[[redirects]]
+  from = "/linkedin"
+  to = "https://www.linkedin.com/in/bryan-leewood-86858415/"

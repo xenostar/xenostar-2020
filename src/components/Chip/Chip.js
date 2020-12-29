@@ -2,17 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Typography as Typography_ } from 'components'
-import { FaWrench } from 'react-icons/fa'
+import { FaLink, FaWrench } from 'react-icons/fa'
 
-export const Chip = ({ icon = null, text = 'None', ...props }) => (
-  <StyledChip {...props}>
-    <Icon>{icon || <FaWrench />}</Icon>
-    <Typography noWrap>{text}</Typography>
+export const Chip = ({
+  href = null,
+  icon = null,
+  target = '_blank',
+  text = 'None',
+  ...props
+}) => (
+  <StyledChip
+    {...(href && {
+      as: 'a',
+      href: href
+    })}
+    {...(target === '_blank' && { target, rel: 'noopener noreferrer' })}
+    {...props}
+  >
+    <Icon>{icon || href ? <FaLink /> : <FaWrench />}</Icon>
+    <Typography noWrap>{text || href}</Typography>
   </StyledChip>
 )
 
 Chip.propTypes = {
+  href: PropTypes.string,
   icon: PropTypes.node,
+  target: PropTypes.string,
   text: PropTypes.string
 }
 
@@ -21,6 +36,10 @@ const StyledChip = styled.div`
   display: flex;
   margin-top: ${props => props.theme.spacing.tiny};
   margin-right: ${props => props.theme.spacing.tiny};
+  transition: ${props => props.href && props.theme.transitions.default};
+  :hover {
+    opacity: ${props => props.href && 0.85};
+  }
   :last-child {
     margin-right: 0;
   }

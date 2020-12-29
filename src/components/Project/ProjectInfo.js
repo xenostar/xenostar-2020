@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Chip, ChipLink, Row as Row_ } from 'components'
+import { Chip, Row as Row_ } from 'components'
 
 export const ProjectInfo = ({
   link = 'https://www.google.com',
@@ -9,7 +9,7 @@ export const ProjectInfo = ({
 }) => (
   <StyledProjectInfo>
     <Row align="center" justify="flex-start">
-      {link && <ChipLink href={link} text={link} />}
+      {link && <Chip href={link} text={link} />}
       <Chip text={tools} />
     </Row>
   </StyledProjectInfo>

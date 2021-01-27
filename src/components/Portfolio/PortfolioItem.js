@@ -8,7 +8,7 @@ import { media, routes } from 'utils'
 export const PortfolioItem = ({
   area = false,
   featuredImage: { fluid, alt = '', title = '' },
-  name = 'Item Name',
+  name = 'Portfolio Item Name',
   number,
   slug = ''
 }) => (

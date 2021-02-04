@@ -60,7 +60,12 @@ export const Content = styled.div`
     list-style-position: inside;
   }
 
-  code,
+  code.hljs {
+    border-radius: ${props => props.theme.layout.borderRadius};
+    display: inline;
+    padding: ${props => props.theme.spacing.micro};
+    white-space: nowrap;
+  }
   pre.hljs {
     border-radius: ${props => props.theme.layout.borderRadius};
     margin-bottom: ${props => props.theme.spacing.default};

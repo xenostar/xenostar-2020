@@ -31,7 +31,7 @@ const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const categories = data.categories.split(', ')
 
   useEffect(() => {
-    document.querySelectorAll('pre').forEach(block => {
+    document.querySelectorAll('pre, code').forEach(block => {
       hljs.highlightBlock(block)
     })
   }, [data])

@@ -17,9 +17,7 @@ import {
 import { media } from 'utils'
 
 const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
-  console.group()
   console.log(data)
-  console.groupEnd()
   return (
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />

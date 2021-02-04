@@ -29,6 +29,8 @@ hljs.configure({ languages: ['javascript'] })
 const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const categories = data.categories.split(', ')
 
+  console.log(data.publishDate)
+
   useEffect(() => {
     document.querySelectorAll('pre').forEach(block => {
       hljs.highlightBlock(block)
@@ -71,7 +73,7 @@ export const query = graphql`
   query($slug: String!) {
     datoCmsBlogPost(slug: { eq: $slug }) {
       title
-      publishDate(formatString: "MMMM Do, YYYY", locale: "en")
+      publishDate
       body
       excerpt
       categories

@@ -10,6 +10,7 @@ import {
   Footer
 } from 'components'
 import { useBlogApi, useBlogPostApi } from 'hooks'
+import { formatDate } from 'utils'
 
 const Blog = () => {
   const { seo, introText } = useBlogApi()
@@ -26,7 +27,7 @@ const Blog = () => {
               <BlogPost
                 key={data.title}
                 excerpt={data.excerpt}
-                publishDate={data.publishDate}
+                publishDate={formatDate(data.publishDate)}
                 slug={data.slug}
                 title={data.title}
               />

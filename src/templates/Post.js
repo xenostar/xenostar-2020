@@ -16,6 +16,7 @@ import { FaFolderOpen as FaFolderOpen_ } from 'react-icons/fa'
 import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
 import 'highlight.js/styles/atom-one-dark.css'
+import { formatDate } from 'utils'
 
 hljs.registerLanguage('javascript', javascript)
 hljs.configure({ languages: ['javascript'] })
@@ -29,8 +30,6 @@ hljs.configure({ languages: ['javascript'] })
 const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const categories = data.categories.split(', ')
 
-  console.log(data.publishDate)
-
   useEffect(() => {
     document.querySelectorAll('pre').forEach(block => {
       hljs.highlightBlock(block)
@@ -41,7 +40,7 @@ const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
     <Page>
       <SEO title={data.seo.title} description={data.seo.description} />
       <HeaderPost
-        date={data.publishDate}
+        date={formatDate(data.publishDate)}
         introText={data.excerpt}
         path={path}
         title={data.title}

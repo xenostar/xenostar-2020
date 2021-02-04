@@ -46,3 +46,13 @@ export const media = Object.keys(theme.breakpoints).reduce(
   },
   {}
 )
+
+export const formatDate = date => {
+  const formattedDate = new Date(date).toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+
+  return formattedDate
+}

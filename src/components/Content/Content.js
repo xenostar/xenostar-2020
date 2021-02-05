@@ -62,6 +62,7 @@ export const Content = styled.div`
 
   code,
   code.hljs {
+    background: ${props => props.theme.colors.background.oneDarkPro};
     border-radius: ${props => props.theme.layout.borderRadius};
     display: inline;
     padding: ${props => props.theme.spacing.micro};
@@ -69,6 +70,7 @@ export const Content = styled.div`
   }
   pre,
   pre.hljs {
+    background: ${props => props.theme.colors.background.oneDarkPro};
     border-radius: ${props => props.theme.layout.borderRadius};
     margin-bottom: ${props => props.theme.spacing.default};
     padding: ${props => props.theme.spacing.default};

@@ -26,6 +26,10 @@ export const theme = {
       default: 'rgba(255, 255, 255, 1)', // #fff
       oneDarkPro: 'rgba(40, 44, 52, 1)' // ##282c34
     },
+    common: {
+      white: 'rgba(255, 255, 255, 1)', // #fff
+      black: 'rgba(0, 0, 0, 1)' // #000
+    },
     primary: '#90c7a8',
     secondary: 'rgb(34, 34, 34, 1)', // #222
     tertiary: 'rgba(35, 33, 33, 1)', // #232121
@@ -33,8 +37,6 @@ export const theme = {
     lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
     lightGrey: 'rgba(153, 153, 153, 1)', // #999
     transparent: 'rgba(0, 0, 0, 0)', // Transparent
-    white: 'rgba(255, 255, 255, 1)', // #fff
-    black: 'rgba(0, 0, 0, 1)', // #000
     boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)',
     oneDarkPro: 'rgba(171, 178, 191, 1)' //#abb2bf
   },
@@ -77,6 +79,14 @@ export const theme = {
     active: 'translateY(3px)'
   },
   transitions: {
+    durations: {
+      fast: '0.2s',
+      default: '0.3s',
+      slow: '0.4s'
+    },
+    easing: {
+      default: 'ease'
+    },
     fast: '0.2s all ease',
     default: '0.3s all ease',
     slow: '0.4s all ease'

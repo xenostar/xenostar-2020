@@ -9,7 +9,7 @@ Page.propTypes = {
 }
 
 const StyledPage = styled.main`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.common.white};
   display: flex;
   flex-direction: column;
   min-height: 100vh;

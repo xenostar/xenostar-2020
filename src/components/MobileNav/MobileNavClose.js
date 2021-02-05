@@ -21,7 +21,7 @@ const StyledMobileNavClose = styled.div`
   margin: ${props => props.theme.spacing.default};
 `
 const FaTimes = styled(FaTimes_)`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.common.white};
   border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.primary};
   cursor: pointer;

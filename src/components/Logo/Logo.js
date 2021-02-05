@@ -35,7 +35,7 @@ const Anchor = styled(Anchor_)`
   align-items: center;
   background-color: ${props => props.theme.colors.tertiary};
   border-radius: ${props => props.theme.layout.borderRadius};
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.common.white};
   display: inline-flex;
   font-family: ${props => props.theme.fonts.bebasNeue};
   font-size: ${props => (props.$isSmall ? '1.75rem' : '3.75rem')};
@@ -68,13 +68,14 @@ const Text = styled.div`
 const TextColor = styled.span`
   color: ${props => props.theme.colors.primary};
   opacity: 1;
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transitions.durations.default} opacity
+    ${props => props.theme.transitions.easing.default};
   ${Anchor}:hover & {
     opacity: 0;
   }
 `
 const HomeText = styled.div`
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.common.white};
   font-size: 25.7px;
   font-size: ${props => (props.isSmall ? '12px' : '25.7px')};
   opacity: 0;

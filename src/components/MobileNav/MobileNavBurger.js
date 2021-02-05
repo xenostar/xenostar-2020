@@ -23,7 +23,7 @@ const StyledMobileNavBurger = styled.div`
   `}
 `
 const FaBars = styled(FaBars_)`
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.theme.colors.common.white};
   border-radius: ${props => props.theme.layout.borderRadius};
   color: ${props => props.theme.colors.secondary};
   cursor: pointer;

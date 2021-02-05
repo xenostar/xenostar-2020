@@ -103,7 +103,7 @@ const FaFolderOpen = styled(FaFolderOpen_)`
 const Category = styled.div`
   background-color: ${props => props.theme.colors.primary};
   border-radius: ${props => props.theme.layout.borderRadius};
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.common.white};
   font-size: 14px;
   font-weight: ${props => props.theme.fonts.bold};
   margin-left: ${props => props.theme.layout.borderRadius};

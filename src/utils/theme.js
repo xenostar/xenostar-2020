@@ -35,7 +35,8 @@ export const theme = {
     transparent: 'rgba(0, 0, 0, 0)', // Transparent
     white: 'rgba(255, 255, 255, 1)', // #fff
     black: 'rgba(0, 0, 0, 1)', // #000
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
+    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)',
+    oneDarkPro: 'rgba(171, 178, 191, 1)' //#abb2bf
   },
   fonts: {
     bebasNeue: `'Bebas Neue', cursive`,

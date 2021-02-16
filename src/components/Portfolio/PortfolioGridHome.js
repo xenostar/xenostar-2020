@@ -28,14 +28,14 @@ const Grid = styled.div`
   transition: ${props => props.theme.transitions.default};
   width: 100%;
   grid-template-areas:
-    '.   .   .   a1  a1  a12 a2  a2  a2  a2  .    .   .   .'
-    '.   .   .   a1  a1  a14 a2  a2  a2  a2  a15  .   .   .'
-    'a3  a3  a4  a4  a4  a4  a2  a2  a2  a2  a5  a5  a6  a6'
-    'a3  a3  a4  a4  a4  a4  a2  a2  a2  a2  a5  a5  a6  a6'
-    '.   a16 a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  a9  .'
-    '.   .   a4  a4  a4  a4  a7  a7  a7  a7  a8  a8  .   .'
-    '.   .   .   a10 a11 a11 a7  a7  a7  a7  a13 .   .   .'
-    '.   .   .   .   a11 a11 a7  a7  a7  a7  .   .   .   .';
+    '.   .   .   a4  a4  a5  a1  a1  a1  a1  .   .   .   .'
+    '.   .   .   a4  a4  a6  a1  a1  a1  a1  a7  .   .   .'
+    'a8  a8  a2  a2  a2  a2  a1  a1  a1  a1  a9  a9  a10 a10'
+    'a8  a8  a2  a2  a2  a2  a1  a1  a1  a1  a9  a9  a10 a10'
+    '.   a11 a2  a2  a2  a2  a3  a3  a3  a3  a12 a12 a13 .'
+    '.   .   a2  a2  a2  a2  a3  a3  a3  a3  a12 a12 .   .'
+    '.   .   .   a14 a15 a15 a3  a3  a3  a3  a16 .   .   .'
+    '.   .   .   .   a15 a15 a3  a3  a3  a3  .   .   .   .';
   :hover {
     grid-gap: ${props => props.theme.spacing.default};
   }

@@ -14,7 +14,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
       projects: allDatoCmsPortfolioItem(
         sort: { order: ASC, fields: position }
-        limit: 16
       ) {
         items: nodes {
           slug

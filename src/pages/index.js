@@ -6,10 +6,10 @@ import {
   PortfolioItem,
   Footer
 } from 'components'
-import { usePortfolioItemApi } from 'hooks'
+import { useHomePortfolioItemApi } from 'hooks'
 
 const Index = () => {
-  const { items } = usePortfolioItemApi()
+  const { items } = useHomePortfolioItemApi()
 
   return (
     <Page>

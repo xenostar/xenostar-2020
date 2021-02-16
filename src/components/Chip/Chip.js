@@ -38,7 +38,7 @@ const StyledChip = styled.div`
   margin-right: ${props => props.theme.spacing.tiny};
   transition: ${props => props.href && props.theme.transitions.default};
   :hover {
-    opacity: ${props => props.href && 0.85};
+    opacity: ${props => props.href && 0.7};
   }
   :last-child {
     margin-right: 0;

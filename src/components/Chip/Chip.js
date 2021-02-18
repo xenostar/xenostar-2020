@@ -7,6 +7,7 @@ import { FaLink, FaWrench } from 'react-icons/fa'
 export const Chip = ({
   href = null,
   icon = null,
+  rel = 'noopener noreferrer',
   target = '_blank',
   text = 'None',
   ...props
@@ -16,10 +17,10 @@ export const Chip = ({
       as: 'a',
       href: href
     })}
-    {...(target === '_blank' && { target, rel: 'noopener noreferrer' })}
+    {...(target === '_blank' && { target, rel })}
     {...props}
   >
-    <Icon>{icon || href ? <FaLink /> : <FaWrench />}</Icon>
+    <Icon>{icon || (href ? <FaLink /> : <FaWrench />)}</Icon>
     <Typography noWrap>{text || href}</Typography>
   </StyledChip>
 )
@@ -27,6 +28,7 @@ export const Chip = ({
 Chip.propTypes = {
   href: PropTypes.string,
   icon: PropTypes.node,
+  rel: PropTypes.string,
   target: PropTypes.string,
   text: PropTypes.string
 }

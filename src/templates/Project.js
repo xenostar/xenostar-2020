@@ -29,7 +29,11 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
           </Col>
           <Col width="48%">
             <Content dangerouslySetInnerHTML={{ __html: data.description }} />
-            <ProjectInfo link={data.link} tools={data.tools} />
+            <ProjectInfo
+              githubLink={data.githubLink}
+              link={data.link}
+              tools={data.tools}
+            />
           </Col>
         </Row>
       </Section>
@@ -48,15 +52,9 @@ export const query = graphql`
       name
       description
       link
+      githubLink
       tools
       image {
-        fluid(maxWidth: 450) {
-          ...GatsbyDatoCmsFluid
-        }
-        alt
-        title
-      }
-      featuredImage {
         fluid(maxWidth: 450) {
           ...GatsbyDatoCmsFluid
         }

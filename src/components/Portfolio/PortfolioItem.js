@@ -53,7 +53,7 @@ const Anchor = styled(Anchor_)`
 `
 const Name = styled.div`
   font-family: ${props => props.theme.fonts.bebasNeue};
-  font-size: 1em;
+  font-size: 1.2em;
   position: absolute;
   bottom: 100%;
   left: 100%;

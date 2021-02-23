@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
+  width: 100%;
+
   h1,
   h2,
   h3,
@@ -60,32 +62,18 @@ export const Content = styled.div`
     list-style-position: inside;
   }
 
-  code,
-  code.hljs {
-    background: ${props => props.theme.colors.background.oneDarkPro};
+  pre[class*='language-'] {
+    margin: 0;
+  }
+  & > :not(pre) > code[class*='language-'] {
     border-radius: ${props => props.theme.layout.borderRadius};
-    color: ${props => props.theme.colors.oneDarkPro};
-    display: inline;
     padding: ${props => props.theme.spacing.micro};
-    transition: ${props => props.theme.transitions.default};
-    white-space: nowrap;
   }
-  pre,
-  pre.hljs {
-    background: ${props => props.theme.colors.background.oneDarkPro};
-    border-radius: ${props => props.theme.layout.borderRadius};
-    color: ${props => props.theme.colors.oneDarkPro};
+  .gatsby-highlight {
     margin-bottom: ${props => props.theme.spacing.default};
-    padding: ${props => props.theme.spacing.default};
-    position: relative;
-    transition: ${props => props.theme.transitions.default};
   }
-  [data-language]:before {
-    content: attr(data-language);
-    opacity: 0.25;
-    position: absolute;
-    right: ${props => props.theme.spacing.tiny};
-    text-transform: capitalize;
-    top: ${props => props.theme.spacing.tiny};
+  .gatsby-highlight pre {
+    border-radius: ${props => props.theme.layout.borderRadius};
+    padding: ${props => props.theme.spacing.default};
   }
 `

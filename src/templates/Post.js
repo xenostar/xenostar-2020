@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
@@ -13,28 +13,10 @@ import {
   Footer
 } from 'components'
 import { FaFolderOpen as FaFolderOpen_ } from 'react-icons/fa'
-import hljs from 'highlight.js/lib/core'
-import javascript from 'highlight.js/lib/languages/javascript'
-import 'highlight.js/styles/atom-one-dark.css'
 import { formatDate } from 'utils'
-
-hljs.registerLanguage('javascript', javascript)
-hljs.configure({ languages: ['javascript'] })
-// hljs.addPlugin({
-//   'after:highlightBlock': ({ block, result }) => {
-//     // move the language from the result into the dataset
-//     block.dataset.language = result.language
-//   }
-// })
 
 const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
   const categories = data.categories.split(', ')
-
-  useEffect(() => {
-    document.querySelectorAll('pre, code').forEach(block => {
-      hljs.highlightBlock(block)
-    })
-  }, [data])
 
   return (
     <Page>
@@ -48,7 +30,11 @@ const Post = ({ data: { datoCmsBlogPost: data }, path }) => {
       <Section>
         <Row>
           <Col>
-            <Content dangerouslySetInnerHTML={{ __html: data.body }} />
+            <Content
+              dangerouslySetInnerHTML={{
+                __html: data.bodyNode.childMarkdownRemark.html
+              }}
+            />
             <Categories>
               <FaFolderOpen />
               {categories.map((data, i) => (
@@ -73,7 +59,11 @@ export const query = graphql`
     datoCmsBlogPost(slug: { eq: $slug }) {
       title
       publishDate
-      body
+      bodyNode {
+        childMarkdownRemark {
+          html
+        }
+      }
       excerpt
       categories
       slug

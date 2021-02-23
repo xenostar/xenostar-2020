@@ -5,14 +5,14 @@ import { NavLink as NavLink_ } from 'components'
 import { FaChevronLeft as FaChevronLeft_ } from 'react-icons/fa'
 import { media } from 'utils'
 
-export const BackButton = ({ children, ...props }) => (
+export const ButtonBack = ({ children, ...props }) => (
   <NavLink {...props}>
     <FaChevronLeft />
     {children}
   </NavLink>
 )
 
-BackButton.propTypes = {
+ButtonBack.propTypes = {
   children: PropTypes.node
 }
 

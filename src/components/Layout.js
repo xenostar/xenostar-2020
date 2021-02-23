@@ -6,9 +6,9 @@ import { HelmetProvider } from 'react-helmet-async'
 import {
   StoreSync,
   SEO,
-  NormalizeStyle,
-  ResetStyle,
-  GlobalStyle,
+  StyleNormalize,
+  StyleReset,
+  StyleGlobal,
   TopBar,
   MobileNav
 } from 'components'
@@ -21,9 +21,9 @@ const Layout = ({ children, path }) => (
         <StyledLayout>
           <StoreSync path={path} />
           <SEO />
-          <NormalizeStyle />
-          <ResetStyle />
-          <GlobalStyle />
+          <StyleNormalize />
+          <StyleReset />
+          <StyleGlobal />
           <TopBar path={path} />
           <MobileNav />
           {children}

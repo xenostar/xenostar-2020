@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+export const StyleGlobal = createGlobalStyle`
   html {
     color: ${props => props.theme.colors.secondary};
     font-family: ${props => props.theme.fonts.openSans};

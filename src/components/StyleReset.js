@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const ResetStyle = createGlobalStyle`
+export const StyleReset = createGlobalStyle`
   html {
     box-sizing: border-box;
     line-height: normal;

@@ -1,58 +1,58 @@
-export * from './Section/Section'
-export * from './Row/Row'
-export * from './Col/Col'
+export * from './Section'
+export * from './Row'
+export * from './Col'
 
-export * from './Typography/Typography'
+export * from './Typography'
 
-export * from './Anchor/Anchor'
+export * from './Anchor'
 
-export * from './Nav/Nav'
-export * from './Nav/NavLink'
+export * from './Nav'
+export * from './NavLink'
 
-export * from './Button/BackButton'
+export * from './BlogDate'
+export * from './BlogPost'
+export * from './BlogShare'
 
-export * from './Blog/BlogDate'
-export * from './Blog/BlogPost'
-export * from './Blog/BlogShare'
+export * from './ButtonBack'
 
-export * from './Chip/Chip'
+export * from './Chip'
 
-export * from './Content/Content'
+export * from './Content'
 
-export * from './Footer/Footer'
+export * from './Footer'
 
-export * from './Headers/Header'
-export * from './Headers/HeaderPost'
-export * from './Headers/HeaderProject'
-export * from './Headers/HeaderHome'
+export * from './Header'
+export * from './HeaderPost'
+export * from './HeaderProject'
+export * from './HeaderHome'
 
-export * from './Logo/Logo'
+export * from './Logo'
 
-export * from './MobileNav/MobileNavBurger'
-export * from './MobileNav/MobileNavClose'
-export * from './MobileNav/MobileNavLink'
-export * from './MobileNav/MobileNavLinks'
-export * from './MobileNav/MobileNav'
+export * from './MobileNavBurger'
+export * from './MobileNavClose'
+export * from './MobileNavLink'
+export * from './MobileNavLinks'
+export * from './MobileNav'
 
-export * from './Page/Page'
-export * from './Page/PageName'
+export * from './Page'
+export * from './PageName'
 
-export * from './Portfolio/PortfolioGrid'
-export * from './Portfolio/PortfolioGridHome'
-export * from './Portfolio/PortfolioItem'
+export * from './PortfolioGrid'
+export * from './PortfolioGridHome'
+export * from './PortfolioItem'
 
-export * from './Project/ProjectInfo'
-export * from './Project/ProjectItem'
+export * from './ProjectInfo'
+export * from './ProjectItem'
 
-export * from './SEO/SEO'
+export * from './SEO'
 
-export * from './Social/SocialIcon'
-export * from './Social/Social'
+export * from './SocialIcon'
+export * from './Social'
 
-export * from './StoreSync/StoreSync'
+export * from './StoreSync'
 
-export * from './Styles/NormalizeStyle'
-export * from './Styles/ResetStyle'
-export * from './Styles/GlobalStyle'
+export * from './StyleNormalize'
+export * from './StyleReset'
+export * from './StyleGlobal'
 
-export * from './TopBar/TopBar'
+export * from './TopBar'

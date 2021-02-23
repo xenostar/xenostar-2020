@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Row as Row_, Logo, BackButton, Nav, MobileNavBurger } from 'components'
+import { Row as Row_, Logo, ButtonBack, Nav, MobileNavBurger } from 'components'
 import { isSubPage, routes } from 'utils'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
@@ -22,14 +22,14 @@ export const TopBar = ({ path }) => {
       <Row isSmall={isSmall} wrap="nowrap">
         <Logo isSmall={isSmall} />
         {isSubPage(path, routes.blog.name) && (
-          <BackButton to={routes.blog.url}>
+          <ButtonBack to={routes.blog.url}>
             back to {routes.blog.name}
-          </BackButton>
+          </ButtonBack>
         )}
         {isSubPage(path, routes.portfolio.name) && (
-          <BackButton to={routes.portfolio.url}>
+          <ButtonBack to={routes.portfolio.url}>
             back to {routes.portfolio.name}
-          </BackButton>
+          </ButtonBack>
         )}
         <Nav />
         <MobileNavBurger />
@@ -67,9 +67,7 @@ const Gradient = styled.div`
 const Row = styled(Row_)`
   max-width: none;
   padding: ${props =>
-    props.isSmall
-      ? props.theme.spacing.small
-      : props.theme.spacing.default};
+    props.isSmall ? props.theme.spacing.small : props.theme.spacing.default};
   padding-left: ${props => props.theme.spacing.default};
   padding-right: ${props => props.theme.spacing.default};
   transition: ${props => props.theme.transitions.default};

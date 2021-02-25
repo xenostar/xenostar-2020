@@ -62,27 +62,32 @@ export const Content = styled.div`
     list-style-position: inside;
   }
 
-  pre[class*='language-'] {
-    margin: 0;
-  }
   & > :not(pre) > code[class*='language-'] {
     border-radius: ${props => props.theme.layout.borderRadius};
     padding: ${props => props.theme.spacing.micro};
   }
   .gatsby-highlight {
+    background-color: ${props => props.theme.colors.background.oneDarkPro};
+    border-radius: ${props => props.theme.layout.borderRadius};
     margin-bottom: ${props => props.theme.spacing.default};
+    overflow: auto;
+    padding: ${props => props.theme.spacing.default};
   }
   .gatsby-highlight pre {
-    border-radius: ${props => props.theme.layout.borderRadius};
-    padding: ${props => props.theme.spacing.default};
+    background-color: transparent;
+    float: left;
+    margin: 0;
+    min-width: 100%;
+    overflow: initial;
+    padding: 0;
   }
   .gatsby-highlight-code-line {
     background-color: rgba(97, 175, 239, 0.2);
-    display: block;
-    margin-right: -${props => props.theme.spacing.default};
-    margin-left: -${props => props.theme.spacing.default};
-    padding-right: ${props => props.theme.spacing.default};
-    padding-left: 1.5625rem;
     border-left: 0.3125rem solid rgba(97, 175, 239, 0.5);
+    display: block;
+    margin-left: -${props => props.theme.spacing.default};
+    margin-right: -${props => props.theme.spacing.default};
+    padding-left: 1.5625rem;
+    padding-right: ${props => props.theme.spacing.default};
   }
 `

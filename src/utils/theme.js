@@ -24,7 +24,7 @@ export const theme = {
     // gradient: 'linear-gradient(to right, #36d1dc, #5b86e5)',
     background: {
       default: 'rgba(255, 255, 255, 1)', // #fff
-      oneDarkPro: 'rgba(40, 44, 52, 1)' // ##282c34
+      oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
     },
     common: {
       white: 'rgba(255, 255, 255, 1)', // #fff

@@ -4,7 +4,7 @@ import {
   SEO,
   Header,
   PortfolioGrid,
-  PortfolioItem,
+  PortfolioGridItem,
   Footer
 } from 'components'
 import { usePortfolioApi, usePortfolioItemApi } from 'hooks'
@@ -19,7 +19,7 @@ const Portfolio = () => {
       <Header title={seo.title} introText={introText} />
       <PortfolioGrid>
         {items.map((data, i) => (
-          <PortfolioItem
+          <PortfolioGridItem
             key={data.name}
             featuredImage={data.featuredImage}
             name={data.name}

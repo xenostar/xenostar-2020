@@ -5,14 +5,14 @@ import Img from 'gatsby-image'
 import { Anchor as Anchor_ } from 'components'
 import { media, routes } from 'utils'
 
-export const PortfolioItem = ({
+export const PortfolioGridItem = ({
   area = false,
   featuredImage: { fluid, alt = '', title = '' },
   name = 'Portfolio Item Name',
   number,
   slug = ''
 }) => (
-  <StyledPortfolioItem
+  <StyledPortfolioGridItem
     area={area}
     number={'a' + (number + 1)}
     className={'a' + number}
@@ -21,10 +21,10 @@ export const PortfolioItem = ({
       <Image fluid={fluid} alt={alt} title={title} />
       <Name>{name}</Name>
     </Anchor>
-  </StyledPortfolioItem>
+  </StyledPortfolioGridItem>
 )
 
-PortfolioItem.propTypes = {
+PortfolioGridItem.propTypes = {
   area: PropTypes.bool,
   featuredImage: PropTypes.exact({
     fluid: PropTypes.object,
@@ -36,7 +36,7 @@ PortfolioItem.propTypes = {
   slug: PropTypes.string
 }
 
-const StyledPortfolioItem = styled.div`
+const StyledPortfolioGridItem = styled.div`
   display: block;
   grid-area: ${({ area, number }) => (area ? number : '')};
   ${media.tablet`

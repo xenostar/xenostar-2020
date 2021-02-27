@@ -3,7 +3,7 @@ import {
   Page,
   HeaderHome,
   PortfolioGridHome,
-  PortfolioItem,
+  PortfolioGridItem,
   Footer
 } from 'components'
 import { useHomePortfolioItemApi } from 'hooks'
@@ -16,7 +16,7 @@ const Index = () => {
       <HeaderHome />
       <PortfolioGridHome>
         {items.map((data, i) => (
-          <PortfolioItem
+          <PortfolioGridItem
             key={data.name}
             area={true}
             featuredImage={data.featuredImage}

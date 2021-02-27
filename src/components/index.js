@@ -39,7 +39,7 @@ export * from './PageName'
 
 export * from './PortfolioGrid'
 export * from './PortfolioGridHome'
-export * from './PortfolioItem'
+export * from './PortfolioGridItem'
 
 export * from './ProjectInfo'
 export * from './ProjectItem'
@@ -56,3 +56,5 @@ export * from './StyleReset'
 export * from './StyleGlobal'
 
 export * from './TopBar'
+
+export * from './AboutGrid'

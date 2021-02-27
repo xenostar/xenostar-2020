@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Section as StyledPortfolioGrid, Row } from 'components'
+import { Section as StyledAboutGrid, Row } from 'components'
 import { media } from 'utils'
 
-export const PortfolioGrid = ({ children }) => (
-  <StyledPortfolioGrid>
+export const AboutGrid = ({ children }) => (
+  <StyledAboutGrid>
     <Row>
       <Grid>{children}</Grid>
     </Row>
-  </StyledPortfolioGrid>
+  </StyledAboutGrid>
 )
 
-PortfolioGrid.propTypes = {
+AboutGrid.propTypes = {
   children: PropTypes.node
 }
 

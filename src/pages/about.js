@@ -6,6 +6,7 @@ import {
   Section,
   Row,
   Col,
+  AboutGrid,
   Content,
   Typography,
   Footer
@@ -19,6 +20,11 @@ const About = () => {
     <Page>
       <SEO title={seo.title} description={seo.description} />
       <Header title={seo.title} introText={introText} />
+      <AboutGrid>
+        <div>About picture</div>
+        <div>About picture</div>
+        <div>About picture</div>
+      </AboutGrid>
       <Section>
         <Row>
           <Col>

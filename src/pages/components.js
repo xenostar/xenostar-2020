@@ -1,4 +1,3 @@
-import React from 'react'
 import { SEO, Page, Header, Section, Row, Col, Footer } from 'components'
 
 const Components = () => (

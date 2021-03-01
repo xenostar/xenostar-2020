@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { Row, Col as Col_, Typography, Anchor } from 'components'
 import { useHomeApi } from 'hooks'

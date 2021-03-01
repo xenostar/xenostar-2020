@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
@@ -16,31 +15,28 @@ import {
 } from 'components'
 import { media } from 'utils'
 
-const Project = ({ data: { datoCmsPortfolioItem: data } }) => {
-  console.log(data)
-  return (
-    <Page>
-      <SEO title={data.seo.title} description={data.seo.description} />
-      <HeaderProject name={data.name} />
-      <Section>
-        <Row>
-          <Col width="48%">
-            <ProjectItem image={data.image} />
-          </Col>
-          <Col width="48%">
-            <Content dangerouslySetInnerHTML={{ __html: data.description }} />
-            <ProjectInfo
-              githubLink={data.githubLink}
-              link={data.link}
-              tools={data.tools}
-            />
-          </Col>
-        </Row>
-      </Section>
-      <Footer />
-    </Page>
-  )
-}
+const Project = ({ data: { datoCmsPortfolioItem: data } }) => (
+  <Page>
+    <SEO title={data.seo.title} description={data.seo.description} />
+    <HeaderProject name={data.name} />
+    <Section>
+      <Row>
+        <Col width="48%">
+          <ProjectItem image={data.image} />
+        </Col>
+        <Col width="48%">
+          <Content dangerouslySetInnerHTML={{ __html: data.description }} />
+          <ProjectInfo
+            githubLink={data.githubLink}
+            link={data.link}
+            tools={data.tools}
+          />
+        </Col>
+      </Row>
+    </Section>
+    <Footer />
+  </Page>
+)
 
 Project.propTypes = {
   data: PropTypes.object

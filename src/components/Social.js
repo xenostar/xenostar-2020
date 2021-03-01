@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { SocialIcon as SocialIcon_ } from 'components'
 import { useSocialInfo } from 'hooks'

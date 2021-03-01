@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { useStoreState } from 'easy-peasy'
 

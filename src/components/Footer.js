@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Row, Col as Col_, Typography as Typography_, Social } from 'components'
 import { FaHeart as FaHeart_ } from 'react-icons/fa'

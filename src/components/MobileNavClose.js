@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { useStoreActions } from 'easy-peasy'
 import { FaTimes as FaTimes_ } from 'react-icons/fa'

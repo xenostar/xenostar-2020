@@ -1,4 +1,3 @@
-import React from 'react'
 import { Page, Header, SEO, Section, Footer } from 'components'
 
 const FourZeroFour = () => (

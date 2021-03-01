@@ -1,8 +1,11 @@
 export * from './Section'
 export * from './Row'
 export * from './Col'
+export * from './Grid'
 
 export * from './Typography'
+
+export * from './AboutGrid'
 
 export * from './Anchor'
 
@@ -56,5 +59,3 @@ export * from './StyleReset'
 export * from './StyleGlobal'
 
 export * from './TopBar'
-
-export * from './AboutGrid'

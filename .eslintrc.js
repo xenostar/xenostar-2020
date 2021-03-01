@@ -1,24 +1,20 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true
+    es2021: true
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
-    'prettier/react'
+    'plugin:prettier/recommended'
   ],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 11,
+    ecmaVersion: 12, // 2021
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error'
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
     react: {

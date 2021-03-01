@@ -6,6 +6,9 @@
 require('dotenv').config()
 
 module.exports = {
+  flags: {
+    FAST_REFRESH: true
+  },
   siteMetadata: {
     title: `Xenostar Studios`,
     subTitle: `XS`,

@@ -1,4 +1,4 @@
-import { SEO, Page, Header, Section, Row, Col, Footer } from 'components'
+import { Col, Footer, Header, Page, Row, Section, SEO } from 'components'
 
 const Components = () => (
   <Page>

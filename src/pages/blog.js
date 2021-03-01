@@ -1,12 +1,12 @@
 import {
-  Page,
-  SEO,
-  Header,
-  Section,
-  Row,
-  Col,
   BlogPost,
-  Footer
+  Col,
+  Footer,
+  Header,
+  Page,
+  Row,
+  Section,
+  SEO
 } from 'components'
 import { useBlogApi, useBlogPostApi } from 'hooks'
 import { formatDate } from 'utils'

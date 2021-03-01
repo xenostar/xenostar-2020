@@ -2,16 +2,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
-  Page,
-  SEO,
-  HeaderProject,
-  Section as Section_,
-  Row as Row_,
   Col as Col_,
   Content,
+  Footer,
+  HeaderProject,
+  Page,
   ProjectInfo,
   ProjectItem,
-  Footer
+  Row as Row_,
+  Section as Section_,
+  SEO
 } from 'components'
 import { media } from 'utils'
 

@@ -1,9 +1,9 @@
 import {
-  Page,
+  Footer,
   HeaderHome,
+  Page,
   PortfolioGridHome,
-  PortfolioGridItem,
-  Footer
+  PortfolioGridItem
 } from 'components'
 import { useHomePortfolioItemApi } from 'hooks'
 

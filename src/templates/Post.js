@@ -2,14 +2,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
-  Page,
-  SEO,
-  HeaderPost,
-  Section as Section_,
-  Row,
   Col,
   Content as Content_,
-  Footer
+  Footer,
+  HeaderPost,
+  Page,
+  Row,
+  Section as Section_,
+  SEO
 } from 'components'
 import { FaFolderOpen as FaFolderOpen_ } from 'react-icons/fa'
 import { formatDate } from 'utils'

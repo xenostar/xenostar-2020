@@ -1,10 +1,10 @@
 import {
-  Page,
-  SEO,
+  Footer,
   Header,
+  Page,
   PortfolioGrid,
   PortfolioGridItem,
-  Footer
+  SEO
 } from 'components'
 import { usePortfolioApi, usePortfolioItemApi } from 'hooks'
 

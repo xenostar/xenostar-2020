@@ -1,14 +1,14 @@
 import {
-  Page,
-  SEO,
-  Header,
-  Section,
-  Row,
-  Col,
   AboutGrid,
+  Col,
   Content,
-  Typography,
-  Footer
+  Footer,
+  Header,
+  Page,
+  Row,
+  Section,
+  SEO,
+  Typography
 } from 'components'
 import { useAboutApi } from 'hooks'
 

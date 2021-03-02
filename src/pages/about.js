@@ -1,5 +1,6 @@
 import {
   AboutGrid,
+  AboutGridItem,
   Col,
   Content,
   Footer,
@@ -13,16 +14,16 @@ import {
 import { useAboutApi } from 'hooks'
 
 const About = () => {
-  const { seo, introText } = useAboutApi()
+  const { introText, photos, seo } = useAboutApi()
 
   return (
     <Page>
       <SEO title={seo.title} description={seo.description} />
       <Header title={seo.title} introText={introText} />
       <AboutGrid>
-        <div>About picture</div>
-        <div>About picture</div>
-        <div>About picture</div>
+        {photos.map((photo, i) => (
+          <AboutGridItem key={i} image={photo} />
+        ))}
       </AboutGrid>
       <Section>
         <Row>

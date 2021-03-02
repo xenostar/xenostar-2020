@@ -2,13 +2,13 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-export const ProjectItem = ({ image: { fluid, alt = '', title = '' } }) => (
-  <StyledProjectItem>
+export const AboutGridItem = ({ image: { fluid, alt = '', title = '' } }) => (
+  <StyledAboutGridItem>
     <Image fluid={fluid} alt={alt} title={title} />
-  </StyledProjectItem>
+  </StyledAboutGridItem>
 )
 
-ProjectItem.propTypes = {
+AboutGridItem.propTypes = {
   image: PropTypes.exact({
     fluid: PropTypes.object,
     alt: PropTypes.string,
@@ -16,7 +16,7 @@ ProjectItem.propTypes = {
   }).isRequired
 }
 
-const StyledProjectItem = styled.div`
+const StyledAboutGridItem = styled.div`
   display: block;
   width: 100%;
 `

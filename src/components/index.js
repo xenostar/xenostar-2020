@@ -6,6 +6,7 @@ export * from './Grid'
 export * from './Typography'
 
 export * from './AboutGrid'
+export * from './AboutGridItem'
 
 export * from './Anchor'
 

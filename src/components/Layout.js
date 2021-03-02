@@ -13,28 +13,24 @@ import {
 } from 'components'
 import { store, theme } from 'utils'
 
-const Layout = ({ children, location, path }) => {
-  if (location.pathname === '/offline-plugin-app-shell-fallback') return null
-
-  return (
-    <StoreProvider store={store}>
-      <ThemeProvider theme={theme}>
-        <HelmetProvider>
-          <StyledLayout>
-            <StoreSync path={path} />
-            <SEO />
-            <StyleNormalize />
-            <StyleReset />
-            <StyleGlobal />
-            <TopBar path={path} />
-            <MobileNav />
-            {children}
-          </StyledLayout>
-        </HelmetProvider>
-      </ThemeProvider>
-    </StoreProvider>
-  )
-}
+const Layout = ({ children, path }) => (
+  <StoreProvider store={store}>
+    <ThemeProvider theme={theme}>
+      <HelmetProvider>
+        <StyledLayout>
+          <StoreSync path={path} />
+          <SEO />
+          <StyleNormalize />
+          <StyleReset />
+          <StyleGlobal />
+          <TopBar path={path} />
+          <MobileNav />
+          {children}
+        </StyledLayout>
+      </HelmetProvider>
+    </ThemeProvider>
+  </StoreProvider>
+)
 
 Layout.propTypes = {
   children: PropTypes.node,

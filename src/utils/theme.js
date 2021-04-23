@@ -1,5 +1,6 @@
 export const theme = {
   breakpoints: {
+    ultrawide: 1920,
     desktop: 1200,
     tablet: 960,
     phablet: 720,
@@ -31,7 +32,7 @@ export const theme = {
       black: 'rgba(0, 0, 0, 1)' // #000
     },
     primary: '#90c7a8',
-    secondary: 'rgb(34, 34, 34, 1)', // #222
+    secondary: 'rgba(34, 34, 34, 1)', // #222
     tertiary: 'rgba(35, 33, 33, 1)', // #232121
     gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
     lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
@@ -64,6 +65,7 @@ export const theme = {
     borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '56.25em', // 900px
+    maxWidthFixedUltrawide: '76em', // 1216px
     topBar: '6px'
   },
   spacing: {

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { media } from 'utils'
 
 export const Row = styled.div`
   align-items: ${({ align }) => align ?? 'stretch'};
@@ -7,8 +8,11 @@ export const Row = styled.div`
   flex-direction: ${({ direction }) => direction ?? 'row'};
   flex-wrap: ${({ wrap }) => wrap ?? 'wrap'};
   justify-content: ${({ justify }) => justify ?? 'space-between'};
-  max-width: ${props => props.theme.layout.maxWidthFixed};
+  max-width: ${props => props.theme.layout.maxWidthFixedUltrawide};
   width: ${({ width }) => width ?? '100%'};
+  ${media.ultrawide`
+    max-width: ${props => props.theme.layout.maxWidthFixed};
+  `}
 `
 
 Row.propTypes = {

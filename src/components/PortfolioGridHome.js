@@ -20,7 +20,10 @@ PortfolioGridHome.propTypes = {
 }
 
 const Row = styled(Row_)`
-  max-width: 87.5rem; /* 1400px */
+  max-width: 112.5rem; /* 1800px */
+  ${media.ultrawide`
+    max-width: 87.5rem; /* 1400px */
+  `}
 `
 const Grid = styled(Grid_)`
   grid-template-columns: repeat(14, 1fr);

@@ -5,6 +5,11 @@ export const useAboutApi = () => {
     query {
       datoCmsAbout {
         introText
+        contentNode {
+          childMarkdownRemark {
+            html
+          }
+        }
         photos {
           fluid(maxWidth: 450) {
             ...GatsbyDatoCmsFluid

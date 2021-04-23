@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import {
   AboutGrid,
   AboutGridItem,
@@ -7,14 +8,13 @@ import {
   Header,
   Page,
   Row,
-  Section,
-  SEO,
-  Typography
+  Section as _Section,
+  SEO
 } from 'components'
 import { useAboutApi } from 'hooks'
 
 const About = () => {
-  const { introText, photos, seo } = useAboutApi()
+  const { contentNode, introText, photos, seo } = useAboutApi()
 
   return (
     <Page>
@@ -28,28 +28,11 @@ const About = () => {
       <Section>
         <Row>
           <Col>
-            <Content>
-              <Typography>
-                Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim
-                qui Lorem ea sunt exercitation sunt Lorem sit do. Est laborum
-                nostrud dolor sit cupidatat nisi ut incididunt. Qui aliqua ea
-                cupidatat deserunt aute anim velit culpa id cupidatat. Esse
-                culpa officia nisi commodo duis excepteur minim dolore deserunt
-                et. Est eiusmod id ut eu qui ex quis magna incididunt enim
-                officia pariatur consectetur. Amet nisi do nisi tempor dolore
-                labore dolore sit sit laborum dolore commodo commodo veniam.
-              </Typography>
-              <Typography>
-                Nulla sit ullamco ex adipisicing consequat sunt incididunt. Anim
-                qui Lorem ea sunt exercitation sunt Lorem sit do. Est laborum
-                nostrud dolor sit cupidatat nisi ut incididunt. Qui aliqua ea
-                cupidatat deserunt aute anim velit culpa id cupidatat. Esse
-                culpa officia nisi commodo duis excepteur minim dolore deserunt
-                et. Est eiusmod id ut eu qui ex quis magna incididunt enim
-                officia pariatur consectetur. Amet nisi do nisi tempor dolore
-                labore dolore sit sit laborum dolore commodo commodo veniam.
-              </Typography>
-            </Content>
+            <Content
+              dangerouslySetInnerHTML={{
+                __html: contentNode.childMarkdownRemark.html
+              }}
+            />
           </Col>
         </Row>
       </Section>
@@ -57,5 +40,9 @@ const About = () => {
     </Page>
   )
 }
+
+const Section = styled(_Section)`
+  padding-top: 0;
+`
 
 export default About

@@ -1,4 +1,5 @@
 export * from './useAboutApi'
+export * from './useAboutInfo'
 export * from './useBlogApi'
 export * from './useBlogPostApi'
 export * from './useHomeApi'

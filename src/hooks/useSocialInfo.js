@@ -5,8 +5,8 @@ export const useSocialInfo = () => {
     query {
       allDatoCmsSocialInfo(sort: { fields: position }) {
         items: nodes {
+          socialType
           url
-          profileType
         }
       }
     }

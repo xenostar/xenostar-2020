@@ -2,17 +2,19 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import {
+  Chip,
+  ChipHolder,
   Col as Col_,
   Content,
   Footer,
   HeaderProject,
   Page,
-  ProjectInfo,
   ProjectItem,
   Row as Row_,
   Section as Section_,
   SEO
 } from 'components'
+import { FaGithub, FaWrench } from 'react-icons/fa'
 import { media } from 'utils'
 
 const Project = ({ data: { datoCmsPortfolioItem: data } }) => (
@@ -26,11 +28,13 @@ const Project = ({ data: { datoCmsPortfolioItem: data } }) => (
         </Col>
         <Col width="48%">
           <Content dangerouslySetInnerHTML={{ __html: data.description }} />
-          <ProjectInfo
-            githubLink={data.githubLink}
-            link={data.link}
-            tools={data.tools}
-          />
+          <ChipHolder>
+            {data.link && <Chip href={data.link} text="View Project" />}
+            {data.githubLink && (
+              <Chip href={data.githubLink} icon={<FaGithub />} text="Github" />
+            )}
+            {data.tools && <Chip icon={<FaWrench />} text={data.tools} />}
+          </ChipHolder>
         </Col>
       </Row>
     </Section>

@@ -20,6 +20,7 @@ export * from './BlogShare'
 export * from './ButtonBack'
 
 export * from './Chip'
+export * from './ChipHolder'
 
 export * from './Content'
 
@@ -45,7 +46,6 @@ export * from './PortfolioGrid'
 export * from './PortfolioGridHome'
 export * from './PortfolioGridItem'
 
-export * from './ProjectInfo'
 export * from './ProjectItem'
 
 export * from './SEO'

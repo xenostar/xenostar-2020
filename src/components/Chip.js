@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Typography as Typography_ } from 'components'
-import { FaLink, FaWrench } from 'react-icons/fa'
+import { FaLink } from 'react-icons/fa'
 
 export const Chip = ({
   href = null,
@@ -19,7 +19,7 @@ export const Chip = ({
     {...(target === '_blank' && { target, rel })}
     {...props}
   >
-    <Icon>{icon || (href ? <FaLink /> : <FaWrench />)}</Icon>
+    <Icon>{icon || <FaLink />}</Icon>
     <Typography noWrap>{text || href}</Typography>
   </StyledChip>
 )

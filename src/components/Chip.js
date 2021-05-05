@@ -5,17 +5,17 @@ import { FaLink } from 'react-icons/fa'
 
 export const Chip = ({
   bgColor = null,
-  color = null,
   href = null,
   icon = null,
   rel = 'noopener noreferrer',
   target = '_blank',
   text = 'None',
+  textColor = null,
   ...props
 }) => (
   <StyledChip
     bgColor={bgColor}
-    color={color}
+    textColor={textColor}
     {...(href && {
       as: 'a',
       href: href
@@ -30,19 +30,19 @@ export const Chip = ({
 
 Chip.propTypes = {
   bgColor: PropTypes.string,
-  color: PropTypes.string,
   href: PropTypes.string,
   icon: PropTypes.node,
   rel: PropTypes.string,
   target: PropTypes.string,
-  text: PropTypes.string
+  text: PropTypes.string,
+  textColor: PropTypes.string
 }
 
 const StyledChip = styled.div`
   align-items: stretch;
   background-color: ${props => props.bgColor || props.theme.colors.primary};
   border-radius: ${props => props.theme.layout.borderRadius};
-  color: ${props => props.color || props.theme.colors.secondary};
+  color: ${props => props.textColor || props.theme.colors.secondary};
   display: flex;
   margin-top: ${props => props.theme.spacing.tiny};
   margin-right: ${props => props.theme.spacing.tiny};

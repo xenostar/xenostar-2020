@@ -4,6 +4,8 @@ import { Typography as Typography_ } from 'components'
 import { FaLink } from 'react-icons/fa'
 
 export const Chip = ({
+  bgColor = null,
+  color = null,
   href = null,
   icon = null,
   rel = 'noopener noreferrer',
@@ -12,6 +14,8 @@ export const Chip = ({
   ...props
 }) => (
   <StyledChip
+    bgColor={bgColor}
+    color={color}
     {...(href && {
       as: 'a',
       href: href
@@ -25,6 +29,8 @@ export const Chip = ({
 )
 
 Chip.propTypes = {
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
   href: PropTypes.string,
   icon: PropTypes.node,
   rel: PropTypes.string,
@@ -34,9 +40,13 @@ Chip.propTypes = {
 
 const StyledChip = styled.div`
   align-items: stretch;
+  background-color: ${props => props.bgColor || props.theme.colors.primary};
+  border-radius: ${props => props.theme.layout.borderRadius};
+  color: ${props => props.color || props.theme.colors.secondary};
   display: flex;
   margin-top: ${props => props.theme.spacing.tiny};
   margin-right: ${props => props.theme.spacing.tiny};
+  overflow: hidden;
   transition: ${props => props.href && props.theme.transitions.default};
   :hover {
     opacity: ${props => props.href && 0.7};
@@ -47,14 +57,11 @@ const StyledChip = styled.div`
 `
 const Icon = styled.div`
   align-items: center;
-  background-color: ${props => props.theme.colors.primary};
-  border-radius: ${props => props.theme.layout.borderRadius} 0 0
-    ${props => props.theme.layout.borderRadius};
   display: flex;
   padding: 0 ${props => props.theme.spacing.tiny};
 `
 const Typography = styled(Typography_)`
-  background-color: ${props => props.theme.colors.lightGreen};
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0 ${props => props.theme.layout.borderRadius}
     ${props => props.theme.layout.borderRadius} 0;
   font-weight: bold;

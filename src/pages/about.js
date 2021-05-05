@@ -48,8 +48,10 @@ const About = () => {
               {items.map((data, i) => (
                 <Chip
                   key={i}
-                  text={data.text}
+                  bgColor={data?.backgroundColor?.hex}
                   href={data.url || data.file.url}
+                  text={data.text}
+                  textColor={data?.textColor?.hex}
                 />
               ))}
             </ChipHolder>

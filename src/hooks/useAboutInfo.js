@@ -5,7 +5,13 @@ export const useAboutInfo = () => {
     query {
       allDatoCmsAboutInfo(sort: { fields: position }) {
         items: nodes {
+          backgroundColor {
+            hex
+          }
           text
+          textColor {
+            hex
+          }
           url
           aboutType
           file {

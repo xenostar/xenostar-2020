@@ -55,7 +55,6 @@ export * from './Social'
 
 export * from './StoreSync'
 
-export * from './StyleNormalize'
 export * from './StyleReset'
 export * from './StyleGlobal'
 

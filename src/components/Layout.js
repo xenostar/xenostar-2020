@@ -5,13 +5,13 @@ import { HelmetProvider } from 'react-helmet-async'
 import {
   StoreSync,
   SEO,
-  StyleNormalize,
   StyleReset,
   StyleGlobal,
   TopBar,
   MobileNav
 } from 'components'
 import { store, theme } from 'utils'
+import 'normalize.css'
 
 const Layout = ({ children, path }) => (
   <StoreProvider store={store}>
@@ -20,7 +20,6 @@ const Layout = ({ children, path }) => (
         <StyledLayout>
           <StoreSync path={path} />
           <SEO />
-          <StyleNormalize />
           <StyleReset />
           <StyleGlobal />
           <TopBar path={path} />

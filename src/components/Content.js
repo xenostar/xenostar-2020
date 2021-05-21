@@ -55,11 +55,11 @@ export const Content = styled.div`
   }
 
   ul {
-    list-style-position: inside;
+    margin-left: 1em;
     list-style-type: disc;
   }
   ol {
-    list-style-position: inside;
+    margin-left: 1em;
   }
 
   & > :not(pre) > code[class*='language-'] {

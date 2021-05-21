@@ -20,7 +20,8 @@ const StyledPage = styled.main`
   h4 a,
   h5 a,
   h6 a,
-  p a {
+  p a,
+  li a {
     background-image: ${props => props.theme.colors.gradient},
       linear-gradient(
         ${props => props.theme.colors.lightGreen},
@@ -43,7 +44,8 @@ const StyledPage = styled.main`
     background-size: 100% 30%, 100% 30%;
   }
 
-  p a {
+  p a,
+  li a {
     font-weight: ${props => props.theme.fonts.bold};
   }
 `

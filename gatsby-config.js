@@ -6,16 +6,12 @@
 require('dotenv').config()
 
 module.exports = {
-  flags: {
-    FAST_REFRESH: true
-  },
   siteMetadata: {
     title: `Xenostar Studios`,
     subTitle: `XS`,
     description: `Xenostar.net is the official website of Bryan Leewood.`,
     author: `Bryan Leewood`,
-    // siteUrl: `https://www.xenostar.net`,
-    siteUrl: `https://xenostar-2020.netlify.app`
+    siteUrl: `https://www.xenostar.net`
   },
   plugins: [
     /**

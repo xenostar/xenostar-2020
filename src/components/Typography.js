@@ -28,7 +28,7 @@ Typography.propTypes = {
 const h1 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h1Size};
-  font-weight: ${props => props.theme.fonts.boldBlack};
+  font-weight: ${props => props.theme.fonts.weight.blackBold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h2 = css`

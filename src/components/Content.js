@@ -16,7 +16,7 @@ export const Content = styled.div`
 
   h1 {
     font-size: ${props => props.theme.fonts.h1Size};
-    font-weight: ${props => props.theme.fonts.boldBlack};
+    font-weight: ${props => props.theme.fonts.weight.blackBold};
   }
   h2 {
     font-size: ${props => props.theme.fonts.h2Size};

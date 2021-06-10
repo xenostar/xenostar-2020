@@ -42,10 +42,6 @@ export const theme = {
     oneDarkPro: 'rgba(171, 178, 191, 1)' //#abb2bf
   },
   fonts: {
-    boldSemi: '600',
-    bold: '700',
-    boldExtra: '800',
-    boldBlack: '900',
     defaultLineHeight: '1.5',
     defaultSize: '1.25em',
     defaultStyle: 'normal',

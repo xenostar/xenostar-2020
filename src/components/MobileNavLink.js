@@ -6,7 +6,7 @@ export const MobileNavLink = styled(Anchor)`
   display: flex;
   font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: 3em;
-  font-weight: ${props => props.theme.fonts.boldBlack};
+  font-weight: ${props => props.theme.fonts.weight.blackBold};
   justify-content: flex-end;
   line-height: 60px;
   transition: ${props => props.theme.transitions.default};

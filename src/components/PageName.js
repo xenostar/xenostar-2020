@@ -12,7 +12,7 @@ const StyledPageName = styled.h1`
   display: flex;
   font-family: ${props => props.theme.fonts.family.bebasNeue};
   font-size: ${props => props.theme.fonts.defaultSize};
-  font-weight: ${props => props.theme.fonts.boldBlack};
+  font-weight: ${props => props.theme.fonts.weight.blackBold};
   justify-content: center;
   line-height: 1;
   user-select: none;

@@ -59,6 +59,32 @@ export const theme = {
     h4Size: '1.5em',
     h5Size: '1.25em',
     h6Size: '1em',
+    defaults: {
+      lineHeight: '1.5',
+      size: '1.25em',
+      style: 'normal',
+      weight: '400'
+    },
+    family: {
+      bebasNeue: `'Bebas Neue', cursive`,
+      montserrat: `'Montserrat', sans-serif`,
+      openSans: `'Open Sans', sans-serif`
+    },
+    size: {
+      h1: '5em',
+      h2: '2.5em',
+      h3: '2em',
+      h4: '1.5em',
+      h5: '1.25em',
+      h6: '1em'
+    },
+    weight: {
+      regular: 400,
+      semiBold: 600,
+      bold: 700,
+      extraBold: 800,
+      blackBold: 900
+    }
   },
   layout: {
     maxWidth: '60vw',

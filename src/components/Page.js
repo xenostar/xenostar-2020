@@ -40,6 +40,7 @@ const StyledPage = styled.main`
   h4 a:hover,
   h5 a:hover,
   h6 a:hover,
+  li a:hover,
   p a:hover {
     background-size: 100% 30%, 100% 30%;
   }

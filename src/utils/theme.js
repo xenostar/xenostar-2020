@@ -42,9 +42,6 @@ export const theme = {
     oneDarkPro: 'rgba(171, 178, 191, 1)' //#abb2bf
   },
   fonts: {
-    bebasNeue: `'Bebas Neue', cursive`,
-    openSans: `'Open Sans', sans-serif`,
-    montserrat: `'Montserrat', sans-serif`,
     boldSemi: '600',
     bold: '700',
     boldExtra: '800',
@@ -60,10 +57,10 @@ export const theme = {
     h5Size: '1.25em',
     h6Size: '1em',
     defaults: {
-      lineHeight: '1.5',
+      lineHeight: 1.5,
       size: '1.25em',
       style: 'normal',
-      weight: '400'
+      weight: 400
     },
     family: {
       bebasNeue: `'Bebas Neue', cursive`,

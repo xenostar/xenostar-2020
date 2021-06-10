@@ -9,7 +9,7 @@ export const Content = styled.div`
   h4,
   h5,
   h6 {
-    font-family: ${props => props.theme.fonts.montserrat};
+    font-family: ${props => props.theme.fonts.family.montserrat};
     line-height: ${props => props.theme.fonts.defaultLineHeight};
     margin-bottom: ${props => props.theme.spacing.default};
   }

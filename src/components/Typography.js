@@ -26,42 +26,42 @@ Typography.propTypes = {
 }
 
 const h1 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h1Size};
   font-weight: ${props => props.theme.fonts.boldBlack};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h2 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h2Size};
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h3 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h3Size};
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h4 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h4Size};
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h5 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h5Size};
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h6 = css`
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: ${props => props.theme.fonts.h6Size};
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const p = css`

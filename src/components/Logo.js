@@ -36,7 +36,7 @@ const Anchor = styled(Anchor_)`
   border-radius: ${props => props.theme.shape.borderRadius.default};
   color: ${props => props.theme.colors.common.white};
   display: inline-flex;
-  font-family: ${props => props.theme.fonts.bebasNeue};
+  font-family: ${props => props.theme.fonts.family.bebasNeue};
   font-size: ${props => (props.$isSmall ? '1.75rem' : '3.75rem')};
   height: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   justify-content: center;

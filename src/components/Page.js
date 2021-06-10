@@ -39,6 +39,6 @@ const StyledPage = styled.main`
 
   p a,
   li a {
-    font-weight: ${props => props.theme.fonts.bold};
+    font-weight: ${props => props.theme.fonts.weight.bold};
   }
 `

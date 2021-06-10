@@ -4,7 +4,7 @@ import { Anchor } from 'components'
 export const MobileNavLink = styled(Anchor)`
   color: ${props => props.theme.colors.primary};
   display: flex;
-  font-family: ${props => props.theme.fonts.montserrat};
+  font-family: ${props => props.theme.fonts.family.montserrat};
   font-size: 3em;
   font-weight: ${props => props.theme.fonts.boldBlack};
   justify-content: flex-end;

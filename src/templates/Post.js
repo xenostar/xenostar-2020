@@ -94,7 +94,7 @@ const Category = styled.div`
   border-radius: ${props => props.theme.shape.borderRadius.default};
   color: ${props => props.theme.colors.common.white};
   font-size: 14px;
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   margin-left: ${props => props.theme.shape.borderRadius.default};
   padding: 8px 10px;
 `

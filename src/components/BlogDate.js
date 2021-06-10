@@ -18,7 +18,7 @@ const StyledBlogDate = styled.div`
   display: flex;
   color: ${props => props.theme.colors.lightGrey};
   font-size: 0.875em;
-  font-weight: ${props => props.theme.fonts.bold};
+  font-weight: ${props => props.theme.fonts.weight.bold};
   text-transform: uppercase;
 `
 const FaCalendarAlt = styled(FaCalendarAlt_)`

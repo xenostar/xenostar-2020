@@ -28,8 +28,8 @@ export const theme = {
       oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
     },
     common: {
-      white: 'rgba(255, 255, 255, 1)', // #fff
-      black: 'rgba(0, 0, 0, 1)' // #000
+      black: 'rgba(0, 0, 0, 1)', // #000
+      white: 'rgba(255, 255, 255, 1)' // #fff
     },
     primary: '#90c7a8',
     secondary: 'rgba(34, 34, 34, 1)', // #222
@@ -58,15 +58,19 @@ export const theme = {
     h3Size: '2em',
     h4Size: '1.5em',
     h5Size: '1.25em',
-    h6Size: '1em'
+    h6Size: '1em',
   },
   layout: {
-    borderRadius: '6px',
-    borderRadiusSmall: '1px',
     maxWidth: '60vw',
     maxWidthFixed: '56.25em', // 900px
     maxWidthFixedUltrawide: '76em', // 1216px
     topBar: '6px'
+  },
+  shape: {
+    borderRadius: {
+      small: '1px',
+      default: '6px'
+    }
   },
   spacing: {
     micro: '0.3125rem', // 5px,

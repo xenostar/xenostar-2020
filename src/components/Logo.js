@@ -19,7 +19,7 @@ Logo.propTypes = {
 }
 
 const StyledLogo = styled.div`
-  border-radius: ${props => props.theme.layout.borderRadius};
+  border-radius: ${props => props.theme.shape.borderRadius.default};
   display: flex;
   transition: ${props => props.theme.transitions.default};
   :active {
@@ -33,7 +33,7 @@ const StyledLogo = styled.div`
 const Anchor = styled(Anchor_)`
   align-items: center;
   background-color: ${props => props.theme.colors.tertiary};
-  border-radius: ${props => props.theme.layout.borderRadius};
+  border-radius: ${props => props.theme.shape.borderRadius.default};
   color: ${props => props.theme.colors.common.white};
   display: inline-flex;
   font-family: ${props => props.theme.fonts.bebasNeue};
@@ -50,7 +50,7 @@ const Anchor = styled(Anchor_)`
   }
   :before {
     content: '';
-    border-radius: ${props => props.theme.layout.borderRadius};
+    border-radius: ${props => props.theme.shape.borderRadius.default};
     background-image: ${props => props.theme.colors.gradient};
     position: absolute;
     top: 0;

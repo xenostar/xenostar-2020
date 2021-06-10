@@ -30,19 +30,11 @@ const StyledPage = styled.main`
     background-position: bottom 0% left;
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
-    border-radius: ${props => props.theme.layout.borderRadiusSmall};
+    border-radius: ${props => props.theme.shape.borderRadius.small};
     transition: 0.2s background ease-out;
-  }
-
-  h1 a:hover,
-  h2 a:hover,
-  h3 a:hover,
-  h4 a:hover,
-  h5 a:hover,
-  h6 a:hover,
-  li a:hover,
-  p a:hover {
-    background-size: 100% 30%, 100% 30%;
+    :hover {
+      background-size: 100% 30%, 100% 30%;
+    }
   }
 
   p a,

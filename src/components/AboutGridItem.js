@@ -22,7 +22,7 @@ const StyledAboutGridItem = styled.div`
 `
 const Image = styled(Img)`
   box-shadow: ${props => props.theme.colors.boxShadow};
-  border-radius: ${props => props.theme.layout.borderRadius};
+  border-radius: ${props => props.theme.shape.borderRadius.default};
   transition: ${props => props.theme.transitions.default};
   z-index: 10;
 `

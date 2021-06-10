@@ -23,5 +23,5 @@ const StyledBlogDate = styled.div`
 `
 const FaCalendarAlt = styled(FaCalendarAlt_)`
   font-size: 21px;
-  margin-right: ${props => props.theme.layout.borderRadius};
+  margin-right: ${props => props.theme.shape.borderRadius.default};
 `

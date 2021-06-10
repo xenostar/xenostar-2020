@@ -63,12 +63,12 @@ export const Content = styled.div`
   }
 
   & > :not(pre) > code[class*='language-'] {
-    border-radius: ${props => props.theme.layout.borderRadius};
+    border-radius: ${props => props.theme.shape.borderRadius.default};
     padding: ${props => props.theme.spacing.micro};
   }
   .gatsby-highlight {
     background-color: ${props => props.theme.colors.background.oneDarkPro};
-    border-radius: ${props => props.theme.layout.borderRadius};
+    border-radius: ${props => props.theme.shape.borderRadius.default};
     margin-bottom: ${props => props.theme.spacing.default};
     overflow: auto;
     padding: ${props => props.theme.spacing.default};

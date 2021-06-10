@@ -41,7 +41,7 @@ Chip.propTypes = {
 const StyledChip = styled.div`
   align-items: stretch;
   background-color: ${props => props.bgColor || props.theme.colors.primary};
-  border-radius: ${props => props.theme.layout.borderRadius};
+  border-radius: ${props => props.theme.shape.borderRadius.default};
   color: ${props => props.textColor || props.theme.colors.secondary};
   display: flex;
   margin-top: ${props => props.theme.spacing.tiny};
@@ -62,8 +62,8 @@ const Icon = styled.div`
 `
 const Typography = styled(Typography_)`
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 ${props => props.theme.layout.borderRadius}
-    ${props => props.theme.layout.borderRadius} 0;
+  border-radius: 0 ${props => props.theme.shape.borderRadius.default}
+    ${props => props.theme.shape.borderRadius.default} 0;
   font-weight: bold;
   font-size: 0.8125em;
   padding: ${props => props.theme.spacing.tiny};

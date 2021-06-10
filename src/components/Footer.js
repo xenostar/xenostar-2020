@@ -48,7 +48,7 @@ const HeartBeat = keyframes`
 `
 const FaHeart = styled(FaHeart_)`
   cursor: none;
-  margin: 0 ${props => props.theme.layout.borderRadius};
+  margin: 0 ${props => props.theme.shape.borderRadius.default};
   transition: ${props => props.theme.transitions.default};
   ${Typography}:hover & {
     animation: ${HeartBeat} 2.5s infinite;

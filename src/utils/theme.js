@@ -46,12 +46,6 @@ export const theme = {
     defaultSize: '1.25em',
     defaultStyle: 'normal',
     defaultWeight: '400',
-    h1Size: '5em',
-    h2Size: '2.5em',
-    h3Size: '2em',
-    h4Size: '1.5em',
-    h5Size: '1.25em',
-    h6Size: '1em',
     defaults: {
       lineHeight: 1.5,
       size: '1.25em',

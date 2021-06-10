@@ -15,26 +15,26 @@ export const Content = styled.div`
   }
 
   h1 {
-    font-size: ${props => props.theme.fonts.h1Size};
+    font-size: ${props => props.theme.fonts.size.h1};
     font-weight: ${props => props.theme.fonts.weight.blackBold};
   }
   h2 {
-    font-size: ${props => props.theme.fonts.h2Size};
+    font-size: ${props => props.theme.fonts.size.h2};
     letter-spacing: -1px;
   }
   h3 {
-    font-size: ${props => props.theme.fonts.h3Size};
+    font-size: ${props => props.theme.fonts.size.h3};
     letter-spacing: -1px;
   }
   h4 {
-    font-size: ${props => props.theme.fonts.h4Size};
+    font-size: ${props => props.theme.fonts.size.h4};
     letter-spacing: -1px;
   }
   h5 {
-    font-size: ${props => props.theme.fonts.h5Size};
+    font-size: ${props => props.theme.fonts.size.h5};
   }
   h6 {
-    font-size: ${props => props.theme.fonts.h6Size};
+    font-size: ${props => props.theme.fonts.size.h6};
   }
 
   p,

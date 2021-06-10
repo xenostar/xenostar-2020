@@ -27,40 +27,40 @@ Typography.propTypes = {
 
 const h1 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h1Size};
+  font-size: ${props => props.theme.fonts.size.h1};
   font-weight: ${props => props.theme.fonts.weight.blackBold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h2 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h2Size};
+  font-size: ${props => props.theme.fonts.size.h2};
   font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h3 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h3Size};
+  font-size: ${props => props.theme.fonts.size.h3};
   font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h4 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h4Size};
+  font-size: ${props => props.theme.fonts.size.h4};
   font-weight: ${props => props.theme.fonts.weight.bold};
   letter-spacing: -1px;
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h5 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h5Size};
+  font-size: ${props => props.theme.fonts.size.h5};
   font-weight: ${props => props.theme.fonts.weight.bold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `
 const h6 = css`
   font-family: ${props => props.theme.fonts.family.montserrat};
-  font-size: ${props => props.theme.fonts.h6Size};
+  font-size: ${props => props.theme.fonts.size.h6};
   font-weight: ${props => props.theme.fonts.weight.bold};
   line-height: ${props => props.theme.fonts.defaultLineHeight};
 `

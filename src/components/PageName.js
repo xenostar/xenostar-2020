@@ -11,7 +11,7 @@ const StyledPageName = styled.h1`
   color: ${props => props.theme.colors.secondary};
   display: flex;
   font-family: ${props => props.theme.fonts.family.bebasNeue};
-  font-size: ${props => props.theme.fonts.defaultSize};
+  font-size: ${props => props.theme.fonts.defaults.size};
   font-weight: ${props => props.theme.fonts.weight.blackBold};
   justify-content: center;
   line-height: 1;

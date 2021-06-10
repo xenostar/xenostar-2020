@@ -10,7 +10,7 @@ export const Content = styled.div`
   h5,
   h6 {
     font-family: ${props => props.theme.fonts.family.montserrat};
-    line-height: ${props => props.theme.fonts.defaultLineHeight};
+    line-height: ${props => props.theme.fonts.defaults.lineHeight};
     margin-bottom: ${props => props.theme.spacing.default};
   }
 
@@ -40,9 +40,9 @@ export const Content = styled.div`
   p,
   ol,
   ul {
-    font-size: ${props => props.theme.fonts.defaultSize};
-    font-weight: ${props => props.theme.fonts.defaultWeight};
-    line-height: ${props => props.theme.fonts.defaultLineHeight};
+    font-size: ${props => props.theme.fonts.defaults.size};
+    font-weight: ${props => props.theme.fonts.defaults.weight};
+    line-height: ${props => props.theme.fonts.defaults.lineHeight};
     margin-bottom: ${props => props.theme.spacing.default};
   }
 

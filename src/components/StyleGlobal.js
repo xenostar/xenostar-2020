@@ -5,8 +5,8 @@ export const StyleGlobal = createGlobalStyle`
     color: ${props => props.theme.colors.secondary};
     font-family: ${props => props.theme.fonts.family.openSans};
     font-size: 1em;
-    font-style: ${props => props.theme.fonts.defaultStyle};
-    font-weight: ${props => props.theme.fonts.defaultWeight};
+    font-style: ${props => props.theme.fonts.defaults.style};
+    font-weight: ${props => props.theme.fonts.defaults.weight};
   }
 
   body {

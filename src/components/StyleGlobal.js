@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const StyleGlobal = createGlobalStyle`
   html {
-    color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.palette.secondary};
     font-family: ${props => props.theme.fonts.family.openSans};
     font-size: 1em;
     font-style: ${props => props.theme.fonts.defaults.style};
@@ -10,12 +10,12 @@ export const StyleGlobal = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.colors.background.default};
+    background-color: ${props => props.theme.palette.background.default};
     overflow-y: scroll;
   }
 
   a {
-    color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.palette.secondary};
     text-decoration: none;
   }
 `

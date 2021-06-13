@@ -6,6 +6,6 @@ export const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   margin-bottom: ${props => props.theme.spacing.default};
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transition.default};
   width: 100%;
 `

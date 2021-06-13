@@ -66,5 +66,5 @@ const BlogShare = styled(BlogShare_)`
   padding-left: ${props => props.theme.spacing.small};
 `
 const IntroText = styled(Typography)`
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.palette.primary};
 `

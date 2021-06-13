@@ -67,7 +67,7 @@ export const Content = styled.div`
     padding: ${props => props.theme.spacing.micro};
   }
   .gatsby-highlight {
-    background-color: ${props => props.theme.colors.background.oneDarkPro};
+    background-color: ${props => props.theme.palette.background.oneDarkPro};
     border-radius: ${props => props.theme.shape.borderRadius.default};
     margin-bottom: ${props => props.theme.spacing.default};
     overflow: auto;

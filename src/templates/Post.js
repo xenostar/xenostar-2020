@@ -86,13 +86,13 @@ const Categories = styled.div`
   align-items: center;
 `
 const FaFolderOpen = styled(FaFolderOpen_)`
-  color: ${props => props.theme.colors.lightGrey};
+  color: ${props => props.theme.palette.lightGrey};
   font-size: 21px;
 `
 const Category = styled.div`
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.palette.primary};
   border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.theme.colors.common.white};
+  color: ${props => props.theme.palette.common.white};
   font-size: 14px;
   font-weight: ${props => props.theme.fonts.weight.bold};
   margin-left: ${props => props.theme.shape.borderRadius.default};

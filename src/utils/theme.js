@@ -6,40 +6,6 @@ export const theme = {
     phablet: 720,
     phone: 480
   },
-  colors: {
-    // primary: '#90c7a8',
-    // gradient: 'linear-gradient(to right, #ec56f4, #90c7a8)',
-    // primary: '#90c7a8',
-    // gradient: 'linear-gradient(to right, #49a19a, #90c7a8)',
-    // primary: '#90c7a8',
-    // gradient: 'linear-gradient(to right, #379189, #90c7a8)',
-    // primary: '#90c7a8',
-    // gradient: 'linear-gradient(to right, #8764b2, #90c7a8)',
-    // primary: '#90c7a8',
-    // gradient: 'linear-gradient(to right, #6f43a4, #90c7a8)',
-    // primary: '#00cdac',
-    // gradient: 'linear-gradient(to right, #02aab0, #00cdac)',
-    // primary: '#43cea2',
-    // gradient: 'linear-gradient(to right, #185a9d, #43cea2)',
-    // primary: '#5b86e5',
-    // gradient: 'linear-gradient(to right, #36d1dc, #5b86e5)',
-    background: {
-      default: 'rgba(255, 255, 255, 1)', // #fff
-      oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
-    },
-    common: {
-      black: 'rgba(0, 0, 0, 1)', // #000
-      white: 'rgba(255, 255, 255, 1)', // #fff
-      transparent: 'rgba(0, 0, 0, 0)' // Transparent
-    },
-    primary: '#90c7a8',
-    secondary: 'rgba(34, 34, 34, 1)', // #222
-    tertiary: 'rgba(35, 33, 33, 1)', // #232121
-    gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
-    lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
-    lightGrey: 'rgba(153, 153, 153, 1)', // #999
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
-  },
   fonts: {
     defaults: {
       lineHeight: 1.5,
@@ -74,6 +40,40 @@ export const theme = {
     maxWidthFixedUltrawide: '76em', // 1216px
     topBar: '6px'
   },
+  palette: {
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #ec56f4, #90c7a8)',
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #49a19a, #90c7a8)',
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #379189, #90c7a8)',
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #8764b2, #90c7a8)',
+    // primary: '#90c7a8',
+    // gradient: 'linear-gradient(to right, #6f43a4, #90c7a8)',
+    // primary: '#00cdac',
+    // gradient: 'linear-gradient(to right, #02aab0, #00cdac)',
+    // primary: '#43cea2',
+    // gradient: 'linear-gradient(to right, #185a9d, #43cea2)',
+    // primary: '#5b86e5',
+    // gradient: 'linear-gradient(to right, #36d1dc, #5b86e5)',
+    background: {
+      default: 'rgba(255, 255, 255, 1)', // #fff
+      oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
+    },
+    common: {
+      black: 'rgba(0, 0, 0, 1)', // #000
+      white: 'rgba(255, 255, 255, 1)', // #fff
+      transparent: 'rgba(0, 0, 0, 0)' // Transparent
+    },
+    primary: '#90c7a8',
+    secondary: 'rgba(34, 34, 34, 1)', // #222
+    tertiary: 'rgba(35, 33, 33, 1)', // #232121
+    gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
+    lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
+    lightGrey: 'rgba(153, 153, 153, 1)', // #999
+    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
+  },
   shape: {
     borderRadius: {
       small: '1px',
@@ -92,8 +92,8 @@ export const theme = {
   transforms: {
     active: 'translateY(3px)'
   },
-  transitions: {
-    durations: {
+  transition: {
+    duration: {
       fast: '0.2s',
       default: '0.3s',
       slow: '0.4s'

@@ -38,7 +38,7 @@ const Col = styled(Col_)`
 `
 const Title = styled(Typography)`
   span {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.palette.primary};
   }
   ${media.tablet`
     font-size: 10.5vw;

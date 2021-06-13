@@ -45,7 +45,7 @@ const StyledBlogShare = styled.div`
   display: flex;
 `
 const Link = styled.a`
-  color: ${props => props.theme.colors.lightGrey};
+  color: ${props => props.theme.palette.lightGrey};
   display: flex;
   font-size: 21px;
   margin-left: ${props => props.theme.spacing.small};
@@ -53,9 +53,9 @@ const Link = styled.a`
     margin-left: 0;
   }
   svg {
-    transition: ${props => props.theme.transitions.default};
+    transition: ${props => props.theme.transition.default};
   }
   :hover svg {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.palette.primary};
   }
 `

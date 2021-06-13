@@ -16,7 +16,7 @@ BlogDate.propTypes = {
 const StyledBlogDate = styled.div`
   align-items: center;
   display: flex;
-  color: ${props => props.theme.colors.lightGrey};
+  color: ${props => props.theme.palette.lightGrey};
   font-size: 0.875em;
   font-weight: ${props => props.theme.fonts.weight.bold};
   text-transform: uppercase;

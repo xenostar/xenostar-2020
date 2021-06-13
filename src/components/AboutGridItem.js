@@ -21,8 +21,8 @@ const StyledAboutGridItem = styled.div`
   width: 100%;
 `
 const Image = styled(Img)`
-  box-shadow: ${props => props.theme.colors.boxShadow};
+  box-shadow: ${props => props.theme.palette.boxShadow};
   border-radius: ${props => props.theme.shape.borderRadius.default};
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transition.default};
   z-index: 10;
 `

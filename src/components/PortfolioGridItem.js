@@ -45,7 +45,7 @@ const StyledPortfolioGridItem = styled.div`
 const Anchor = styled(Anchor_)`
   display: block;
   position: relative;
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transition.default};
   :active {
     transform: ${props => props.theme.transforms.active};
   }
@@ -61,7 +61,7 @@ const Name = styled.div`
   pointer-events: none;
   transform: translateY(-6px) rotate(90deg) translateZ(0);
   transform-origin: bottom left;
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transition.default};
   white-space: nowrap;
   z-index: 20;
   ${Anchor}:hover & {
@@ -71,9 +71,9 @@ const Name = styled.div`
 `
 const Image = styled(Img)`
   border-radius: ${props => props.theme.shape.borderRadius.default};
-  transition: ${props => props.theme.transitions.default};
+  transition: ${props => props.theme.transition.default};
   :hover {
-    box-shadow: ${props => props.theme.colors.boxShadow};
+    box-shadow: ${props => props.theme.palette.boxShadow};
     z-index: 10;
   }
 `

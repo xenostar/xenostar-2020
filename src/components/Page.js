@@ -8,7 +8,7 @@ Page.propTypes = {
 }
 
 const StyledPage = styled.main`
-  background-color: ${props => props.theme.colors.common.white};
+  background-color: ${props => props.theme.palette.common.white};
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -22,10 +22,10 @@ const StyledPage = styled.main`
   h6 a,
   p a,
   li a {
-    background-image: ${props => props.theme.colors.gradient},
+    background-image: ${props => props.theme.palette.gradient},
       linear-gradient(
-        ${props => props.theme.colors.lightGreen},
-        ${props => props.theme.colors.lightGreen}
+        ${props => props.theme.palette.lightGreen},
+        ${props => props.theme.palette.lightGreen}
       );
     background-position: bottom 0% left;
     background-repeat: no-repeat;

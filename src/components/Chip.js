@@ -40,14 +40,14 @@ Chip.propTypes = {
 
 const StyledChip = styled.div`
   align-items: stretch;
-  background-color: ${props => props.bgColor || props.theme.colors.primary};
+  background-color: ${props => props.bgColor || props.theme.palette.primary};
   border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.textColor || props.theme.colors.secondary};
+  color: ${props => props.textColor || props.theme.palette.secondary};
   display: flex;
   margin-top: ${props => props.theme.spacing.tiny};
   margin-right: ${props => props.theme.spacing.tiny};
   overflow: hidden;
-  transition: ${props => props.href && props.theme.transitions.default};
+  transition: ${props => props.href && props.theme.transition.default};
   :hover {
     opacity: ${props => props.href && 0.7};
   }

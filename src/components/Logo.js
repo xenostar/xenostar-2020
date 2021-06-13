@@ -46,7 +46,7 @@ const Anchor = styled(Anchor_)`
   transition: ${props => props.theme.transitions.default};
   width: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   :hover {
-    background-color: ${props => props.theme.colors.transparent};
+    background-color: ${props => props.theme.colors.common.transparent};
   }
   :before {
     content: '';

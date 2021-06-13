@@ -29,7 +29,8 @@ export const theme = {
     },
     common: {
       black: 'rgba(0, 0, 0, 1)', // #000
-      white: 'rgba(255, 255, 255, 1)' // #fff
+      white: 'rgba(255, 255, 255, 1)', // #fff
+      transparent: 'rgba(0, 0, 0, 0)' // Transparent
     },
     primary: '#90c7a8',
     secondary: 'rgba(34, 34, 34, 1)', // #222
@@ -37,9 +38,7 @@ export const theme = {
     gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
     lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
     lightGrey: 'rgba(153, 153, 153, 1)', // #999
-    transparent: 'rgba(0, 0, 0, 0)', // Transparent
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)',
-    oneDarkPro: 'rgba(171, 178, 191, 1)' //#abb2bf
+    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
   },
   fonts: {
     defaults: {

@@ -5,7 +5,7 @@ import {
   Chip,
   ChipHolder,
   Col,
-  Content,
+  Content as _Content,
   Footer,
   Header,
   Page,
@@ -65,6 +65,13 @@ const About = () => {
 
 const Section = styled(_Section)`
   padding-top: 0;
+`
+const Content = styled(_Content)`
+  & ul {
+    list-style-type: none;
+    margin-left: 1.6875rem;
+    text-indent: -1.6875rem;
+  }
 `
 
 export default About

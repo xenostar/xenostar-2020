@@ -77,7 +77,8 @@ export const theme = {
   shape: {
     borderRadius: {
       small: '1px',
-      default: '6px'
+      default: '6px',
+      large: '12px'
     }
   },
   spacing: {

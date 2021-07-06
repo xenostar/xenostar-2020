@@ -17,10 +17,10 @@ PortfolioGrid.propTypes = {
 
 const Grid = styled(Grid_)`
   :hover {
-    grid-gap: ${props => props.theme.spacing.default};
+    grid-gap: ${({ theme }) => theme.spacing.default};
   }
   ${media.phone`
-    grid-gap: ${props => props.theme.spacing.tiny};
+    grid-gap: ${({ theme }) => theme.spacing.tiny};
     grid-template-columns: repeat(2, 1fr);
   `}
 `

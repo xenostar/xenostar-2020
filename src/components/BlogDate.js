@@ -16,12 +16,12 @@ BlogDate.propTypes = {
 const StyledBlogDate = styled.div`
   align-items: center;
   display: flex;
-  color: ${props => props.theme.palette.lightGrey};
+  color: ${({ theme }) => theme.palette.lightGrey};
   font-size: 0.875em;
-  font-weight: ${props => props.theme.fonts.weight.bold};
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
   text-transform: uppercase;
 `
 const FaCalendarAlt = styled(FaCalendarAlt_)`
   font-size: 21px;
-  margin-right: ${props => props.theme.shape.borderRadius.default};
+  margin-right: ${({ theme }) => theme.shape.borderRadius.default};
 `

@@ -37,14 +37,14 @@ const Grid = styled(Grid_)`
     '.   .   .   a14 a15 a15 a3  a3  a3  a3  a16 .   .   .'
     '.   .   .   .   a15 a15 a3  a3  a3  a3  .   .   .   .';
   :hover {
-    grid-gap: ${props => props.theme.spacing.default};
+    grid-gap: ${({ theme }) => theme.spacing.default};
   }
   ${media.tablet`
     grid-template-areas: none;
     grid-template-columns: repeat(3, 1fr);
   `}
   ${media.phone`
-    grid-gap: ${props => props.theme.spacing.tiny};
+    grid-gap: ${({ theme }) => theme.spacing.tiny};
     grid-template-columns: repeat(2, 1fr);
   `}
 `

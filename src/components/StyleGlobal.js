@@ -2,20 +2,20 @@ import { createGlobalStyle } from 'styled-components'
 
 export const StyleGlobal = createGlobalStyle`
   html {
-    color: ${props => props.theme.palette.secondary};
-    font-family: ${props => props.theme.fonts.family.openSans};
+    color: ${({ theme }) => theme.palette.secondary};
+    font-family: ${({ theme }) => theme.fonts.family.openSans};
     font-size: 1em;
-    font-style: ${props => props.theme.fonts.defaults.style};
-    font-weight: ${props => props.theme.fonts.defaults.weight};
+    font-style: ${({ theme }) => theme.fonts.defaults.style};
+    font-weight: ${({ theme }) => theme.fonts.defaults.weight};
   }
 
   body {
-    background-color: ${props => props.theme.palette.background.default};
+    background-color: ${({ theme }) => theme.palette.background.default};
     overflow-y: scroll;
   }
 
   a {
-    color: ${props => props.theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.secondary};
     text-decoration: none;
   }
 `

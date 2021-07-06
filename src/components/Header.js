@@ -30,15 +30,15 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
   padding-top: 9.125rem; /* 146px */
-  padding-right: ${props => props.theme.spacing.default};
-  padding-left: ${props => props.theme.spacing.default};
+  padding-right: ${({ theme }) => theme.spacing.default};
+  padding-left: ${({ theme }) => theme.spacing.default};
 `
 const Col = styled(Col_)`
   margin-bottom: 0;
 `
 const Title = styled(Typography)`
   span {
-    color: ${props => props.theme.palette.primary};
+    color: ${({ theme }) => theme.palette.primary};
   }
   ${media.tablet`
     font-size: 10.5vw;

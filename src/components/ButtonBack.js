@@ -16,14 +16,14 @@ ButtonBack.propTypes = {
 }
 
 const NavLink = styled(NavLink_)`
-  margin-left: ${props => props.theme.spacing.default};
+  margin-left: ${({ theme }) => theme.spacing.default};
   margin-right: auto;
   pointer-events: auto;
   padding: 0;
   ${media.phone`
-    margin-left: ${props => props.theme.spacing.small};
+    margin-left: ${({ theme }) => theme.spacing.small};
   `}
 `
 const FaChevronLeft = styled(FaChevronLeft_)`
-  margin-right: ${props => props.theme.spacing.tiny};
+  margin-right: ${({ theme }) => theme.spacing.tiny};
 `

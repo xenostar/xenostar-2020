@@ -22,16 +22,16 @@ const StyledMobileNavBurger = styled.div`
   `}
 `
 const FaBars = styled(FaBars_)`
-  background-color: ${props => props.theme.palette.common.white};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.theme.palette.secondary};
+  background-color: ${({ theme }) => theme.palette.common.white};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+  color: ${({ theme }) => theme.palette.secondary};
   cursor: pointer;
   font-size: 2.25rem;
   padding: 4px;
   pointer-events: auto;
   transform: scale(1);
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   :hover {
-    color: ${props => props.theme.palette.primary};
+    color: ${({ theme }) => theme.palette.primary};
   }
 `

@@ -21,8 +21,8 @@ const StyledProjectItem = styled.div`
   width: 100%;
 `
 const Image = styled(Img)`
-  box-shadow: ${props => props.theme.palette.boxShadow};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
-  transition: ${props => props.theme.transition.default};
+  box-shadow: ${({ theme }) => theme.palette.boxShadow};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+  transition: ${({ theme }) => theme.transition.default};
   z-index: 10;
 `

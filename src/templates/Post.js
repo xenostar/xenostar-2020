@@ -75,10 +75,10 @@ export const query = graphql`
 `
 
 const Section = styled(Section_)`
-  padding-top: ${props => props.theme.spacing.default};
+  padding-top: ${({ theme }) => theme.spacing.default};
 `
 const Content = styled(Content_)`
-  margin-bottom: ${props => props.theme.spacing.default};
+  margin-bottom: ${({ theme }) => theme.spacing.default};
   max-width: 100%;
 `
 const Categories = styled.div`
@@ -86,16 +86,16 @@ const Categories = styled.div`
   align-items: center;
 `
 const FaFolderOpen = styled(FaFolderOpen_)`
-  color: ${props => props.theme.palette.lightGrey};
+  color: ${({ theme }) => theme.palette.lightGrey};
   font-size: 21px;
 `
 const Category = styled.div`
-  background-color: ${props => props.theme.palette.primary};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.theme.palette.common.white};
+  background-color: ${({ theme }) => theme.palette.primary};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+  color: ${({ theme }) => theme.palette.common.white};
   font-size: 14px;
-  font-weight: ${props => props.theme.fonts.weight.bold};
-  margin-left: ${props => props.theme.shape.borderRadius.default};
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
+  margin-left: ${({ theme }) => theme.shape.borderRadius.default};
   padding: 8px 10px;
 `
 

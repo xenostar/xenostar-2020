@@ -5,10 +5,10 @@ export const Section = styled.section`
   align-items: ${({ align }) => align ?? 'center'};
   display: flex;
   flex-direction: ${({ direction }) => direction ?? 'column'};
-  padding-top: ${props => props.theme.spacing.huge};
-  padding-right: ${props => props.theme.spacing.default};
-  padding-bottom: ${props => props.theme.spacing.big};
-  padding-left: ${props => props.theme.spacing.default};
+  padding-top: ${({ theme }) => theme.spacing.huge};
+  padding-right: ${({ theme }) => theme.spacing.default};
+  padding-bottom: ${({ theme }) => theme.spacing.big};
+  padding-left: ${({ theme }) => theme.spacing.default};
   width: ${({ width }) => width ?? '100%'};
 `
 

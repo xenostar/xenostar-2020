@@ -29,11 +29,11 @@ BlogPost.propTypes = {
 const StyledBlogPost = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: ${props => props.theme.spacing.huge};
+  margin-top: ${({ theme }) => theme.spacing.huge};
   :first-child {
     margin-top: 0;
   }
 `
 const BlogDate = styled(BlogDate_)`
-  margin-bottom: ${props => props.theme.spacing.default};
+  margin-bottom: ${({ theme }) => theme.spacing.default};
 `

@@ -54,13 +54,13 @@ const StyledTopBar = styled.div`
   top: 0;
   right: 0;
   left: 0;
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   user-select: none;
   z-index: 100;
 `
 const Gradient = styled.div`
-  background-image: ${props => props.theme.palette.gradient};
-  height: ${props => props.theme.layout.topBar};
+  background-image: ${({ theme }) => theme.palette.gradient};
+  height: ${({ theme }) => theme.layout.topBar};
   display: flex;
   width: 100%;
 `
@@ -68,7 +68,7 @@ const Row = styled(Row_)`
   max-width: none;
   padding: ${props =>
     props.isSmall ? props.theme.spacing.small : props.theme.spacing.default};
-  padding-left: ${props => props.theme.spacing.default};
-  padding-right: ${props => props.theme.spacing.default};
-  transition: ${props => props.theme.transition.default};
+  padding-left: ${({ theme }) => theme.spacing.default};
+  padding-right: ${({ theme }) => theme.spacing.default};
+  transition: ${({ theme }) => theme.transition.default};
 `

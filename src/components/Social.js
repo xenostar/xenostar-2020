@@ -18,7 +18,7 @@ const StyledSocial = styled.div`
   display: inline-flex;
 `
 const SocialIcon = styled(SocialIcon_)`
-  margin-left: ${props => props.theme.spacing.default};
+  margin-left: ${({ theme }) => theme.spacing.default};
   :first-child {
     margin-left: 0;
   }

@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const Grid = styled.div`
   display: grid;
-  grid-gap: ${props => props.theme.spacing.tiny};
+  grid-gap: ${({ theme }) => theme.spacing.tiny};
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  margin-bottom: ${props => props.theme.spacing.default};
-  transition: ${props => props.theme.transition.default};
+  margin-bottom: ${({ theme }) => theme.spacing.default};
+  transition: ${({ theme }) => theme.transition.default};
   width: 100%;
 `

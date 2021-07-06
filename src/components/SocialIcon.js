@@ -38,11 +38,11 @@ SocialIcon.propTypes = {
 }
 
 const Link = styled.a`
-  color: ${props => props.theme.palette.secondary};
+  color: ${({ theme }) => theme.palette.secondary};
   display: flex;
   font-size: 1.875em; /* 30px */
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   :hover {
-    color: ${props => props.theme.palette.primary};
+    color: ${({ theme }) => theme.palette.primary};
   }
 `

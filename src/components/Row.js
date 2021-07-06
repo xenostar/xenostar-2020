@@ -8,10 +8,10 @@ export const Row = styled.div`
   flex-direction: ${({ direction }) => direction ?? 'row'};
   flex-wrap: ${({ wrap }) => wrap ?? 'wrap'};
   justify-content: ${({ justify }) => justify ?? 'space-between'};
-  max-width: ${props => props.theme.layout.maxWidthFixedUltrawide};
+  max-width: ${({ theme }) => theme.layout.maxWidthFixedUltrawide};
   width: ${({ width }) => width ?? '100%'};
   ${media.ultrawide`
-    max-width: ${props => props.theme.layout.maxWidthFixed};
+    max-width: ${({ theme }) => theme.layout.maxWidthFixed};
   `}
 `
 

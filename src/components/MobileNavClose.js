@@ -17,17 +17,17 @@ const StyledMobileNavClose = styled.div`
   display: flex;
   justify-content: right;
   height: 5rem;
-  margin: ${props => props.theme.spacing.default};
+  margin: ${({ theme }) => theme.spacing.default};
 `
 const FaTimes = styled(FaTimes_)`
-  background-color: ${props => props.theme.palette.common.white};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.theme.palette.primary};
+  background-color: ${({ theme }) => theme.palette.common.white};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+  color: ${({ theme }) => theme.palette.primary};
   cursor: pointer;
   font-size: 2.25rem;
   padding: 4px;
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   :hover {
-    color: ${props => props.theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.secondary};
   }
 `

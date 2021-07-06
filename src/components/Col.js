@@ -6,7 +6,7 @@ export const Col = styled.div`
   display: flex;
   flex-direction: ${({ direction }) => direction ?? 'column'};
   justify-content: ${({ justify }) => justify ?? 'flex-start'};
-  margin-bottom: ${props => props.theme.spacing.default};
+  margin-bottom: ${({ theme }) => theme.spacing.default};
   width: ${({ width }) => width ?? '100%'};
   *:last-child {
     margin-bottom: 0;

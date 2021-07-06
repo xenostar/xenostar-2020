@@ -19,39 +19,39 @@ Logo.propTypes = {
 }
 
 const StyledLogo = styled.div`
-  border-radius: ${props => props.theme.shape.borderRadius.default};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   display: flex;
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   :active {
-    transform: ${props => props.theme.transforms.active};
+    transform: ${({ theme }) => theme.transforms.active};
   }
   :hover {
-    box-shadow: ${props => props.theme.palette.boxShadow};
+    box-shadow: ${({ theme }) => theme.palette.boxShadow};
     z-index: 10;
   }
 `
 const Anchor = styled(Anchor_)`
   align-items: center;
-  background-color: ${props => props.theme.palette.tertiary};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
-  color: ${props => props.theme.palette.common.white};
+  background-color: ${({ theme }) => theme.palette.tertiary};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+  color: ${({ theme }) => theme.palette.common.white};
   display: inline-flex;
-  font-family: ${props => props.theme.fonts.family.bebasNeue};
+  font-family: ${({ theme }) => theme.fonts.family.bebasNeue};
   font-size: ${props => (props.$isSmall ? '1.75rem' : '3.75rem')};
   height: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   justify-content: center;
   line-height: 1;
   pointer-events: auto;
   position: relative;
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   width: ${props => (props.$isSmall ? '2.5rem' : '5rem')};
   :hover {
-    background-color: ${props => props.theme.palette.common.transparent};
+    background-color: ${({ theme }) => theme.palette.common.transparent};
   }
   :before {
     content: '';
-    border-radius: ${props => props.theme.shape.borderRadius.default};
-    background-image: ${props => props.theme.palette.gradient};
+    border-radius: ${({ theme }) => theme.shape.borderRadius.default};
+    background-image: ${({ theme }) => theme.palette.gradient};
     position: absolute;
     top: 0;
     right: 0;
@@ -65,16 +65,16 @@ const Text = styled.div`
   position: relative;
 `
 const TextColor = styled.span`
-  color: ${props => props.theme.palette.primary};
+  color: ${({ theme }) => theme.palette.primary};
   opacity: 1;
-  transition: ${props => props.theme.transition.duration.default} opacity
-    ${props => props.theme.transition.easing.default};
+  transition: ${({ theme }) => theme.transition.duration.default} opacity
+    ${({ theme }) => theme.transition.easing.default};
   ${Anchor}:hover & {
     opacity: 0;
   }
 `
 const HomeText = styled.div`
-  color: ${props => props.theme.palette.common.white};
+  color: ${({ theme }) => theme.palette.common.white};
   font-size: 25.7px;
   font-size: ${props => (props.isSmall ? '12px' : '25.7px')};
   opacity: 0;
@@ -83,7 +83,7 @@ const HomeText = styled.div`
   right: ${props => (props.isSmall ? '-2px' : '-4px')};
   transform: rotate(-90deg) translateZ(0);
   transform-origin: bottom right;
-  transition: ${props => props.theme.transition.default};
+  transition: ${({ theme }) => theme.transition.default};
   ${Anchor}:hover & {
     opacity: 1;
   }

@@ -41,11 +41,11 @@ Chip.propTypes = {
 const StyledChip = styled.div`
   align-items: stretch;
   background-color: ${props => props.bgColor || props.theme.palette.primary};
-  border-radius: ${props => props.theme.shape.borderRadius.default};
+  border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   color: ${props => props.textColor || props.theme.palette.secondary};
   display: flex;
-  margin-top: ${props => props.theme.spacing.tiny};
-  margin-right: ${props => props.theme.spacing.tiny};
+  margin-top: ${({ theme }) => theme.spacing.tiny};
+  margin-right: ${({ theme }) => theme.spacing.tiny};
   overflow: hidden;
   transition: ${props => props.href && props.theme.transition.default};
   :hover {
@@ -58,12 +58,12 @@ const StyledChip = styled.div`
 const Icon = styled.div`
   align-items: center;
   display: flex;
-  padding: 0 ${props => props.theme.spacing.tiny};
+  padding: 0 ${({ theme }) => theme.spacing.tiny};
 `
 const Typography = styled(Typography_)`
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0 ${props => props.theme.shape.borderRadius.default}
-    ${props => props.theme.shape.borderRadius.default} 0;
+  border-radius: 0 ${({ theme }) => theme.shape.borderRadius.default}
+    ${({ theme }) => theme.shape.borderRadius.default} 0;
   font-size: 0.8125em;
-  padding: ${props => props.theme.spacing.tiny};
+  padding: ${({ theme }) => theme.spacing.tiny};
 `

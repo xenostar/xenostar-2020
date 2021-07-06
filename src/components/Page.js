@@ -8,7 +8,7 @@ Page.propTypes = {
 }
 
 const StyledPage = styled.main`
-  background-color: ${props => props.theme.palette.common.white};
+  background-color: ${({ theme }) => theme.palette.common.white};
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -22,15 +22,15 @@ const StyledPage = styled.main`
   h6 a,
   p a,
   li a {
-    background-image: ${props => props.theme.palette.gradient},
+    background-image: ${({ theme }) => theme.palette.gradient},
       linear-gradient(
-        ${props => props.theme.palette.lightGreen},
-        ${props => props.theme.palette.lightGreen}
+        ${({ theme }) => theme.palette.lightGreen},
+        ${({ theme }) => theme.palette.lightGreen}
       );
     background-position: bottom 0% left;
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
-    border-radius: ${props => props.theme.shape.borderRadius.small};
+    border-radius: ${({ theme }) => theme.shape.borderRadius.small};
     transition: 0.2s background ease-out;
     :hover {
       background-size: 100% 30%, 100% 30%;
@@ -39,6 +39,6 @@ const StyledPage = styled.main`
 
   p a,
   li a {
-    font-weight: ${props => props.theme.fonts.weight.bold};
+    font-weight: ${({ theme }) => theme.fonts.weight.bold};
   }
 `

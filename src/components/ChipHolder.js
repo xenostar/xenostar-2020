@@ -11,9 +11,9 @@ export const ChipHolder = ({ children }) => (
 
 const StyledChipHolder = styled.div`
   display: flex;
-  margin-top: ${props => props.theme.spacing.default};
+  margin-top: ${({ theme }) => theme.spacing.default};
   width: 100%;
 `
 const Row = styled(Row_)`
-  margin-top: -${props => props.theme.spacing.tiny};
+  margin-top: -${({ theme }) => theme.spacing.tiny};
 `

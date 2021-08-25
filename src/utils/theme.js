@@ -82,6 +82,7 @@ export const theme = {
     }
   },
   spacing: {
+    atom: '0.125rem', // 2px,
     micro: '0.3125rem', // 5px,
     tiny: '0.625rem', // 10px,
     small: '0.9375rem', // 15px

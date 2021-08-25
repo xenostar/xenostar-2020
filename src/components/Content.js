@@ -64,7 +64,7 @@ export const Content = styled.div`
 
   & > :not(pre) > code[class*='language-'] {
     border-radius: ${({ theme }) => theme.shape.borderRadius.default};
-    padding: ${({ theme }) => theme.spacing.micro};
+    padding: 2px ${({ theme }) => theme.spacing.micro};
   }
   .gatsby-highlight {
     background-color: ${({ theme }) => theme.palette.background.oneDarkPro};

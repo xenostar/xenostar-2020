@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from 'utils'
 
 export const Content = styled.div`
   width: 100%;
@@ -70,10 +71,13 @@ export const Content = styled.div`
     background-color: ${({ theme }) => theme.palette.background.oneDarkPro};
     border-radius: ${({ theme }) => theme.shape.borderRadius.default};
     margin-bottom: ${({ theme }) => theme.spacing.default};
-    margin-left: ${({ theme }) => theme.spacing.default};
-    margin-right: ${({ theme }) => theme.spacing.default};
+    margin-left: -${({ theme }) => theme.spacing.default};
+    margin-right: -${({ theme }) => theme.spacing.default};
     overflow: auto;
     padding: ${({ theme }) => theme.spacing.default};
+    ${media.tablet`
+      border-radius: 0;
+    `}
   }
   .gatsby-highlight pre {
     background-color: transparent;

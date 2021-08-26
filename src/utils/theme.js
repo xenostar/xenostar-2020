@@ -8,7 +8,7 @@ export const theme = {
   },
   fonts: {
     defaults: {
-      lineHeight: 1.5,
+      lineHeight: 1.6,
       size: '1.25em',
       style: 'normal',
       weight: 400

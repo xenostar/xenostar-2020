@@ -70,6 +70,8 @@ export const Content = styled.div`
     background-color: ${({ theme }) => theme.palette.background.oneDarkPro};
     border-radius: ${({ theme }) => theme.shape.borderRadius.default};
     margin-bottom: ${({ theme }) => theme.spacing.default};
+    margin-left: ${({ theme }) => theme.spacing.default};
+    margin-right: ${({ theme }) => theme.spacing.default};
     overflow: auto;
     padding: ${({ theme }) => theme.spacing.default};
   }

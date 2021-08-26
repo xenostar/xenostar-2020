@@ -10,9 +10,9 @@ export const Row = styled.div`
   justify-content: ${({ justify }) => justify ?? 'space-between'};
   max-width: ${({ theme }) => theme.layout.maxWidthFixedUltrawide};
   width: ${({ width }) => width ?? '100%'};
-  ${media.ultrawide`
+  /* ${media.ultrawide`
     max-width: ${({ theme }) => theme.layout.maxWidthFixed};
-  `}
+  `} */
 `
 
 Row.propTypes = {

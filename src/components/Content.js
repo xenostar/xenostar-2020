@@ -51,7 +51,7 @@ export const Content = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing.default};
     padding-top: ${({ theme }) => theme.spacing.small};
     padding-bottom: ${({ theme }) => theme.spacing.small};
-    padding-left: ${({ theme }) => theme.spacing.default};
+    padding-left: ${({ theme }) => theme.spacing.small};
   }
 
   ul {

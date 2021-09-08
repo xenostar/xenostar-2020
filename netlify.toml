@@ -7,3 +7,8 @@
 [[redirects]]
   from = "/linkedin"
   to = "https://www.linkedin.com/in/bryan-leewood-86858415/"
+
+[[redirects]]
+  from = "https://xenostar-2020.netlify.app/*"
+  to = "https://www.xenostar.net/:splat"
+  status = 301

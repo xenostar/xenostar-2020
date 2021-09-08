@@ -5,10 +5,11 @@
   package = "netlify-plugin-gatsby-cache"
 
 [[redirects]]
-  from = "/linkedin"
-  to = "https://www.linkedin.com/in/bryan-leewood-86858415/"
+  from = "https://xenostar-2020.netlify.app/*"
+  to = "https://www.xenostar.net/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "https://xenostar-2020.netlify.app/"
-  to = "https://www.xenostar.net/"
-  status = 301
+  from = "/linkedin"
+  to = "https://www.linkedin.com/in/bryan-leewood-86858415/"

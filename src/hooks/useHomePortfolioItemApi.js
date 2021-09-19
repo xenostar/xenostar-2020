@@ -10,9 +10,7 @@ export const useHomePortfolioItemApi = () => {
         items: nodes {
           name
           featuredImage {
-            fluid(maxWidth: 450) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(width: 600)
             alt
             title
           }

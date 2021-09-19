@@ -20,7 +20,7 @@ const Portfolio = () => {
         {items.map((data, i) => (
           <PortfolioGridItem
             key={data.name}
-            featuredImage={data.featuredImage}
+            image={data.featuredImage}
             name={data.name}
             number={i}
             slug={data.slug}

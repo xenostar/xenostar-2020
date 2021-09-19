@@ -11,9 +11,7 @@ export const useAboutApi = () => {
           }
         }
         photos {
-          fluid(maxWidth: 450) {
-            ...GatsbyDatoCmsFluid
-          }
+          gatsbyImageData(width: 450)
           alt
           title
         }

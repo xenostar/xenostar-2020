@@ -47,7 +47,7 @@ Project.propTypes = {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     datoCmsPortfolioItem(slug: { eq: $slug }) {
       name
       description
@@ -55,9 +55,7 @@ export const query = graphql`
       githubLink
       tools
       image {
-        fluid(maxWidth: 450) {
-          ...GatsbyDatoCmsFluid
-        }
+        gatsbyImageData(width: 450)
         alt
         title
       }

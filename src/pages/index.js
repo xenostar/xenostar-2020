@@ -18,7 +18,7 @@ const Index = () => {
           <PortfolioGridItem
             key={data.name}
             area={true}
-            featuredImage={data.featuredImage}
+            image={data.featuredImage}
             name={data.name}
             number={i}
             slug={data.slug}

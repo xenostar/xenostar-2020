@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Anchor as Anchor_ } from 'components'
 import { media, routes } from 'utils'
 
 export const PortfolioGridItem = ({
   area = false,
-  featuredImage: { fluid, alt = '', title = '' },
+  image: { gatsbyImageData, alt = '', title = '' },
   name = 'Portfolio Item Name',
   number,
   slug = ''
@@ -17,7 +17,7 @@ export const PortfolioGridItem = ({
     className={'a' + number}
   >
     <Anchor to={routes.portfolio.url + '/' + slug}>
-      <Image fluid={fluid} alt={alt} title={title} />
+      <Image image={gatsbyImageData} alt={alt} title={title} />
       <Name>{name}</Name>
     </Anchor>
   </StyledPortfolioGridItem>
@@ -25,8 +25,8 @@ export const PortfolioGridItem = ({
 
 PortfolioGridItem.propTypes = {
   area: PropTypes.bool,
-  featuredImage: PropTypes.exact({
-    fluid: PropTypes.object,
+  image: PropTypes.exact({
+    gatsbyImageData: PropTypes.object,
     alt: PropTypes.string,
     title: PropTypes.string
   }),
@@ -69,7 +69,7 @@ const Name = styled.div`
     transform: translateY(0px) rotate(90deg) translateZ(0);
   }
 `
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   transition: ${({ theme }) => theme.transition.default};
   :hover {

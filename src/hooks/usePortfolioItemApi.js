@@ -10,16 +10,12 @@ export const usePortfolioItemApi = () => {
           link
           tools
           image {
-            fluid(maxWidth: 450) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(width: 450)
             alt
             title
           }
           featuredImage {
-            fluid(maxWidth: 450) {
-              ...GatsbyDatoCmsFluid
-            }
+            gatsbyImageData(width: 450)
             alt
             title
           }

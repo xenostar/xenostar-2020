@@ -54,7 +54,7 @@ Post.propTypes = {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     datoCmsBlogPost(slug: { eq: $slug }) {
       title
       publishDate

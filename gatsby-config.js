@@ -55,13 +55,6 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets/`
-      }
-    },
 
     /**
      *
@@ -69,8 +62,9 @@ module.exports = {
      *
      */
     `gatsby-alias-imports`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -92,7 +86,7 @@ module.exports = {
             },
             {
               family: `Montserrat`,
-              variants: [`700`, `700i`, `800`, `800i`, `900`, `900i`]
+              variants: [`700`, `900`]
             }
           ]
         }

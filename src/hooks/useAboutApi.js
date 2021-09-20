@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const useAboutApi = () => {
-  const { datoCmsAbout } = useStaticQuery(graphql`
+  const { datoCmsAbout, allDatoCmsAboutInfo } = useStaticQuery(graphql`
     query {
       datoCmsAbout {
         introText
@@ -20,8 +20,24 @@ export const useAboutApi = () => {
           description
         }
       }
+      allDatoCmsAboutInfo(sort: { fields: position }) {
+        items: nodes {
+          backgroundColor {
+            hex
+          }
+          text
+          textColor {
+            hex
+          }
+          url
+          aboutType
+          file {
+            url
+          }
+        }
+      }
     }
   `)
 
-  return datoCmsAbout
+  return { ...datoCmsAbout, ...allDatoCmsAboutInfo }
 }

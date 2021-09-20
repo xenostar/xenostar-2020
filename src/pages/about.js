@@ -14,11 +14,10 @@ import {
   Typography,
   SEO
 } from 'components'
-import { useAboutApi, useAboutInfo } from 'hooks'
+import { useAboutApi } from 'hooks'
 
 const About = () => {
-  const { contentNode, introText, photos, seo } = useAboutApi()
-  const { items } = useAboutInfo()
+  const { contentNode, introText, photos, seo, items } = useAboutApi()
 
   return (
     <Page>

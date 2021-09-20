@@ -5,10 +5,10 @@ import {
   PortfolioGridHome,
   PortfolioGridItem
 } from 'components'
-import { useHomePortfolioItemApi } from 'hooks'
+import { useHomeApi } from 'hooks'
 
 const Index = () => {
-  const { items } = useHomePortfolioItemApi()
+  const { items } = useHomeApi()
 
   return (
     <Page>

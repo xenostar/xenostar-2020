@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {
   AboutGrid,
-  AboutGridItem,
   Chip,
   ChipHolder,
   Col,
@@ -9,6 +8,7 @@ import {
   Footer,
   Header,
   Page,
+  ProjectItem,
   Row,
   Section as _Section,
   Typography,
@@ -26,7 +26,7 @@ const About = () => {
       <Header title={seo.title} introText={introText} />
       <AboutGrid>
         {photos.map((photo, i) => (
-          <AboutGridItem key={i} image={photo} />
+          <ProjectItem key={i} image={photo} />
         ))}
       </AboutGrid>
       <Section>

@@ -9,11 +9,7 @@ export const TopBar = ({ path }) => {
   const [isSmall, setIsSmall] = useState(false)
 
   useScrollPosition(({ currPos }) => {
-    if (Math.abs(currPos.y) >= 30) {
-      setIsSmall(true)
-    } else {
-      setIsSmall(false)
-    }
+    Math.abs(currPos.y) >= 30 ? setIsSmall(true) : setIsSmall(false)
   })
 
   return (

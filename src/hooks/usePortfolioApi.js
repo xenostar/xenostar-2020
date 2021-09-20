@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const usePortfolioApi = () => {
-  const { datoCmsPortfolio } = useStaticQuery(graphql`
+  const { datoCmsPortfolio, allDatoCmsPortfolioItem } = useStaticQuery(graphql`
     query {
       datoCmsPortfolio {
         seo {
@@ -10,8 +10,31 @@ export const usePortfolioApi = () => {
         }
         introText
       }
+      allDatoCmsPortfolioItem(sort: { order: ASC, fields: position }) {
+        items: nodes {
+          name
+          description
+          link
+          tools
+          image {
+            gatsbyImageData(width: 450)
+            alt
+            title
+          }
+          featuredImage {
+            gatsbyImageData(width: 450)
+            alt
+            title
+          }
+          slug
+          seo {
+            title
+            description
+          }
+        }
+      }
     }
   `)
 
-  return datoCmsPortfolio
+  return { ...datoCmsPortfolio, ...allDatoCmsPortfolioItem }
 }

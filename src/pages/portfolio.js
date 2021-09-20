@@ -6,11 +6,10 @@ import {
   PortfolioGridItem,
   SEO
 } from 'components'
-import { usePortfolioApi, usePortfolioItemApi } from 'hooks'
+import { usePortfolioApi } from 'hooks'
 
 const Portfolio = () => {
-  const { seo, introText } = usePortfolioApi()
-  const { items } = usePortfolioItemApi()
+  const { seo, introText, items } = usePortfolioApi()
 
   return (
     <Page>

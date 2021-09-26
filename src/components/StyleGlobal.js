@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const StyleGlobal = createGlobalStyle`
   html {
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.text.primary};
     font-family: ${({ theme }) => theme.fonts.family.openSans};
     font-size: 1em;
     font-style: ${({ theme }) => theme.fonts.defaults.style};
@@ -15,7 +15,7 @@ export const StyleGlobal = createGlobalStyle`
   }
 
   a {
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.text.primary};
     text-decoration: none;
   }
 `

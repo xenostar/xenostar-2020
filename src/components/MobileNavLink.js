@@ -14,6 +14,6 @@ export const MobileNavLink = styled(Anchor)`
   &.active,
   :hover {
     background-color: ${({ theme }) => theme.palette.primary};
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.text.primary};
   }
 `

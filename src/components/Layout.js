@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 import { StoreProvider } from 'easy-peasy'
@@ -11,14 +11,19 @@ import {
   TopBar,
   MobileNav
 } from 'components'
-import { store, lightTheme } from 'utils'
+import { store, darkTheme, lightTheme } from 'utils'
 import 'normalize.css'
 
 const Layout = ({ children, path }) => {
-  // const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
+
+  const handleChangeTheme = mode => {
+    setIsDarkMode(mode === 'dark' ? true : false)
+  }
+
   return (
     <StoreProvider store={store}>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <HelmetProvider>
           <StoreSync path={path} />
           <SEO />

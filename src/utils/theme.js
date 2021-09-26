@@ -88,7 +88,7 @@ export const darkTheme = {
   ...theme,
   palette: {
     background: {
-      default: 'rgba(255, 255, 255, 1)', // #fff
+      default: '#181a1b', // #181a1b
       oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
     },
     common: {
@@ -96,15 +96,22 @@ export const darkTheme = {
       white: 'rgba(255, 255, 255, 1)', // #fff
       transparent: 'rgba(0, 0, 0, 0)' // Transparent
     },
+    text: {
+      primary: '#e8e6e3', // #e8e6e3
+      secondary: 'rgba(153, 153, 153, 1)', // #999
+      tertiary: 'rgba(34, 34, 34, 1)' // #222
+    },
     primary: '#90c7a8',
     secondary: 'rgba(34, 34, 34, 1)', // #222
     tertiary: 'rgba(35, 33, 33, 1)', // #232121
-    gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
-    lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
+    gradient: 'linear-gradient(to right, rgb(51, 100, 79), rgb(34, 68, 53))',
+    lightGreen: 'rgb(34, 68, 53)', // #c7e3d3
     lightGrey: 'rgba(153, 153, 153, 1)', // #999
     boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
   }
 }
+
+// linear-gradient(to right, rgb(51, 100, 79), rgb(34, 68, 53)), linear-gradient(rgb(34, 68, 53), rgb(34, 68, 53))
 
 export const lightTheme = {
   ...theme,
@@ -117,6 +124,11 @@ export const lightTheme = {
       black: 'rgba(0, 0, 0, 1)', // #000
       white: 'rgba(255, 255, 255, 1)', // #fff
       transparent: 'rgba(0, 0, 0, 0)' // Transparent
+    },
+    text: {
+      primary: 'rgba(34, 34, 34, 1)', // #222
+      secondary: 'rgba(153, 153, 153, 1)', // #999
+      tertiary: 'rgba(34, 34, 34, 1)' // #222
     },
     primary: '#90c7a8',
     secondary: 'rgba(34, 34, 34, 1)', // #222

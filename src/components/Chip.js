@@ -42,7 +42,7 @@ const StyledChip = styled.div`
   align-items: stretch;
   background-color: ${props => props.bgColor || props.theme.palette.primary};
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
-  color: ${props => props.textColor || props.theme.palette.secondary};
+  color: ${props => props.textColor || props.theme.palette.text.tertiary};
   display: flex;
   margin-top: ${({ theme }) => theme.spacing.tiny};
   margin-right: ${({ theme }) => theme.spacing.tiny};

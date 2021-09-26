@@ -8,7 +8,6 @@ Page.propTypes = {
 }
 
 const StyledPage = styled.main`
-  background-color: ${({ theme }) => theme.palette.common.white};
   display: flex;
   flex-direction: column;
   min-height: 100vh;

@@ -38,7 +38,7 @@ SocialIcon.propTypes = {
 }
 
 const Link = styled.a`
-  color: ${({ theme }) => theme.palette.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
   display: flex;
   font-size: 1.875em; /* 30px */
   transition: ${({ theme }) => theme.transition.default};

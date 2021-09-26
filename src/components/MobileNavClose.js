@@ -28,6 +28,6 @@ const FaTimes = styled(FaTimes_)`
   padding: 4px;
   transition: ${({ theme }) => theme.transition.default};
   :hover {
-    color: ${({ theme }) => theme.palette.secondary};
+    color: ${({ theme }) => theme.palette.text.primary};
   }
 `

@@ -8,7 +8,7 @@ export const PageName = props => {
 }
 
 const StyledPageName = styled.h1`
-  color: ${({ theme }) => theme.palette.secondary};
+  color: ${({ theme }) => theme.palette.text.primary};
   display: flex;
   font-family: ${({ theme }) => theme.fonts.family.bebasNeue};
   font-size: ${({ theme }) => theme.fonts.defaults.size};

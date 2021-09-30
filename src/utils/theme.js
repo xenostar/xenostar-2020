@@ -88,58 +88,57 @@ export const darkTheme = {
   ...theme,
   palette: {
     background: {
-      default: '#181a1b', // #181a1b
-      oneDarkPro: 'rgba(40, 44, 52, 1)', // #282c34
-      topBar: 'rgb(27, 30, 31)',
-      footer: 'rgb(27, 30, 31)'
+      default: '#181a1b',
+      footer: 'rgb(27, 30, 31)',
+      oneDarkPro: 'rgba(40, 44, 52, 1)',
+      topBar: 'rgba(24, 26, 27, 0.95)'
     },
     common: {
-      black: 'rgba(0, 0, 0, 1)', // #000
-      white: 'rgba(255, 255, 255, 1)', // #fff
-      transparent: 'rgba(0, 0, 0, 0)' // Transparent
+      black: 'rgba(0, 0, 0, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+      transparent: 'rgba(0, 0, 0, 0)'
     },
     text: {
-      primary: '#e8e6e3', // #e8e6e3
-      secondary: 'rgba(153, 153, 153, 1)', // #999
-      tertiary: 'rgba(34, 34, 34, 1)' // #222
+      primary: '#e8e6e3',
+      secondary: 'rgba(153, 153, 153, 1)',
+      tertiary: 'rgba(34, 34, 34, 1)'
     },
     primary: '#90c7a8',
-    secondary: 'rgba(34, 34, 34, 1)', // #222
-    tertiary: 'rgba(35, 33, 33, 1)', // #232121
-    gradient: 'linear-gradient(to right, rgb(51, 100, 79), rgb(34, 68, 53))',
-    lightGreen: 'rgb(34, 68, 53)', // #c7e3d3
-    lightGrey: 'rgba(153, 153, 153, 1)', // #999
+    secondary: 'rgba(34, 34, 34, 1)',
+    tertiary: 'rgba(35, 33, 33, 1)',
+    gradient:
+      'linear-gradient(to right, rgba(51, 100, 79, 1), rgba(34, 68, 53, 1))',
+    lightGreen: 'rgba(34, 68, 53, 1)',
+    lightGrey: 'rgba(153, 153, 153, 1)',
     boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
   }
 }
-
-// linear-gradient(to right, rgb(51, 100, 79), rgb(34, 68, 53)), linear-gradient(rgb(34, 68, 53), rgb(34, 68, 53))
 
 export const lightTheme = {
   ...theme,
   palette: {
     background: {
-      default: 'rgba(255, 255, 255, 1)', // #fff
-      oneDarkPro: 'rgba(40, 44, 52, 1)', // #282c34
-      topBar: 'rgba(255, 255, 255, 0.95)',
-      footer: '#f9f9f9' // #f9f9f9
+      default: 'rgba(255, 255, 255, 1)',
+      footer: '#f9f9f9',
+      oneDarkPro: 'rgba(40, 44, 52, 1)',
+      topBar: 'rgba(255, 255, 255, 0.95)'
     },
     common: {
-      black: 'rgba(0, 0, 0, 1)', // #000
-      white: 'rgba(255, 255, 255, 1)', // #fff
-      transparent: 'rgba(0, 0, 0, 0)' // Transparent
+      black: 'rgba(0, 0, 0, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+      transparent: 'rgba(0, 0, 0, 0)'
     },
     text: {
-      primary: 'rgba(34, 34, 34, 1)', // #222
-      secondary: 'rgba(153, 153, 153, 1)', // #999
-      tertiary: 'rgba(34, 34, 34, 1)' // #222
+      primary: 'rgba(34, 34, 34, 1)',
+      secondary: 'rgba(153, 153, 153, 1)',
+      tertiary: 'rgba(34, 34, 34, 1)'
     },
     primary: '#90c7a8',
-    secondary: 'rgba(34, 34, 34, 1)', // #222
-    tertiary: 'rgba(35, 33, 33, 1)', // #232121
-    gradient: 'linear-gradient(to right, #90c7a8, #c7e3d3)',
-    lightGreen: 'rgba(199, 227, 211, 1)', // #c7e3d3
-    lightGrey: 'rgba(153, 153, 153, 1)', // #999
+    secondary: 'rgba(34, 34, 34, 1)',
+    tertiary: 'rgba(35, 33, 33, 1)',
+    gradient: 'linear-gradient(to right, #90c7a8, rgba(199, 227, 211, 1))',
+    lightGreen: 'rgba(199, 227, 211, 1)',
+    lightGrey: 'rgba(153, 153, 153, 1)',
     boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
   }
 }

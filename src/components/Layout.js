@@ -15,7 +15,7 @@ import { store, darkTheme, lightTheme } from 'utils'
 import 'normalize.css'
 
 const Layout = ({ children, path }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   const handleChangeTheme = mode => {
     setIsDarkMode(mode === 'dark' ? true : false)

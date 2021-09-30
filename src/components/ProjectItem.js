@@ -23,7 +23,7 @@ const StyledProjectItem = styled.div`
   width: 100%;
 `
 const Image = styled(GatsbyImage)`
-  box-shadow: ${({ theme }) => theme.palette.boxShadow};
+  box-shadow: ${({ theme }) => theme.palette.boxShadow.default};
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   transition: ${({ theme }) => theme.transition.default};
   z-index: 10;

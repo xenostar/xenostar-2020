@@ -26,7 +26,7 @@ const StyledLogo = styled.div`
     transform: ${({ theme }) => theme.transforms.active};
   }
   :hover {
-    box-shadow: ${({ theme }) => theme.palette.boxShadow};
+    box-shadow: ${({ theme }) => theme.palette.boxShadow.default};
     z-index: 10;
   }
 `

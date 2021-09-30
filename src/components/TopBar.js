@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Row as Row_, Logo, ButtonBack, Nav, MobileNavBurger } from 'components'
 import { isSubPage, routes } from 'utils'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import { theme } from '../utils/theme'
 
 export const TopBar = ({ path }) => {
   const [isSmall, setIsSmall] = useState(false)
@@ -41,7 +42,7 @@ TopBar.propTypes = {
 const StyledTopBar = styled.div`
   background-color: ${props =>
     props.isSmall ? props.theme.palette.background.topBar : 'transparent'};
-  box-shadow: ${props => props.isSmall && `0 0 8px rgba(0, 0, 0, 0.1)`};
+  box-shadow: ${props => props.isSmall && props.theme.palette.boxShadow.topBar};
   display: flex;
   flex-direction: column;
   justify-content: center;

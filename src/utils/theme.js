@@ -88,8 +88,8 @@ export const darkTheme = {
   ...theme,
   palette: {
     background: {
-      default: '#181a1b',
-      footer: 'rgb(27, 30, 31)',
+      default: 'rgba(24, 26, 27, 1)',
+      footer: 'rgba(27, 30, 31, 1)',
       oneDarkPro: 'rgba(40, 44, 52, 1)',
       topBar: 'rgba(24, 26, 27, 0.95)'
     },
@@ -110,7 +110,10 @@ export const darkTheme = {
       'linear-gradient(to right, rgba(51, 100, 79, 1), rgba(34, 68, 53, 1))',
     lightGreen: 'rgba(34, 68, 53, 1)',
     lightGrey: 'rgba(153, 153, 153, 1)',
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
+    boxShadow: {
+      default: '0 10px 20px -5px rgba(0, 0, 0, 1)',
+      topBar: '0 0 8px rgba(0, 0, 0, 0.4)'
+    }
   }
 }
 
@@ -119,7 +122,7 @@ export const lightTheme = {
   palette: {
     background: {
       default: 'rgba(255, 255, 255, 1)',
-      footer: '#f9f9f9',
+      footer: 'rgba(249, 249, 249, 1)',
       oneDarkPro: 'rgba(40, 44, 52, 1)',
       topBar: 'rgba(255, 255, 255, 0.95)'
     },
@@ -139,6 +142,9 @@ export const lightTheme = {
     gradient: 'linear-gradient(to right, #90c7a8, rgba(199, 227, 211, 1))',
     lightGreen: 'rgba(199, 227, 211, 1)',
     lightGrey: 'rgba(153, 153, 153, 1)',
-    boxShadow: '0 10px 20px -10px rgba(0, 0, 0, 1)'
+    boxShadow: {
+      default: '0 10px 20px -10px rgba(0, 0, 0, 1)',
+      topBar: '0 0 8px rgba(0, 0, 0, 0.1)'
+    }
   }
 }

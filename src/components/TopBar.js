@@ -40,7 +40,7 @@ TopBar.propTypes = {
 
 const StyledTopBar = styled.div`
   background-color: ${props =>
-    props.isSmall ? 'rgba(255,255,255,0.95)' : 'transparent'};
+    props.isSmall ? props.theme.palette.background.topBar : 'transparent'};
   box-shadow: ${props => props.isSmall && `0 0 8px rgba(0, 0, 0, 0.1)`};
   display: flex;
   flex-direction: column;

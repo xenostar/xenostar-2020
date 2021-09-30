@@ -89,7 +89,9 @@ export const darkTheme = {
   palette: {
     background: {
       default: '#181a1b', // #181a1b
-      oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
+      oneDarkPro: 'rgba(40, 44, 52, 1)', // #282c34
+      topBar: 'rgb(27, 30, 31)',
+      footer: 'rgb(27, 30, 31)'
     },
     common: {
       black: 'rgba(0, 0, 0, 1)', // #000
@@ -118,7 +120,9 @@ export const lightTheme = {
   palette: {
     background: {
       default: 'rgba(255, 255, 255, 1)', // #fff
-      oneDarkPro: 'rgba(40, 44, 52, 1)' // #282c34
+      oneDarkPro: 'rgba(40, 44, 52, 1)', // #282c34
+      topBar: 'rgba(255, 255, 255, 0.95)',
+      footer: '#f9f9f9' // #f9f9f9
     },
     common: {
       black: 'rgba(0, 0, 0, 1)', // #000

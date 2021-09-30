@@ -19,7 +19,7 @@ export const Footer = () => (
 )
 
 const StyledFooter = styled.footer`
-  background-color: #f9f9f9;
+  background-color: ${({ theme }) => theme.palette.background.footer};
   display: flex;
   justify-content: center;
   margin-top: auto;

@@ -20,13 +20,13 @@ const StyledMobileNavClose = styled.div`
   margin: ${({ theme }) => theme.spacing.default};
 `
 const FaTimes = styled(FaTimes_)`
-  background-color: ${({ theme }) => theme.palette.common.white};
+  background-color: ${({ theme }) => theme.palette.background.default};
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   color: ${({ theme }) => theme.palette.primary};
   cursor: pointer;
   font-size: 2.25rem;
   padding: 4px;
-  transition: ${({ theme }) => theme.transition.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   :hover {
     color: ${({ theme }) => theme.palette.text.primary};
   }

@@ -45,12 +45,12 @@ const StyledTopBar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  left: 0;
   pointer-events: ${props => props.collapsed && 'none'};
   position: fixed;
-  top: 0;
   right: 0;
-  left: 0;
-  transition: ${({ theme }) => theme.transition.default};
+  top: 0;
+  transition: ${({ theme }) => theme.transition.theme.backgroundColor};
   user-select: none;
   z-index: 100;
 `

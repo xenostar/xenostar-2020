@@ -22,7 +22,7 @@ const StyledMobileNavBurger = styled.div`
   `}
 `
 const FaBars = styled(FaBars_)`
-  background-color: ${({ theme }) => theme.palette.common.white};
+  background-color: ${({ theme }) => theme.palette.background.default};
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   color: ${({ theme }) => theme.palette.text.primary};
   cursor: pointer;
@@ -30,7 +30,7 @@ const FaBars = styled(FaBars_)`
   padding: 4px;
   pointer-events: auto;
   transform: scale(1);
-  transition: ${({ theme }) => theme.transition.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   :hover {
     color: ${({ theme }) => theme.palette.primary};
   }

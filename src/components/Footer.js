@@ -23,10 +23,11 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   margin-top: auto;
-  padding-top: ${({ theme }) => theme.spacing.big};
-  padding-right: ${({ theme }) => theme.spacing.default};
   padding-bottom: ${({ theme }) => theme.spacing.default};
   padding-left: ${({ theme }) => theme.spacing.default};
+  padding-right: ${({ theme }) => theme.spacing.default};
+  padding-top: ${({ theme }) => theme.spacing.big};
+  transition: ${({ theme }) => theme.transition.theme.backgroundColor};
 `
 const Col = styled(Col_)`
   ${media.tablet`
@@ -49,7 +50,7 @@ const HeartBeat = keyframes`
 const FaHeart = styled(FaHeart_)`
   cursor: none;
   margin: 0 ${({ theme }) => theme.shape.borderRadius.default};
-  transition: ${({ theme }) => theme.transition.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   ${Typography}:hover & {
     animation: ${HeartBeat} 2.5s infinite;
     color: ${({ theme }) => theme.palette.primary};

@@ -21,12 +21,13 @@ export const ThemeToggler = () => {
 
 const StyledButton = styled.button`
   align-items: center;
+  background-color: transparent;
   color: ${({ theme }) => theme.palette.text.primary};
   cursor: pointer;
   display: flex;
-  background-color: transparent;
+  font-size: ${({ theme }) => theme.fonts.size.h4};
   padding: 0 ${({ theme }) => theme.spacing.small};
-  transition: ${({ theme }) => theme.transition.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   &.active,
   :hover {
     color: ${({ theme }) => theme.palette.primary};

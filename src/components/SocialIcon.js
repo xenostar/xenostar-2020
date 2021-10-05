@@ -41,7 +41,7 @@ const Link = styled.a`
   color: ${({ theme }) => theme.palette.text.primary};
   display: flex;
   font-size: 1.875em; /* 30px */
-  transition: ${({ theme }) => theme.transition.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   :hover {
     color: ${({ theme }) => theme.palette.primary};
   }

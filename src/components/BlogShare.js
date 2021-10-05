@@ -49,13 +49,14 @@ const Link = styled.a`
   display: flex;
   font-size: 21px;
   margin-left: ${({ theme }) => theme.spacing.small};
+  transition: ${({ theme }) => theme.transition.theme.color};
+  svg {
+    color: inherit;
+  }
   :first-child {
     margin-left: 0;
   }
-  svg {
-    transition: ${({ theme }) => theme.transition.default};
-  }
-  :hover svg {
+  :hover {
     color: ${({ theme }) => theme.palette.primary};
   }
 `

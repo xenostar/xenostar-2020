@@ -17,6 +17,7 @@ export const Typography = styled.p`
       ? h6
       : p}
   margin-bottom: ${props => props.mb && props.theme.spacing.default};
+  transition: ${({ theme }) => theme.transition.theme.color};
   ${({ noWrap }) => noWrap && noWrapText};
 `
 

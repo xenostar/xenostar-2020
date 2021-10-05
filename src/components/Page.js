@@ -30,7 +30,8 @@ const StyledPage = styled.main`
     background-repeat: no-repeat;
     background-size: 0 30%, 100% 30%;
     border-radius: ${({ theme }) => theme.shape.borderRadius.small};
-    transition: 0.2s background ease-out;
+    transition: ${({ theme }) =>
+      `${theme.transition.theme.background}, ${theme.transition.theme.color}`};
     :hover {
       background-size: 100% 30%, 100% 30%;
     }

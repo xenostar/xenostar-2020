@@ -69,6 +69,12 @@ export const theme = {
     easing: {
       default: 'ease'
     },
+    theme: {
+      color: '0.3s color ease',
+      background: '0.3s background ease',
+      backgroundColor: '0.3s background-color ease',
+      link: '0.2s background ease-out'
+    },
     fast: '0.2s all ease',
     default: '0.3s all ease',
     slow: '0.4s all ease'

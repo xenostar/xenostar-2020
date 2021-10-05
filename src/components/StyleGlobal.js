@@ -11,6 +11,7 @@ export const StyleGlobal = createGlobalStyle`
 
   body {
     background-color: ${({ theme }) => theme.palette.background.default};
+    transition: ${({ theme }) => theme.transition.theme.backgroundColor};
     overflow-y: scroll;
   }
 

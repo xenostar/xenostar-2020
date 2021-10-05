@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Row as Row_, Logo, ButtonBack, Nav, MobileNavBurger } from 'components'
 import { isSubPage, routes } from 'utils'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-import { theme } from '../utils/theme'
 
 export const TopBar = ({ path }) => {
   const [isSmall, setIsSmall] = useState(false)

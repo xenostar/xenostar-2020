@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
 import { StoreProvider } from 'easy-peasy'
 import { HelmetProvider } from 'react-helmet-async'
 import {
@@ -11,32 +9,25 @@ import {
   TopBar,
   MobileNav
 } from 'components'
-import { store, darkTheme, lightTheme } from 'utils'
+import { ThemeProvider } from 'providers'
+import { store } from 'utils'
 import 'normalize.css'
 
-const Layout = ({ children, path }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true)
-
-  const handleChangeTheme = mode => {
-    setIsDarkMode(mode === 'dark' ? true : false)
-  }
-
-  return (
-    <StoreProvider store={store}>
-      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <HelmetProvider>
-          <StoreSync path={path} />
-          <SEO />
-          <StyleReset />
-          <StyleGlobal />
-          <TopBar path={path} />
-          <MobileNav />
-          {children}
-        </HelmetProvider>
+const Layout = ({ children, path }) => (
+  <StoreProvider store={store}>
+    <HelmetProvider>
+      <ThemeProvider>
+        <StoreSync path={path} />
+        <SEO />
+        <StyleReset />
+        <StyleGlobal />
+        <TopBar path={path} />
+        <MobileNav />
+        {children}
       </ThemeProvider>
-    </StoreProvider>
-  )
-}
+    </HelmetProvider>
+  </StoreProvider>
+)
 
 Layout.propTypes = {
   children: PropTypes.node,

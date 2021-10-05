@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { NavLink } from 'components'
+import { NavLink, ThemeToggler } from 'components'
 import { media, routes } from 'utils'
 
 export const Nav = () => (
@@ -12,6 +12,7 @@ export const Nav = () => (
     <NavLink to={routes.blog.url} partiallyActive={true}>
       {routes.blog.name}
     </NavLink>
+    <ThemeToggler />
   </StyledNav>
 )
 

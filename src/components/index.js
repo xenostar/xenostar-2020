@@ -57,4 +57,6 @@ export * from './StoreSync'
 export * from './StyleReset'
 export * from './StyleGlobal'
 
+export * from './ThemeToggler'
+
 export * from './TopBar'

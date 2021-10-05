@@ -1,6 +1,12 @@
-import { createStore, action } from 'easy-peasy'
+import { action, createStore } from 'easy-peasy'
 
 export const store = createStore({
+  theme: {
+    isDarkMode: false,
+    toggleDarkMode: action((state, isEnabled = null) => {
+      state.isDarkMode = isEnabled ? isEnabled : !state.isDarkMode
+    })
+  },
   page: {
     currentPage: '',
     setCurrentPage: action((state, newPage) => {
@@ -13,10 +19,10 @@ export const store = createStore({
   },
   nav: {
     isNavOpen: false,
-    openNav: action((state) => {
+    openNav: action(state => {
       state.isNavOpen = true
     }),
-    closeNav: action((state) => {
+    closeNav: action(state => {
       state.isNavOpen = false
     })
   }

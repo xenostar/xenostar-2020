@@ -1,16 +1,10 @@
 import { CgSun, CgMoon } from 'react-icons/cg'
-import { useStoreActions, useStoreState } from 'easy-peasy'
 import styled from 'styled-components'
 
-export const ThemeToggler = () => {
-  const isDarkMode = useStoreState(state => state.theme.isDarkMode)
-  const toggleDarkMode = useStoreActions(
-    actions => actions.theme.toggleDarkMode
-  )
+import { useDarkMode } from 'hooks'
 
-  const handleToggleDarkMode = () => {
-    toggleDarkMode()
-  }
+export const ThemeToggler = () => {
+  const [isDarkMode, handleToggleDarkMode] = useDarkMode()
 
   return (
     <StyledButton onClick={handleToggleDarkMode}>

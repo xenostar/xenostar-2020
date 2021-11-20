@@ -1,6 +1,7 @@
 export * from './useAboutApi'
 export * from './useBlogApi'
 export * from './useBlogPostApi'
+export * from './useDarkMode'
 export * from './useHomeApi'
 export * from './usePortfolioApi'
 export * from './useSeoApi'

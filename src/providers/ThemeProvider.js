@@ -1,10 +1,11 @@
 import { darkTheme, lightTheme } from 'utils'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
-import { useStoreState } from 'easy-peasy'
 import PropTypes from 'prop-types'
 
+import { useDarkMode } from 'hooks'
+
 export const ThemeProvider = ({ children }) => {
-  const isDarkMode = useStoreState(state => state.theme.isDarkMode)
+  const [isDarkMode] = useDarkMode()
 
   return (
     <StyledThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>

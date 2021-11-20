@@ -3,8 +3,8 @@ import { action, createStore } from 'easy-peasy'
 export const store = createStore({
   theme: {
     theme: 'dark',
-    setTheme: action((state, mode = null) => {
-      state.theme = mode ? mode : 'dark'
+    setTheme: action((state, mode = 'dark') => {
+      state.theme = mode
     })
   },
   page: {

@@ -54,3 +54,8 @@ export const formatDate = date => {
     day: 'numeric'
   })
 }
+
+/**
+ * Return whether or not we're in the browser.
+ */
+export const isBrowser = typeof window !== 'undefined'

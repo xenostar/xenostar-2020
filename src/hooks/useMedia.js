@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
 
+import { isBrowser } from 'utils'
+
 export const useMedia = (queries, values, defaultValue) => {
   // Array containing a media query list for each query
-  const mediaQueryLists = queries.map(q => window.matchMedia(q))
+  const mediaQueryLists = isBrowser
+    ? queries.map(q => window.matchMedia(q))
+    : []
 
   // Function that gets value based on matching media query
   const getValue = () => {

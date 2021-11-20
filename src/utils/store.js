@@ -2,9 +2,9 @@ import { action, createStore } from 'easy-peasy'
 
 export const store = createStore({
   theme: {
-    isDarkMode: false,
-    toggleDarkMode: action((state, isEnabled = null) => {
-      state.isDarkMode = isEnabled ? isEnabled : !state.isDarkMode
+    theme: 'dark',
+    setTheme: action((state, mode = null) => {
+      state.theme = mode ? mode : 'dark'
     })
   },
   page: {

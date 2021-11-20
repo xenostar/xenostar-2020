@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { useDarkMode } from 'hooks'
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode] = useDarkMode()
+  const { isDarkMode } = useDarkMode()
 
   return (
     <StyledThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>

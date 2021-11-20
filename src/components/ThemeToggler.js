@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import { useDarkMode } from 'hooks'
 
 export const ThemeToggler = () => {
-  const [isDarkMode, handleToggleDarkMode] = useDarkMode()
+  const { isDarkMode, handleToggleTheme } = useDarkMode()
 
   return (
-    <StyledButton onClick={handleToggleDarkMode}>
+    <StyledButton onClick={handleToggleTheme}>
       {isDarkMode ? <CgSun /> : <CgMoon />}
     </StyledButton>
   )

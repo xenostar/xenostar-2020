@@ -7,16 +7,8 @@ export const useDarkMode = () => {
   )
 
   const handleToggleDarkMode = () => {
-    // window.localStorage.setItem('theme', mode)
     toggleDarkMode()
   }
-
-  // useEffect(() => {
-  //   effect
-  //   return () => {
-  //     cleanup
-  //   }
-  // }, [input])
 
   return [isDarkMode, handleToggleDarkMode]
 }

@@ -1,14 +1,30 @@
+import { useEffect } from 'react'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 
-export const useDarkMode = () => {
-  const isDarkMode = useStoreState(state => state.theme.isDarkMode)
-  const toggleDarkMode = useStoreActions(
-    actions => actions.theme.toggleDarkMode
-  )
+import { usePrefersDarkMode } from 'hooks'
 
-  const handleToggleDarkMode = () => {
-    toggleDarkMode()
+export const useDarkMode = () => {
+  const theme = useStoreState(state => state.theme.theme)
+  const setTheme = useStoreActions(actions => actions.theme.setTheme)
+  const isDarkModePreferred = usePrefersDarkMode()
+  const isDarkMode = theme === 'dark'
+
+  const handleToggleTheme = () => {
+    const mode = theme === 'dark' ? 'light' : 'dark'
+    window.localStorage.setItem('theme', mode)
+    setTheme(mode)
   }
 
-  return [isDarkMode, handleToggleDarkMode]
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme')
+    const preference = localTheme
+      ? localTheme
+      : isDarkModePreferred
+      ? 'dark'
+      : 'light'
+
+    setTheme(preference)
+  }, [setTheme, isDarkModePreferred])
+
+  return { handleToggleTheme, isDarkMode, theme }
 }

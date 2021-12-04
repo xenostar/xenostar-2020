@@ -72,8 +72,8 @@ const Name = styled.div`
 const Image = styled(GatsbyImage)`
   border-radius: ${({ theme }) => theme.shape.borderRadius.default};
   transition: ${({ theme }) => theme.transition.default};
+  z-index: 10;
   :hover {
     box-shadow: ${({ theme }) => theme.palette.boxShadow.default};
-    z-index: 10;
   }
 `

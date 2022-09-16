@@ -2,7 +2,7 @@
   "name": "xenostar-2020",
   "private": true,
   "description": "My new portfolio created with Gatsby. Hosted on Netlify, Headless CMS provided by DatoCMS.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --log-pages",
